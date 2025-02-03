@@ -1,13 +1,13 @@
 {
-  "name": "ol",
-  "version": "7.0.0",
+  "name": "@suez/ol",
+  "version": "7.0.1",
   "description": "OpenLayers mapping library",
   "keywords": [
     "map",
     "mapping",
     "openlayers"
   ],
-  "private": true,
+  "private": false,
   "homepage": "https://openlayers.org/",
   "scripts": {
     "lint": "eslint tasks test src/ol examples config",
