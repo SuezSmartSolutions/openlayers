@@ -79,7 +79,7 @@ main() {
   npm run build-package
   cd ${BUILT_PACKAGE}
   shift
-  npm publish ${@}
+  npm publish ${@} --access public
 }
 
 if test ${#} -lt 1; then
