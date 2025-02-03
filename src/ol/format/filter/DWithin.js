@@ -1,7 +1,7 @@
 /**
  * @module ol/format/filter/DWithin
  */
-import Spatial from './Spatial.js';
+import {Spatial} from './Spatial.js';
 
 /**
  * @classdesc
@@ -9,7 +9,7 @@ import Spatial from './Spatial.js';
  * is within a distance to a given geometry.
  * @api
  */
-class DWithin extends Spatial {
+export class DWithin extends Spatial {
   /**
    * @param {!string} geometryName Geometry name to use.
    * @param {!import("../../geom/Geometry.js").default} geometry Geometry.
@@ -34,5 +34,3 @@ class DWithin extends Spatial {
     this.unit = unit;
   }
 }
-
-export default DWithin;

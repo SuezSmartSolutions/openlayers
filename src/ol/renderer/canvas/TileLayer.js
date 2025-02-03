@@ -1,11 +1,11 @@
 /**
  * @module ol/renderer/canvas/TileLayer
  */
-import CanvasLayerRenderer from './Layer.js';
-import ImageTile from '../../ImageTile.js';
-import ReprojTile from '../../reproj/Tile.js';
-import TileRange from '../../TileRange.js';
-import TileState from '../../TileState.js';
+import {CanvasLayerRenderer} from './Layer.js';
+import {ImageTile} from '../../ImageTile.js';
+import {ReprojTile} from '../../reproj/Tile.js';
+import {TileRange} from '../../TileRange.js';
+import {TileState} from '../../TileState.js';
 import {
   apply as applyTransform,
   compose as composeTransform,
@@ -35,7 +35,7 @@ import {toSize} from '../../size.js';
  * @template {import("../../layer/Tile.js").default<import("../../source/Tile.js").default>|import("../../layer/VectorTile.js").default} [LayerType=import("../../layer/Tile.js").default<import("../../source/Tile.js").default>|import("../../layer/VectorTile.js").default]
  * @extends {CanvasLayerRenderer<LayerType>}
  */
-class CanvasTileLayerRenderer extends CanvasLayerRenderer {
+export class CanvasTileLayerRenderer extends CanvasLayerRenderer {
   /**
    * @param {LayerType} tileLayer Tile layer.
    */
@@ -763,5 +763,3 @@ class CanvasTileLayerRenderer extends CanvasLayerRenderer {
     tileSource.updateCacheSize(tileCount, projection);
   }
 }
-
-export default CanvasTileLayerRenderer;

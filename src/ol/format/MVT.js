@@ -4,15 +4,15 @@
 //FIXME Implement projection handling
 
 import FeatureFormat, {transformGeometryWithOptions} from './Feature.js';
-import LineString from '../geom/LineString.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import MultiPoint from '../geom/MultiPoint.js';
-import MultiPolygon from '../geom/MultiPolygon.js';
-import PBF from 'pbf';
-import Point from '../geom/Point.js';
-import Polygon from '../geom/Polygon.js';
-import Projection from '../proj/Projection.js';
-import RenderFeature from '../render/Feature.js';
+import {LineString} from '../geom/LineString.js';
+import {MultiLineString} from '../geom/MultiLineString.js';
+import {MultiPoint} from '../geom/MultiPoint.js';
+import {MultiPolygon} from '../geom/MultiPolygon.js';
+import {PBF} from 'pbf';
+import {Point} from '../geom/Point.js';
+import {Polygon} from '../geom/Polygon.js';
+import {Projection} from '../proj/Projection.js';
+import {RenderFeature} from '../render/Feature.js';
 import {assert} from '../asserts.js';
 import {get} from '../proj.js';
 import {inflateEnds} from '../geom/flat/orient.js';
@@ -37,7 +37,7 @@ import {inflateEnds} from '../geom/flat/orient.js';
  * @param {Options} [options] Options.
  * @api
  */
-class MVT extends FeatureFormat {
+export class MVT extends FeatureFormat {
   /**
    * @param {Options} [options] Options.
    */
@@ -429,5 +429,3 @@ function getGeometryType(type, numEnds) {
   }
   return geometryType;
 }
-
-export default MVT;

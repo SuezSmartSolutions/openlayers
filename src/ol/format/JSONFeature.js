@@ -1,7 +1,7 @@
 /**
  * @module ol/format/JSONFeature
  */
-import FeatureFormat from './Feature.js';
+import {FeatureFormat} from './Feature.js';
 import {abstract} from '../util.js';
 
 /**
@@ -12,7 +12,7 @@ import {abstract} from '../util.js';
  *
  * @abstract
  */
-class JSONFeature extends FeatureFormat {
+export class JSONFeature extends FeatureFormat {
   constructor() {
     super();
   }
@@ -206,5 +206,3 @@ function getObject(source) {
     return null;
   }
 }
-
-export default JSONFeature;

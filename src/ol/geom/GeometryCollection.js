@@ -1,8 +1,8 @@
 /**
  * @module ol/geom/GeometryCollection
  */
-import EventType from '../events/EventType.js';
-import Geometry from './Geometry.js';
+import {EventType} from '../events/EventType.js';
+import {Geometry} from './Geometry.js';
 import {
   closestSquaredDistanceXY,
   createOrUpdateEmpty,
@@ -17,7 +17,7 @@ import {listen, unlistenByKey} from '../events.js';
  *
  * @api
  */
-class GeometryCollection extends Geometry {
+export class GeometryCollection extends Geometry {
   /**
    * @param {Array<Geometry>} [geometries] Geometries.
    */
@@ -340,5 +340,3 @@ function cloneGeometries(geometries) {
   }
   return clonedGeometries;
 }
-
-export default GeometryCollection;

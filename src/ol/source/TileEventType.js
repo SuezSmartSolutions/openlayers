@@ -5,7 +5,7 @@
 /**
  * @enum {string}
  */
-export default {
+export const TileEventType = {
   /**
    * Triggered when a tile starts loading.
    * @event module:ol/source/Tile.TileSourceEvent#tileloadstart

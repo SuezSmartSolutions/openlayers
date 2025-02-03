@@ -2,15 +2,15 @@
  * @module ol/format/GeoJSON
  */
 
-import Feature from '../Feature.js';
-import GeometryCollection from '../geom/GeometryCollection.js';
-import JSONFeature from './JSONFeature.js';
-import LineString from '../geom/LineString.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import MultiPoint from '../geom/MultiPoint.js';
-import MultiPolygon from '../geom/MultiPolygon.js';
-import Point from '../geom/Point.js';
-import Polygon from '../geom/Polygon.js';
+import {Feature} from '../Feature.js';
+import {GeometryCollection} from '../geom/GeometryCollection.js';
+import {JSONFeature} from './JSONFeature.js';
+import {LineString} from '../geom/LineString.js';
+import {MultiLineString} from '../geom/MultiLineString.js';
+import {MultiPoint} from '../geom/MultiPoint.js';
+import {MultiPolygon} from '../geom/MultiPolygon.js';
+import {Point} from '../geom/Point.js';
+import {Polygon} from '../geom/Polygon.js';
 import {assert} from '../asserts.js';
 import {get as getProjection} from '../proj.js';
 import {isEmpty} from '../obj.js';
@@ -48,7 +48,7 @@ import {transformGeometryWithOptions} from './Feature.js';
  *
  * @api
  */
-class GeoJSON extends JSONFeature {
+export class GeoJSON extends JSONFeature {
   /**
    * @param {Options} [options] Options.
    */
@@ -560,5 +560,3 @@ function writePolygonGeometry(geometry, options) {
     coordinates: geometry.getCoordinates(right),
   };
 }
-
-export default GeoJSON;

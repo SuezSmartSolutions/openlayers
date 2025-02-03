@@ -3,7 +3,7 @@
  * @module ol/style/expressions
  */
 
-import PaletteTexture from '../webgl/PaletteTexture.js';
+import {PaletteTexture} from '../webgl/PaletteTexture.js';
 import {Uniforms} from '../renderer/webgl/TileLayer.js';
 import {asArray, fromString, isStringColor} from '../color.js';
 

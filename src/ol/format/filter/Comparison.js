@@ -1,7 +1,7 @@
 /**
  * @module ol/format/filter/Comparison
  */
-import Filter from './Filter.js';
+import {Filter} from './Filter.js';
 
 /**
  * @classdesc
@@ -10,7 +10,7 @@ import Filter from './Filter.js';
  *
  * @abstract
  */
-class Comparison extends Filter {
+export class Comparison extends Filter {
   /**
    * @param {!string} tagName The XML tag name for this filter.
    * @param {!string} propertyName Name of the context property to compare.
@@ -24,5 +24,3 @@ class Comparison extends Filter {
     this.propertyName = propertyName;
   }
 }
-
-export default Comparison;

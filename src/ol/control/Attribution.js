@@ -1,9 +1,9 @@
 /**
  * @module ol/control/Attribution
  */
-import Control from './Control.js';
-import EventType from '../events/EventType.js';
 import {CLASS_COLLAPSED, CLASS_CONTROL, CLASS_UNSELECTABLE} from '../css.js';
+import {Control} from './Control.js';
+import {EventType} from '../events/EventType.js';
 import {equals} from '../array.js';
 import {inView} from '../layer/Layer.js';
 import {removeChildren, replaceNode} from '../dom.js';
@@ -44,7 +44,7 @@ import {removeChildren, replaceNode} from '../dom.js';
  *
  * @api
  */
-class Attribution extends Control {
+export class Attribution extends Control {
   /**
    * @param {Options} [options] Attribution options.
    */
@@ -371,5 +371,3 @@ class Attribution extends Control {
     this.updateElement_(mapEvent.frameState);
   }
 }
-
-export default Attribution;

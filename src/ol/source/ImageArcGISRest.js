@@ -2,9 +2,9 @@
  * @module ol/source/ImageArcGISRest
  */
 
-import EventType from '../events/EventType.js';
 import ImageSource, {defaultImageLoadFunction} from './Image.js';
-import ImageWrapper from '../Image.js';
+import {EventType} from '../events/EventType.js';
+import {ImageWrapper} from '../Image.js';
 import {appendParams} from '../uri.js';
 import {assert} from '../asserts.js';
 import {containsExtent, getHeight, getWidth} from '../extent.js';
@@ -50,7 +50,7 @@ import {containsExtent, getHeight, getWidth} from '../extent.js';
  * @fires module:ol/source/Image.ImageSourceEvent
  * @api
  */
-class ImageArcGISRest extends ImageSource {
+export class ImageArcGISRest extends ImageSource {
   /**
    * @param {Options} [options] Image ArcGIS Rest Options.
    */
@@ -308,5 +308,3 @@ class ImageArcGISRest extends ImageSource {
     this.changed();
   }
 }
-
-export default ImageArcGISRest;

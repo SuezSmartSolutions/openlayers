@@ -2,9 +2,9 @@
  * @module ol/source/ImageMapGuide
  */
 
-import EventType from '../events/EventType.js';
 import ImageSource, {defaultImageLoadFunction} from './Image.js';
-import ImageWrapper from '../Image.js';
+import {EventType} from '../events/EventType.js';
+import {ImageWrapper} from '../Image.js';
 import {appendParams} from '../uri.js';
 import {
   containsExtent,
@@ -43,7 +43,7 @@ import {
  * @fires module:ol/source/Image.ImageSourceEvent
  * @api
  */
-class ImageMapGuide extends ImageSource {
+export class ImageMapGuide extends ImageSource {
   /**
    * @param {Options} options ImageMapGuide options.
    */
@@ -277,5 +277,3 @@ function getScale(extent, size, metersPerUnit, dpi) {
     return (mcsH * metersPerUnit) / (devH * mpp); // height limited
   }
 }
-
-export default ImageMapGuide;

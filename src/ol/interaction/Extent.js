@@ -1,13 +1,13 @@
 /**
  * @module ol/interaction/Extent
  */
-import Event from '../events/Event.js';
-import Feature from '../Feature.js';
-import MapBrowserEventType from '../MapBrowserEventType.js';
-import Point from '../geom/Point.js';
-import PointerInteraction from './Pointer.js';
-import VectorLayer from '../layer/Vector.js';
-import VectorSource from '../source/Vector.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {Feature} from '../Feature.js';
+import {MapBrowserEventType} from '../MapBrowserEventType.js';
+import {Point} from '../geom/Point.js';
+import {PointerInteraction} from './Pointer.js';
+import {VectorLayer} from '../layer/Vector.js';
+import {VectorSource} from '../source/Vector.js';
 import {always} from '../events/condition.js';
 import {boundingExtent, getArea} from '../extent.js';
 import {
@@ -92,7 +92,7 @@ export class ExtentEvent extends Event {
  * @fires ExtentEvent
  * @api
  */
-class Extent extends PointerInteraction {
+export class Extent extends PointerInteraction {
   /**
    * @param {Options} [options] Options.
    */
@@ -546,5 +546,3 @@ function getSegments(extent) {
     ],
   ];
 }
-
-export default Extent;

@@ -21,7 +21,7 @@ export const DROP = Infinity;
  *
  * @template T
  */
-class PriorityQueue {
+export class PriorityQueue {
   /**
    * @param {function(T): number} priorityFunction Priority function.
    * @param {function(T): string} keyFunction Key function.
@@ -258,5 +258,3 @@ class PriorityQueue {
     this.heapify_();
   }
 }
-
-export default PriorityQueue;

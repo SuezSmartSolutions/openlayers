@@ -1,15 +1,15 @@
 /**
  * @module ol/format/EsriJSON
  */
-import Feature from '../Feature.js';
-import JSONFeature from './JSONFeature.js';
-import LineString from '../geom/LineString.js';
-import LinearRing from '../geom/LinearRing.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import MultiPoint from '../geom/MultiPoint.js';
-import MultiPolygon from '../geom/MultiPolygon.js';
-import Point from '../geom/Point.js';
-import Polygon from '../geom/Polygon.js';
+import {Feature} from '../Feature.js';
+import {JSONFeature} from './JSONFeature.js';
+import {LineString} from '../geom/LineString.js';
+import {LinearRing} from '../geom/LinearRing.js';
+import {MultiLineString} from '../geom/MultiLineString.js';
+import {MultiPoint} from '../geom/MultiPoint.js';
+import {MultiPolygon} from '../geom/MultiPolygon.js';
+import {Point} from '../geom/Point.js';
+import {Polygon} from '../geom/Polygon.js';
 import {assert} from '../asserts.js';
 import {containsExtent} from '../extent.js';
 import {deflateCoordinates} from '../geom/flat/deflate.js';
@@ -76,7 +76,7 @@ const GEOMETRY_WRITERS = {
  *
  * @api
  */
-class EsriJSON extends JSONFeature {
+export class EsriJSON extends JSONFeature {
   /**
    * @param {Options} [options] Options.
    */
@@ -569,5 +569,3 @@ function writeGeometry(geometry, options) {
     options
   );
 }
-
-export default EsriJSON;

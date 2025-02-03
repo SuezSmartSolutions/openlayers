@@ -2,8 +2,8 @@
  * @module ol/style/RegularShape
  */
 
-import ImageState from '../ImageState.js';
-import ImageStyle from './Image.js';
+import {ImageState} from '../ImageState.js';
+import {ImageStyle} from './Image.js';
 import {asArray} from '../color.js';
 import {asColorLike} from '../colorlike.js';
 import {createCanvasContext2D} from '../dom.js';
@@ -53,7 +53,7 @@ import {
  * `radius2` are provided.
  * @api
  */
-class RegularShape extends ImageStyle {
+export class RegularShape extends ImageStyle {
   /**
    * @param {Options} options Options.
    */
@@ -620,5 +620,3 @@ class RegularShape extends ImageStyle {
     }
   }
 }
-
-export default RegularShape;

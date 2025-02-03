@@ -5,7 +5,7 @@
 /**
  * @enum {string}
  */
-export default {
+export const TileProperty = {
   PRELOAD: 'preload',
   USE_INTERIM_TILES_ON_ERROR: 'useInterimTilesOnError',
 };

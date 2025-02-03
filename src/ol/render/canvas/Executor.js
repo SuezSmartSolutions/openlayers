@@ -1,7 +1,7 @@
 /**
  * @module ol/render/canvas/Executor
  */
-import CanvasInstruction from './Instruction.js';
+import {Instruction as CanvasInstruction} from './Instruction.js';
 import {TEXT_ALIGN} from './TextBuilder.js';
 import {
   apply as applyTransform,
@@ -114,7 +114,7 @@ function createTextChunks(acc, line, i) {
   return acc;
 }
 
-class Executor {
+export class Executor {
   /**
    * @param {number} resolution Resolution.
    * @param {number} pixelRatio Pixel ratio.
@@ -1252,5 +1252,3 @@ class Executor {
     );
   }
 }
-
-export default Executor;

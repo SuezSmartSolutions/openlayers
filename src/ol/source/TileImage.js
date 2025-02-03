@@ -1,12 +1,12 @@
 /**
  * @module ol/source/TileImage
  */
-import EventType from '../events/EventType.js';
-import ImageTile from '../ImageTile.js';
-import ReprojTile from '../reproj/Tile.js';
-import TileCache from '../TileCache.js';
-import TileState from '../TileState.js';
-import UrlTile from './UrlTile.js';
+import {EventType} from '../events/EventType.js';
+import {ImageTile} from '../ImageTile.js';
+import {ReprojTile} from '../reproj/Tile.js';
+import {TileCache} from '../TileCache.js';
+import {TileState} from '../TileState.js';
+import {UrlTile} from './UrlTile.js';
 import {equivalent, get as getProjection} from '../proj.js';
 import {getKey, getKeyZXY} from '../tilecoord.js';
 import {getForProjection as getTileGridForProjection} from '../tilegrid.js';
@@ -64,7 +64,7 @@ import {getUid} from '../util.js';
  * @fires import("./Tile.js").TileSourceEvent
  * @api
  */
-class TileImage extends UrlTile {
+export class TileImage extends UrlTile {
   /**
    * @param {!Options} options Image tile options.
    */
@@ -446,5 +446,3 @@ function defaultTileLoadFunction(imageTile, src) {
   /** @type {HTMLImageElement|HTMLVideoElement} */ (imageTile.getImage()).src =
     src;
 }
-
-export default TileImage;

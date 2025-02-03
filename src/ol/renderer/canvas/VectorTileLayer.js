@@ -1,16 +1,16 @@
 /**
  * @module ol/renderer/canvas/VectorTileLayer
  */
-import CanvasBuilderGroup from '../../render/canvas/BuilderGroup.js';
-import CanvasExecutorGroup from '../../render/canvas/ExecutorGroup.js';
-import CanvasTileLayerRenderer from './TileLayer.js';
-import TileState from '../../TileState.js';
-import ViewHint from '../../ViewHint.js';
+import {BuilderGroup as CanvasBuilderGroup} from '../../render/canvas/BuilderGroup.js';
+import {ExecutorGroup as CanvasExecutorGroup} from '../../render/canvas/ExecutorGroup.js';
+import {CanvasTileLayerRenderer} from './TileLayer.js';
 import {
   HIT_DETECT_RESOLUTION,
   createHitDetectionImageData,
   hitDetect,
 } from '../../render/canvas/hitdetect.js';
+import {TileState} from '../../TileState.js';
+import {ViewHint} from '../../ViewHint.js';
 import {
   apply as applyTransform,
   create as createTransform,
@@ -60,7 +60,7 @@ const VECTOR_REPLAYS = {
  * @api
  * @extends {CanvasTileLayerRenderer<import("../../layer/VectorTile.js").default>}
  */
-class CanvasVectorTileLayerRenderer extends CanvasTileLayerRenderer {
+export class CanvasVectorTileLayerRenderer extends CanvasTileLayerRenderer {
   /**
    * @param {import("../../layer/VectorTile.js").default} layer VectorTile layer.
    */
@@ -851,5 +851,3 @@ class CanvasVectorTileLayerRenderer extends CanvasTileLayerRenderer {
     replayState.renderedTileResolution = tile.wantedResolution;
   }
 }
-
-export default CanvasVectorTileLayerRenderer;

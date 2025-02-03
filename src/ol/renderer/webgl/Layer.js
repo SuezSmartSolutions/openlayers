@@ -1,11 +1,11 @@
 /**
  * @module ol/renderer/webgl/Layer
  */
-import LayerProperty from '../../layer/Property.js';
-import LayerRenderer from '../Layer.js';
-import RenderEvent from '../../render/Event.js';
-import RenderEventType from '../../render/EventType.js';
-import WebGLHelper from '../../webgl/Helper.js';
+import {LayerProperty} from '../../layer/Property.js';
+import {LayerRenderer} from '../Layer.js';
+import {RenderEvent} from '../../render/Event.js';
+import {RenderEventType} from '../../render/EventType.js';
+import {WebGLHelper} from '../../webgl/Helper.js';
 import {
   compose as composeTransform,
   create as createTransform,
@@ -33,7 +33,7 @@ import {
  * @template {import("../../layer/Layer.js").default} LayerType
  * @extends {LayerRenderer<LayerType>}
  */
-class WebGLLayerRenderer extends LayerRenderer {
+export class WebGLLayerRenderer extends LayerRenderer {
   /**
    * @param {LayerType} layer Layer.
    * @param {Options} [options] Options.
@@ -258,5 +258,3 @@ class WebGLLayerRenderer extends LayerRenderer {
     this.dispatchRenderEvent_(RenderEventType.POSTRENDER, context, frameState);
   }
 }
-
-export default WebGLLayerRenderer;

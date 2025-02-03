@@ -1,8 +1,8 @@
 /**
  * @module ol/layer/VectorImage
  */
-import BaseVectorLayer from './BaseVector.js';
-import CanvasVectorImageLayerRenderer from '../renderer/canvas/VectorImageLayer.js';
+import {BaseVectorLayer} from './BaseVector.js';
+import {CanvasVectorImageLayerRenderer} from '../renderer/canvas/VectorImageLayer.js';
 
 /**
  * @template {import("../source/Vector.js").default} VectorSourceType
@@ -61,7 +61,7 @@ import CanvasVectorImageLayerRenderer from '../renderer/canvas/VectorImageLayer.
  * @extends {BaseVectorLayer<VectorSourceType, CanvasVectorImageLayerRenderer>}
  * @api
  */
-class VectorImageLayer extends BaseVectorLayer {
+export class VectorImageLayer extends BaseVectorLayer {
   /**
    * @param {Options<VectorSourceType>} [options] Options.
    */
@@ -91,5 +91,3 @@ class VectorImageLayer extends BaseVectorLayer {
     return new CanvasVectorImageLayerRenderer(this);
   }
 }
-
-export default VectorImageLayer;

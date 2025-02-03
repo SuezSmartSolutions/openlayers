@@ -2,14 +2,14 @@
  * @module ol/webgl/TileTexture
  */
 
-import DataTile from '../DataTile.js';
-import EventTarget from '../events/Target.js';
-import EventType from '../events/EventType.js';
-import ImageTile from '../ImageTile.js';
-import ReprojTile from '../reproj/Tile.js';
-import TileState from '../TileState.js';
-import WebGLArrayBuffer from './Buffer.js';
 import {ARRAY_BUFFER, STATIC_DRAW} from '../webgl.js';
+import {DataTile} from '../DataTile.js';
+import {Target as EventTarget} from '../events/Target.js';
+import {EventType} from '../events/EventType.js';
+import {ImageTile} from '../ImageTile.js';
+import {ReprojTile} from '../reproj/Tile.js';
+import {TileState} from '../TileState.js';
+import {WebGLArrayBuffer} from './Buffer.js';
 import {toSize} from '../size.js';
 
 /**
@@ -141,7 +141,7 @@ function createPixelContext() {
  * @property {number} [gutter=0] The size in pixels of the gutter around image tiles to ignore.
  */
 
-class TileTexture extends EventTarget {
+export class TileTexture extends EventTarget {
   /**
    * @param {Options} options The tile texture options.
    */
@@ -406,5 +406,3 @@ class TileTexture extends EventTarget {
     return data;
   }
 }
-
-export default TileTexture;

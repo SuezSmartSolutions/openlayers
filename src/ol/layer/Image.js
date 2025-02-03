@@ -1,8 +1,8 @@
 /**
  * @module ol/layer/Image
  */
-import BaseImageLayer from './BaseImage.js';
-import CanvasImageLayerRenderer from '../renderer/canvas/ImageLayer.js';
+import {BaseImageLayer} from './BaseImage.js';
+import {CanvasImageLayerRenderer} from '../renderer/canvas/ImageLayer.js';
 
 /**
  * @classdesc
@@ -16,7 +16,7 @@ import CanvasImageLayerRenderer from '../renderer/canvas/ImageLayer.js';
  * @extends {BaseImageLayer<ImageSourceType, CanvasImageLayerRenderer>}
  * @api
  */
-class ImageLayer extends BaseImageLayer {
+export class ImageLayer extends BaseImageLayer {
   /**
    * @param {import("./BaseImage.js").Options<ImageSourceType>} [options] Layer options.
    */
@@ -47,5 +47,3 @@ class ImageLayer extends BaseImageLayer {
     return super.getData(pixel);
   }
 }
-
-export default ImageLayer;

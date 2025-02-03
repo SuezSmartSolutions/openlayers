@@ -13,7 +13,7 @@
  * @classdesc
  * Creates an empty linked list structure.
  */
-class LinkedList {
+export class LinkedList {
   /**
    * @param {boolean} [circular] The last item is connected to the first one,
    * and the first item to the last one. Default is true.
@@ -255,5 +255,3 @@ class LinkedList {
     return this.length_;
   }
 }
-
-export default LinkedList;

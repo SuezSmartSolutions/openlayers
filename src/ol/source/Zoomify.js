@@ -3,10 +3,10 @@
  */
 import {DEFAULT_TILE_SIZE} from '../tilegrid/common.js';
 
-import ImageTile from '../ImageTile.js';
-import TileGrid from '../tilegrid/TileGrid.js';
-import TileImage from './TileImage.js';
-import TileState from '../TileState.js';
+import {ImageTile} from '../ImageTile.js';
+import {TileGrid} from '../tilegrid/TileGrid.js';
+import {TileImage} from './TileImage.js';
+import {TileState} from '../TileState.js';
 import {assert} from '../asserts.js';
 import {createCanvasContext2D} from '../dom.js';
 import {createFromTileUrlFunctions, expandUrl} from '../tileurlfunction.js';
@@ -121,7 +121,7 @@ export class CustomTile extends ImageTile {
  * Imaging Protocol are supported).
  * @api
  */
-class Zoomify extends TileImage {
+export class Zoomify extends TileImage {
   /**
    * @param {Options} options Options.
    */
@@ -286,5 +286,3 @@ class Zoomify extends TileImage {
     image.src = testTileUrl;
   }
 }
-
-export default Zoomify;

@@ -1,13 +1,13 @@
 /**
  * @module ol/renderer/canvas/VectorImageLayer
  */
-import CanvasImageLayerRenderer from './ImageLayer.js';
-import CanvasVectorLayerRenderer from './VectorLayer.js';
-import EventType from '../../events/EventType.js';
-import ImageCanvas from '../../ImageCanvas.js';
-import ImageState from '../../ImageState.js';
 import RBush from 'rbush';
-import ViewHint from '../../ViewHint.js';
+import {CanvasImageLayerRenderer} from './ImageLayer.js';
+import {CanvasVectorLayerRenderer} from './VectorLayer.js';
+import {EventType} from '../../events/EventType.js';
+import {ImageCanvas} from '../../ImageCanvas.js';
+import {ImageState} from '../../ImageState.js';
+import {ViewHint} from '../../ViewHint.js';
 import {apply, compose, create} from '../../transform.js';
 import {getHeight, getWidth, isEmpty, scaleFromCenter} from '../../extent.js';
 
@@ -16,7 +16,7 @@ import {getHeight, getWidth, isEmpty, scaleFromCenter} from '../../extent.js';
  * Canvas renderer for image layers.
  * @api
  */
-class CanvasVectorImageLayerRenderer extends CanvasImageLayerRenderer {
+export class CanvasVectorImageLayerRenderer extends CanvasImageLayerRenderer {
   /**
    * @param {import("../../layer/VectorImage.js").default} layer Vector image layer.
    */
@@ -226,5 +226,3 @@ class CanvasVectorImageLayerRenderer extends CanvasImageLayerRenderer {
     }
   }
 }
-
-export default CanvasVectorImageLayerRenderer;

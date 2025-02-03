@@ -1,9 +1,9 @@
 /**
  * @module ol/Tile
  */
-import EventTarget from './events/Target.js';
-import EventType from './events/EventType.js';
-import TileState from './TileState.js';
+import {Target as EventTarget} from './events/Target.js';
+import {EventType} from './events/EventType.js';
+import {TileState} from './TileState.js';
 import {abstract} from './util.js';
 import {easeIn} from './easing.js';
 
@@ -19,7 +19,7 @@ import {easeIn} from './easing.js';
  * error handling:
  *
  * ```js
- * import TileState from 'ol/TileState';
+ * import { TileState } from 'ol/TileState';
  *
  * source.setTileLoadFunction(function(tile, src) {
  *   const xhr = new XMLHttpRequest();
@@ -74,7 +74,7 @@ import {easeIn} from './easing.js';
  *
  * @abstract
  */
-class Tile extends EventTarget {
+export class Tile extends EventTarget {
   /**
    * @param {import("./tilecoord.js").TileCoord} tileCoord Tile coordinate.
    * @param {import("./TileState.js").default} state State.
@@ -318,5 +318,3 @@ class Tile extends EventTarget {
     }
   }
 }
-
-export default Tile;

@@ -1,8 +1,8 @@
 /**
  * @module ol/render/webgl/MixedGeometryBatch
  */
-import WebGLArrayBuffer from '../../webgl/Buffer.js';
 import {ARRAY_BUFFER, DYNAMIC_DRAW, ELEMENT_ARRAY_BUFFER} from '../../webgl.js';
+import {WebGLArrayBuffer} from '../../webgl/Buffer.js';
 import {create as createTransform} from '../../transform.js';
 import {getUid} from '../../util.js';
 
@@ -83,7 +83,7 @@ import {getUid} from '../../util.js';
  * This is why two world-to-screen transforms are stored on each batch: one for the render instructions and one for
  * the WebGL buffers.
  */
-class MixedGeometryBatch {
+export class MixedGeometryBatch {
   constructor() {
     /**
      * @type {PolygonGeometryBatch}
@@ -360,5 +360,3 @@ class MixedGeometryBatch {
     this.pointBatch.geometriesCount = 0;
   }
 }
-
-export default MixedGeometryBatch;

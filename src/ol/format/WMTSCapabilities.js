@@ -1,8 +1,8 @@
 /**
  * @module ol/format/WMTSCapabilities
  */
-import OWS from './OWS.js';
-import XML from './XML.js';
+import {OWS} from './OWS.js';
+import {XML} from './XML.js';
 import {boundingExtent} from '../extent.js';
 import {
   makeArrayPusher,
@@ -41,7 +41,7 @@ const PARSERS = makeStructureNS(NAMESPACE_URIS, {
  *
  * @api
  */
-class WMTSCapabilities extends XML {
+export class WMTSCapabilities extends XML {
   constructor() {
     super();
 
@@ -376,5 +376,3 @@ function readTileMatrixLimitsList(node, objectStack) {
 function readTileMatrixLimits(node, objectStack) {
   return pushParseAndPop({}, TMS_LIMITS_PARSERS, node, objectStack);
 }
-
-export default WMTSCapabilities;

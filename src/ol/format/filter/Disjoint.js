@@ -1,7 +1,7 @@
 /**
  * @module ol/format/filter/Disjoint
  */
-import Spatial from './Spatial.js';
+import {Spatial} from './Spatial.js';
 
 /**
  * @classdesc
@@ -9,7 +9,7 @@ import Spatial from './Spatial.js';
  * is disjoint to a given geometry.
  * @api
  */
-class Disjoint extends Spatial {
+export class Disjoint extends Spatial {
   /**
    * @param {!string} geometryName Geometry name to use.
    * @param {!import("../../geom/Geometry.js").default} geometry Geometry.
@@ -20,5 +20,3 @@ class Disjoint extends Spatial {
     super('Disjoint', geometryName, geometry, srsName);
   }
 }
-
-export default Disjoint;

@@ -2,7 +2,7 @@
  * @module ol/source/WMTS
  */
 
-import TileImage from './TileImage.js';
+import {TileImage} from './TileImage.js';
 import {appendParams} from '../uri.js';
 import {containsExtent} from '../extent.js';
 import {createFromCapabilitiesMatrixSet} from '../tilegrid/WMTS.js';
@@ -67,7 +67,7 @@ import {equivalent, get as getProjection, transformExtent} from '../proj.js';
  * Layer source for tile data from WMTS servers.
  * @api
  */
-class WMTS extends TileImage {
+export class WMTS extends TileImage {
   /**
    * @param {Options} options WMTS options.
    */
@@ -334,8 +334,6 @@ class WMTS extends TileImage {
     );
   }
 }
-
-export default WMTS;
 
 /**
  * Generate source options from a capabilities object.

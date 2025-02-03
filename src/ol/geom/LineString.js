@@ -1,7 +1,7 @@
 /**
  * @module ol/geom/LineString
  */
-import SimpleGeometry from './SimpleGeometry.js';
+import {SimpleGeometry} from './SimpleGeometry.js';
 import {assignClosestPoint, maxSquaredDelta} from './flat/closest.js';
 import {closestSquaredDistanceXY} from '../extent.js';
 import {deflateCoordinates} from './flat/deflate.js';
@@ -19,7 +19,7 @@ import {lineStringLength} from './flat/length.js';
  *
  * @api
  */
-class LineString extends SimpleGeometry {
+export class LineString extends SimpleGeometry {
   /**
    * @param {Array<import("../coordinate.js").Coordinate>|Array<number>} coordinates Coordinates.
    *     For internal use, flat coordinates in combination with `layout` are also accepted.
@@ -307,5 +307,3 @@ class LineString extends SimpleGeometry {
     this.changed();
   }
 }
-
-export default LineString;

@@ -1,7 +1,7 @@
 /**
  * @module ol/geom/Geometry
  */
-import BaseObject from '../Object.js';
+import {BaseObject} from '../Object.js';
 import {abstract} from '../util.js';
 import {
   compose as composeTransform,
@@ -47,7 +47,7 @@ const tmpTransform = createTransform();
  * @abstract
  * @api
  */
-class Geometry extends BaseObject {
+export class Geometry extends BaseObject {
   constructor() {
     super();
 
@@ -343,5 +343,3 @@ class Geometry extends BaseObject {
     return this;
   }
 }
-
-export default Geometry;

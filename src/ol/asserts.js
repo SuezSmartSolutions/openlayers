@@ -1,7 +1,7 @@
 /**
  * @module ol/asserts
  */
-import AssertionError from './AssertionError.js';
+import {AssertionError} from './AssertionError.js';
 
 /**
  * @param {*} assertion Assertion we expected to be truthy.

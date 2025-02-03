@@ -1,8 +1,8 @@
 /**
  * @module ol/DataTile
  */
-import Tile from './Tile.js';
-import TileState from './TileState.js';
+import {Tile} from './Tile.js';
+import {TileState} from './TileState.js';
 
 /**
  * Data that can be used with a DataTile.  For increased browser compatibility, use
@@ -22,7 +22,7 @@ import TileState from './TileState.js';
  * @api
  */
 
-class DataTile extends Tile {
+export class DataTile extends Tile {
   /**
    * @param {Options} options Tile options.
    */
@@ -110,5 +110,3 @@ class DataTile extends Tile {
       });
   }
 }
-
-export default DataTile;

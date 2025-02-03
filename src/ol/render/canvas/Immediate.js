@@ -5,7 +5,7 @@
 // FIXME need to handle large thick features (where pixel size matters)
 // FIXME add offset and end to ol/geom/flat/transform~transform2D?
 
-import VectorContext from '../VectorContext.js';
+import {VectorContext} from '../VectorContext.js';
 import {asColorLike} from '../../colorlike.js';
 import {
   compose as composeTransform,
@@ -38,7 +38,7 @@ import {transformGeom2D} from '../../geom/SimpleGeometry.js';
  * {@link module:ol/render/Event~RenderEvent} object associated with postcompose, precompose and
  * render events emitted by layers and maps.
  */
-class CanvasImmediateRenderer extends VectorContext {
+export class CanvasImmediateRenderer extends VectorContext {
   /**
    * @param {CanvasRenderingContext2D} context Context.
    * @param {number} pixelRatio Pixel ratio.
@@ -1151,5 +1151,3 @@ class CanvasImmediateRenderer extends VectorContext {
     }
   }
 }
-
-export default CanvasImmediateRenderer;

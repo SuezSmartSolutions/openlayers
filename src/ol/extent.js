@@ -1,7 +1,7 @@
 /**
  * @module ol/extent
  */
-import Relationship from './extent/Relationship.js';
+import {Relationship} from './extent/Relationship.js';
 import {assert} from './asserts.js';
 
 /**

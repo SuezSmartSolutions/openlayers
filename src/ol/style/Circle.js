@@ -2,7 +2,7 @@
  * @module ol/style/Circle
  */
 
-import RegularShape from './RegularShape.js';
+import {RegularShape} from './RegularShape.js';
 
 /**
  * @typedef {Object} Options
@@ -24,7 +24,7 @@ import RegularShape from './RegularShape.js';
  * Set circle style for vector features.
  * @api
  */
-class CircleStyle extends RegularShape {
+export class CircleStyle extends RegularShape {
   /**
    * @param {Options} [options] Options.
    */
@@ -78,5 +78,3 @@ class CircleStyle extends RegularShape {
     this.render();
   }
 }
-
-export default CircleStyle;

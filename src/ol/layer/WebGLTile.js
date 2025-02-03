@@ -1,12 +1,12 @@
 /**
  * @module ol/layer/WebGLTile
  */
-import BaseTileLayer from './BaseTile.js';
-import LayerProperty from '../layer/Property.js';
 import WebGLTileLayerRenderer, {
   Attributes,
   Uniforms,
 } from '../renderer/webgl/TileLayer.js';
+import {BaseTileLayer} from './BaseTile.js';
+import {LayerProperty} from '../layer/Property.js';
 import {
   PALETTE_TEXTURE_ARRAY,
   ValueTypes,
@@ -302,7 +302,7 @@ function parseStyle(style, bandCount) {
  * @fires import("../render/Event.js").RenderEvent
  * @api
  */
-class WebGLTileLayer extends BaseTileLayer {
+export class WebGLTileLayer extends BaseTileLayer {
   /**
    * @param {Options} options Tile layer options.
    */
@@ -521,5 +521,3 @@ class WebGLTileLayer extends BaseTileLayer {
  * @api
  */
 WebGLTileLayer.prototype.dispose;
-
-export default WebGLTileLayer;

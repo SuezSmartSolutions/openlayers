@@ -5,7 +5,7 @@
 /**
  * @enum {string}
  */
-export default {
+export const MapEventType = {
   /**
    * Triggered after a map frame is rendered.
    * @event module:ol/MapEvent~MapEvent#postrender

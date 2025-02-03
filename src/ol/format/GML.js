@@ -1,7 +1,7 @@
 /**
  * @module ol/format/GML
  */
-import GML3 from './GML3.js';
+import {GML3} from './GML3.js';
 
 /**
  * Feature format for reading and writing data in the GML format
@@ -13,7 +13,7 @@ import GML3 from './GML3.js';
  *     Optional configuration object.
  * @api
  */
-const GML = GML3;
+export const GML = GML3;
 
 /**
  * Encode an array of features in GML 3.1.1 Simple Features.
@@ -36,5 +36,3 @@ GML.prototype.writeFeatures;
  * @api
  */
 GML.prototype.writeFeaturesNode;
-
-export default GML;

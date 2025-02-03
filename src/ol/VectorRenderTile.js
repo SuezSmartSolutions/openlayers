@@ -1,7 +1,7 @@
 /**
  * @module ol/VectorRenderTile
  */
-import Tile from './Tile.js';
+import {Tile} from './Tile.js';
 import {createCanvasContext2D, releaseCanvas} from './dom.js';
 import {getUid} from './util.js';
 
@@ -21,7 +21,7 @@ import {getUid} from './util.js';
  */
 const canvasPool = [];
 
-class VectorRenderTile extends Tile {
+export class VectorRenderTile extends Tile {
   /**
    * @param {import("./tilecoord.js").TileCoord} tileCoord Tile coordinate.
    * @param {import("./TileState.js").default} state State.
@@ -162,5 +162,3 @@ class VectorRenderTile extends Tile {
     super.release();
   }
 }
-
-export default VectorRenderTile;

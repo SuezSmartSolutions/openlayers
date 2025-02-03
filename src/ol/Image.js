@@ -1,10 +1,10 @@
 /**
  * @module ol/Image
  */
-import EventType from './events/EventType.js';
-import ImageBase from './ImageBase.js';
-import ImageState from './ImageState.js';
+import {EventType} from './events/EventType.js';
 import {IMAGE_DECODE} from './has.js';
+import {ImageBase} from './ImageBase.js';
+import {ImageState} from './ImageState.js';
 import {getHeight} from './extent.js';
 import {listenOnce, unlistenByKey} from './events.js';
 
@@ -26,7 +26,7 @@ import {listenOnce, unlistenByKey} from './events.js';
  * @api
  */
 
-class ImageWrapper extends ImageBase {
+export class ImageWrapper extends ImageBase {
   /**
    * @param {import("./extent.js").Extent} extent Extent.
    * @param {number|undefined} resolution Resolution.
@@ -200,5 +200,3 @@ export function listenImage(image, loadHandler, errorHandler) {
     listenerKeys.forEach(unlistenByKey);
   };
 }
-
-export default ImageWrapper;

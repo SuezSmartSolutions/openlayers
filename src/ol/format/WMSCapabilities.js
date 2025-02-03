@@ -1,7 +1,7 @@
 /**
  * @module ol/format/WMSCapabilities
  */
-import XML from './XML.js';
+import {XML} from './XML.js';
 import {
   makeArrayPusher,
   makeObjectPropertyPusher,
@@ -52,7 +52,7 @@ const CAPABILITY_PARSERS = makeStructureNS(NAMESPACE_URIS, {
  *
  * @api
  */
-class WMSCapabilities extends XML {
+export class WMSCapabilities extends XML {
   constructor() {
     super();
 
@@ -621,5 +621,3 @@ function readStyle(node, objectStack) {
 function readKeywordList(node, objectStack) {
   return pushParseAndPop([], KEYWORDLIST_PARSERS, node, objectStack);
 }
-
-export default WMSCapabilities;

@@ -2,8 +2,8 @@
  * @module ol/source/TileWMS
  */
 
-import TileImage from './TileImage.js';
 import {DEFAULT_VERSION} from './wms.js';
+import {TileImage} from './TileImage.js';
 import {appendParams} from '../uri.js';
 import {assert} from '../asserts.js';
 import {buffer, createEmpty} from '../extent.js';
@@ -77,7 +77,7 @@ import {hash as tileCoordHash} from '../tilecoord.js';
  * Layer source for tile data from WMS servers.
  * @api
  */
-class TileWMS extends TileImage {
+export class TileWMS extends TileImage {
   /**
    * @param {Options} [options] Tile WMS options.
    */
@@ -466,5 +466,3 @@ class TileWMS extends TileImage {
     );
   }
 }
-
-export default TileWMS;

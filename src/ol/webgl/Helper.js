@@ -1,9 +1,8 @@
 /**
  * @module ol/webgl/Helper
  */
-import ContextEventType from '../webgl/ContextEventType.js';
-import Disposable from '../Disposable.js';
-import WebGLPostProcessingPass from './PostProcessingPass.js';
+import {ContextEventType} from '../webgl/ContextEventType.js';
+import {Disposable} from '../Disposable.js';
 import {
   FLOAT,
   UNSIGNED_BYTE,
@@ -11,6 +10,7 @@ import {
   UNSIGNED_SHORT,
   getContext,
 } from '../webgl.js';
+import {WebGLPostProcessingPass} from './PostProcessingPass.js';
 import {clear} from '../obj.js';
 import {
   compose as composeTransform,
@@ -306,7 +306,7 @@ function releaseCanvas(key) {
  *
  * For an example usage of this class, refer to {@link module:ol/renderer/webgl/PointsLayer~WebGLPointsLayerRenderer}.
  */
-class WebGLHelper extends Disposable {
+export class WebGLHelper extends Disposable {
   /**
    * @param {Options} [options] Options.
    */
@@ -1104,5 +1104,3 @@ function getByteSizeFromType(type) {
       return Float32Array.BYTES_PER_ELEMENT;
   }
 }
-
-export default WebGLHelper;

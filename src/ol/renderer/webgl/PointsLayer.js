@@ -1,14 +1,14 @@
 /**
  * @module ol/renderer/webgl/PointsLayer
  */
-import BaseVector from '../../layer/BaseVector.js';
-import VectorEventType from '../../source/VectorEventType.js';
-import ViewHint from '../../ViewHint.js';
-import WebGLArrayBuffer from '../../webgl/Buffer.js';
-import WebGLLayerRenderer from './Layer.js';
-import WebGLRenderTarget from '../../webgl/RenderTarget.js';
 import {ARRAY_BUFFER, DYNAMIC_DRAW, ELEMENT_ARRAY_BUFFER} from '../../webgl.js';
 import {AttributeType, DefaultUniform} from '../../webgl/Helper.js';
+import {BaseVectorLayer as BaseVector} from '../../layer/BaseVector.js';
+import {VectorEventType} from '../../source/VectorEventType.js';
+import {ViewHint} from '../../ViewHint.js';
+import {WebGLArrayBuffer} from '../../webgl/Buffer.js';
+import {WebGLLayerRenderer} from './Layer.js';
+import {WebGLRenderTarget} from '../../webgl/RenderTarget.js';
 import {WebGLWorkerMessageType} from '../../render/webgl/constants.js';
 import {
   apply as applyTransform,
@@ -120,7 +120,7 @@ import {listen, unlistenByKey} from '../../events.js';
  *
  * @api
  */
-class WebGLPointsLayerRenderer extends WebGLLayerRenderer {
+export class WebGLPointsLayerRenderer extends WebGLLayerRenderer {
   /**
    * @param {import("../../layer/Layer.js").default} layer Layer.
    * @param {Options} options Options.
@@ -765,5 +765,3 @@ class WebGLPointsLayerRenderer extends WebGLLayerRenderer {
     super.disposeInternal();
   }
 }
-
-export default WebGLPointsLayerRenderer;

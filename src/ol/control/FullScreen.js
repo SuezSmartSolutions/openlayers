@@ -1,10 +1,10 @@
 /**
  * @module ol/control/FullScreen
  */
-import Control from './Control.js';
-import EventType from '../events/EventType.js';
-import MapProperty from '../MapProperty.js';
 import {CLASS_CONTROL, CLASS_UNSELECTABLE, CLASS_UNSUPPORTED} from '../css.js';
+import {Control} from './Control.js';
+import {EventType} from '../events/EventType.js';
+import {MapProperty} from '../MapProperty.js';
 import {listen, unlistenByKey} from '../events.js';
 import {replaceNode} from '../dom.js';
 
@@ -78,7 +78,7 @@ const FullScreenEventType = {
  * @fires FullScreenEventType#leavefullscreen
  * @api
  */
-class FullScreen extends Control {
+export class FullScreen extends Control {
   /**
    * @param {Options} [options] Options.
    */
@@ -392,5 +392,3 @@ function exitFullScreen(doc) {
     doc['webkitExitFullscreen']();
   }
 }
-
-export default FullScreen;

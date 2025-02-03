@@ -1,7 +1,7 @@
 /**
  * @module ol/proj/epsg3857
  */
-import Projection from './Projection.js';
+import {Projection} from './Projection.js';
 
 /**
  * Radius of WGS84 sphere
@@ -40,7 +40,7 @@ export const MAX_SAFE_Y = RADIUS * Math.log(Math.tan(Math.PI / 2));
  * @classdesc
  * Projection object for web/spherical Mercator (EPSG:3857).
  */
-class EPSG3857Projection extends Projection {
+export class EPSG3857Projection extends Projection {
   /**
    * @param {string} code Code.
    */

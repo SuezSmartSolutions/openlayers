@@ -1,8 +1,8 @@
 /**
  * @module ol/layer/WebGLPoints
  */
-import Layer from './Layer.js';
-import WebGLPointsLayerRenderer from '../renderer/webgl/PointsLayer.js';
+import {Layer} from './Layer.js';
+import {WebGLPointsLayerRenderer} from '../renderer/webgl/PointsLayer.js';
 import {parseLiteralStyle} from '../webgl/ShaderBuilder.js';
 
 /**
@@ -71,7 +71,7 @@ import {parseLiteralStyle} from '../webgl/ShaderBuilder.js';
  * @extends {Layer<VectorSourceType, WebGLPointsLayerRenderer>}
  * @fires import("../render/Event.js").RenderEvent
  */
-class WebGLPointsLayer extends Layer {
+export class WebGLPointsLayer extends Layer {
   /**
    * @param {Options<VectorSourceType>} options Options.
    */
@@ -123,5 +123,3 @@ class WebGLPointsLayer extends Layer {
     this.changed();
   }
 }
-
-export default WebGLPointsLayer;

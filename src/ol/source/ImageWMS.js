@@ -2,10 +2,10 @@
  * @module ol/source/ImageWMS
  */
 
-import EventType from '../events/EventType.js';
 import ImageSource, {defaultImageLoadFunction} from './Image.js';
-import ImageWrapper from '../Image.js';
 import {DEFAULT_VERSION} from './wms.js';
+import {EventType} from '../events/EventType.js';
+import {ImageWrapper} from '../Image.js';
 import {appendParams} from '../uri.js';
 import {assert} from '../asserts.js';
 import {calculateSourceResolution} from '../reproj.js';
@@ -66,7 +66,7 @@ const GETFEATUREINFO_IMAGE_SIZE = [101, 101];
  * @fires module:ol/source/Image.ImageSourceEvent
  * @api
  */
-class ImageWMS extends ImageSource {
+export class ImageWMS extends ImageSource {
   /**
    * @param {Options} [options] ImageWMS options.
    */
@@ -486,5 +486,3 @@ class ImageWMS extends ImageSource {
     this.v13_ = compareVersions(version, '1.3') >= 0;
   }
 }
-
-export default ImageWMS;

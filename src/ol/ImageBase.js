@@ -1,14 +1,14 @@
 /**
  * @module ol/ImageBase
  */
-import EventTarget from './events/Target.js';
-import EventType from './events/EventType.js';
+import {Target as EventTarget} from './events/Target.js';
+import {EventType} from './events/EventType.js';
 import {abstract} from './util.js';
 
 /**
  * @abstract
  */
-class ImageBase extends EventTarget {
+export class ImageBase extends EventTarget {
   /**
    * @param {import("./extent.js").Extent} extent Extent.
    * @param {number|undefined} resolution Resolution.
@@ -94,5 +94,3 @@ class ImageBase extends EventTarget {
     abstract();
   }
 }
-
-export default ImageBase;

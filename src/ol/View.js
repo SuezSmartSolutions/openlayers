@@ -1,9 +1,7 @@
 /**
  * @module ol/View
  */
-import BaseObject from './Object.js';
-import ViewHint from './ViewHint.js';
-import ViewProperty from './ViewProperty.js';
+import {BaseObject} from './Object.js';
 import {DEFAULT_TILE_SIZE} from './tilegrid/common.js';
 import {
   METERS_PER_UNIT,
@@ -16,6 +14,8 @@ import {
   toUserExtent,
 } from './proj.js';
 import {VOID} from './functions.js';
+import {ViewHint} from './ViewHint.js';
+import {ViewProperty} from './ViewProperty.js';
 import {
   add as addCoordinate,
   equals as coordinatesEqual,
@@ -301,7 +301,7 @@ const DEFAULT_MIN_ZOOM = 0;
  *
  * @api
  */
-class View extends BaseObject {
+export class View extends BaseObject {
   /**
    * @param {ViewOptions} [options] View options.
    */
@@ -2135,5 +2135,3 @@ function calculateCenterOn(coordinate, size, position, resolution, rotation) {
 
   return [centerX, centerY];
 }
-
-export default View;

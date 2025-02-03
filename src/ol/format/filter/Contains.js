@@ -1,7 +1,7 @@
 /**
  * @module ol/format/filter/Contains
  */
-import Spatial from './Spatial.js';
+import {Spatial} from './Spatial.js';
 
 /**
  * @classdesc
@@ -9,7 +9,7 @@ import Spatial from './Spatial.js';
  * contains a given geometry.
  * @api
  */
-class Contains extends Spatial {
+export class Contains extends Spatial {
   /**
    * @param {!string} geometryName Geometry name to use.
    * @param {!import("../../geom/Geometry.js").default} geometry Geometry.
@@ -20,5 +20,3 @@ class Contains extends Spatial {
     super('Contains', geometryName, geometry, srsName);
   }
 }
-
-export default Contains;

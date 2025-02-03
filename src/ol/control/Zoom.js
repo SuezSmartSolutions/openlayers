@@ -1,9 +1,9 @@
 /**
  * @module ol/control/Zoom
  */
-import Control from './Control.js';
-import EventType from '../events/EventType.js';
 import {CLASS_CONTROL, CLASS_UNSELECTABLE} from '../css.js';
+import {Control} from './Control.js';
+import {EventType} from '../events/EventType.js';
 import {easeOut} from '../easing.js';
 
 /**
@@ -31,7 +31,7 @@ import {easeOut} from '../easing.js';
  *
  * @api
  */
-class Zoom extends Control {
+export class Zoom extends Control {
   /**
    * @param {Options} [options] Zoom options.
    */
@@ -156,5 +156,3 @@ class Zoom extends Control {
     }
   }
 }
-
-export default Zoom;

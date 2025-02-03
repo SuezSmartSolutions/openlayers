@@ -1,14 +1,14 @@
 /**
  * @module ol/MapEvent
  */
-import Event from './events/Event.js';
+import {BaseEvent as Event} from './events/Event.js';
 
 /**
  * @classdesc
  * Events emitted as map events are instances of this type.
  * See {@link module:ol/Map~Map} for which events trigger a map event.
  */
-class MapEvent extends Event {
+export class MapEvent extends Event {
   /**
    * @param {string} type Event type.
    * @param {import("./Map.js").default} map Map.
@@ -32,5 +32,3 @@ class MapEvent extends Event {
     this.frameState = frameState !== undefined ? frameState : null;
   }
 }
-
-export default MapEvent;

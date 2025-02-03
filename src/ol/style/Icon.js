@@ -1,9 +1,9 @@
 /**
  * @module ol/style/Icon
  */
-import EventType from '../events/EventType.js';
-import ImageState from '../ImageState.js';
-import ImageStyle from './Image.js';
+import {EventType} from '../events/EventType.js';
+import {ImageState} from '../ImageState.js';
+import {ImageStyle} from './Image.js';
 import {asArray} from '../color.js';
 import {assert} from '../asserts.js';
 import {get as getIconImage} from './IconImage.js';
@@ -61,7 +61,7 @@ import {getUid} from '../util.js';
  * Set icon style for vector features.
  * @api
  */
-class Icon extends ImageStyle {
+export class Icon extends ImageStyle {
   /**
    * @param {Options} [options] Options.
    */
@@ -443,5 +443,3 @@ class Icon extends ImageStyle {
     this.iconImage_.removeEventListener(EventType.CHANGE, listener);
   }
 }
-
-export default Icon;

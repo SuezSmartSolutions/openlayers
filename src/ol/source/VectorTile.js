@@ -2,14 +2,14 @@
  * @module ol/source/VectorTile
  */
 
-import EventType from '../events/EventType.js';
-import Tile from '../VectorTile.js';
-import TileCache from '../TileCache.js';
-import TileGrid from '../tilegrid/TileGrid.js';
-import TileState from '../TileState.js';
-import UrlTile from './UrlTile.js';
-import VectorRenderTile from '../VectorRenderTile.js';
 import {DEFAULT_MAX_ZOOM} from '../tilegrid/common.js';
+import {EventType} from '../events/EventType.js';
+import {VectorTile as Tile} from '../VectorTile.js';
+import {TileCache} from '../TileCache.js';
+import {TileGrid} from '../tilegrid/TileGrid.js';
+import {TileState} from '../TileState.js';
+import {UrlTile} from './UrlTile.js';
+import {VectorRenderTile} from '../VectorRenderTile.js';
 import {
   buffer as bufferExtent,
   getIntersection,
@@ -99,7 +99,7 @@ import {toSize} from '../size.js';
  * @fires import("./Tile.js").TileSourceEvent
  * @api
  */
-class VectorTile extends UrlTile {
+export class VectorTile extends UrlTile {
   /**
    * @param {!Options} options Vector tile options.
    */
@@ -488,8 +488,6 @@ class VectorTile extends UrlTile {
       this.getTileCacheForProjection(projection).highWaterMark;
   }
 }
-
-export default VectorTile;
 
 /**
  * Sets the loader for a tile.

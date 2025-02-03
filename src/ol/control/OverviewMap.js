@@ -1,17 +1,17 @@
 /**
  * @module ol/control/OverviewMap
  */
-import Collection from '../Collection.js';
-import Control from './Control.js';
-import EventType from '../events/EventType.js';
-import Map from '../Map.js';
-import MapEventType from '../MapEventType.js';
-import MapProperty from '../MapProperty.js';
-import ObjectEventType from '../ObjectEventType.js';
-import Overlay from '../Overlay.js';
-import View from '../View.js';
-import ViewProperty from '../ViewProperty.js';
 import {CLASS_COLLAPSED, CLASS_CONTROL, CLASS_UNSELECTABLE} from '../css.js';
+import {Collection} from '../Collection.js';
+import {Control} from './Control.js';
+import {EventType} from '../events/EventType.js';
+import {Map} from '../Map.js';
+import {MapEventType} from '../MapEventType.js';
+import {MapProperty} from '../MapProperty.js';
+import {ObjectEventType} from '../ObjectEventType.js';
+import {Overlay} from '../Overlay.js';
+import {View} from '../View.js';
+import {ViewProperty} from '../ViewProperty.js';
 import {
   containsExtent,
   equals as equalsExtent,
@@ -64,7 +64,7 @@ const MIN_RATIO = 0.1;
  *
  * @api
  */
-class OverviewMap extends Control {
+export class OverviewMap extends Control {
   /**
    * @param {Options} [options] OverviewMap options.
    */
@@ -675,5 +675,3 @@ class OverviewMap extends Control {
     this.updateBox_();
   }
 }
-
-export default OverviewMap;

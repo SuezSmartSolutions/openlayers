@@ -1,7 +1,7 @@
 /**
  * @module ol/style/Text
  */
-import Fill from './Fill.js';
+import {Fill} from './Fill.js';
 import {toSize} from '../size.js';
 
 /**
@@ -67,7 +67,7 @@ const DEFAULT_FILL_COLOR = '#333';
  * Set text style for vector features.
  * @api
  */
-class Text {
+export class Text {
   /**
    * @param {Options} [options] Options.
    */
@@ -582,5 +582,3 @@ class Text {
     this.padding_ = padding;
   }
 }
-
-export default Text;

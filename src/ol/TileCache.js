@@ -1,10 +1,10 @@
 /**
  * @module ol/TileCache
  */
-import LRUCache from './structs/LRUCache.js';
+import {LRUCache} from './structs/LRUCache.js';
 import {fromKey, getKey} from './tilecoord.js';
 
-class TileCache extends LRUCache {
+export class TileCache extends LRUCache {
   clear() {
     while (this.getCount() > 0) {
       this.pop().release();
@@ -46,5 +46,3 @@ class TileCache extends LRUCache {
     );
   }
 }
-
-export default TileCache;

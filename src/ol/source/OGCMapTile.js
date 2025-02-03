@@ -1,7 +1,7 @@
 /**
  * @module ol/source/OGCMapTile
  */
-import TileImage from './TileImage.js';
+import {TileImage} from './TileImage.js';
 import {getTileSetInfo} from './ogcTileUtil.js';
 
 /**
@@ -40,7 +40,7 @@ import {getTileSetInfo} from './ogcTileUtil.js';
  * The service must conform to at least the core (http://www.opengis.net/spec/ogcapi-tiles-1/1.0/conf/core)
  * and tileset (http://www.opengis.net/spec/ogcapi-tiles-1/1.0/conf/tileset) conformance classes.
  */
-class OGCMapTile extends TileImage {
+export class OGCMapTile extends TileImage {
   /**
    * @param {Options} options OGC map tile options.
    */
@@ -89,5 +89,3 @@ class OGCMapTile extends TileImage {
     this.setState('error');
   }
 }
-
-export default OGCMapTile;

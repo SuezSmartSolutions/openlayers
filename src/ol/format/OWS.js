@@ -1,7 +1,7 @@
 /**
  * @module ol/format/OWS
  */
-import XML from './XML.js';
+import {XML} from './XML.js';
 import {
   makeObjectPropertyPusher,
   makeObjectPropertySetter,
@@ -28,7 +28,7 @@ const PARSERS = makeStructureNS(NAMESPACE_URIS, {
   'OperationsMetadata': makeObjectPropertySetter(readOperationsMetadata),
 });
 
-class OWS extends XML {
+export class OWS extends XML {
   constructor() {
     super();
   }
@@ -321,5 +321,3 @@ function readServiceProvider(node, objectStack) {
 function readValue(node, objectStack) {
   return readString(node);
 }
-
-export default OWS;

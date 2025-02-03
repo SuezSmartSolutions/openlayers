@@ -1,7 +1,7 @@
 /**
  * @module ol/renderer/vector
  */
-import ImageState from '../ImageState.js';
+import {ImageState} from '../ImageState.js';
 import {getUid} from '../util.js';
 
 /**

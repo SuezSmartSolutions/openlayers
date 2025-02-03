@@ -4,15 +4,15 @@
 // FIXME Envelopes should not be treated as geometries! readEnvelope_ is part
 // of GEOMETRY_PARSERS_ and methods using GEOMETRY_PARSERS_ do not expect
 // envelopes/extents, only geometries!
-import Feature from '../Feature.js';
-import LineString from '../geom/LineString.js';
-import LinearRing from '../geom/LinearRing.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import MultiPoint from '../geom/MultiPoint.js';
-import MultiPolygon from '../geom/MultiPolygon.js';
-import Point from '../geom/Point.js';
-import Polygon from '../geom/Polygon.js';
-import XMLFeature from './XMLFeature.js';
+import {Feature} from '../Feature.js';
+import {LineString} from '../geom/LineString.js';
+import {LinearRing} from '../geom/LinearRing.js';
+import {MultiLineString} from '../geom/MultiLineString.js';
+import {MultiPoint} from '../geom/MultiPoint.js';
+import {MultiPolygon} from '../geom/MultiPolygon.js';
+import {Point} from '../geom/Point.js';
+import {Polygon} from '../geom/Polygon.js';
+import {XMLFeature} from './XMLFeature.js';
 import {extend} from '../array.js';
 import {
   getAllTextContent,
@@ -86,7 +86,7 @@ const ONLY_WHITESPACE_RE = /^\s*$/;
  * @abstract
  * @api
  */
-class GMLBase extends XMLFeature {
+export class GMLBase extends XMLFeature {
   /**
    * @param {Options} [options] Optional configuration object.
    */
@@ -685,5 +685,3 @@ GMLBase.prototype.RING_PARSERS = {
     'LinearRing': makeReplacer(GMLBase.prototype.readFlatLinearRing),
   },
 };
-
-export default GMLBase;

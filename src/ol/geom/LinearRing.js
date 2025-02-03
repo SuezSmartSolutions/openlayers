@@ -1,7 +1,7 @@
 /**
  * @module ol/geom/LinearRing
  */
-import SimpleGeometry from './SimpleGeometry.js';
+import {SimpleGeometry} from './SimpleGeometry.js';
 import {assignClosestPoint, maxSquaredDelta} from './flat/closest.js';
 import {closestSquaredDistanceXY} from '../extent.js';
 import {deflateCoordinates} from './flat/deflate.js';
@@ -16,7 +16,7 @@ import {linearRing as linearRingArea} from './flat/area.js';
  *
  * @api
  */
-class LinearRing extends SimpleGeometry {
+export class LinearRing extends SimpleGeometry {
   /**
    * @param {Array<import("../coordinate.js").Coordinate>|Array<number>} coordinates Coordinates.
    *     For internal use, flat coordinates in combination with `layout` are also accepted.
@@ -184,5 +184,3 @@ class LinearRing extends SimpleGeometry {
     this.changed();
   }
 }
-
-export default LinearRing;

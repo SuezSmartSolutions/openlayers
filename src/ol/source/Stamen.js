@@ -2,8 +2,8 @@
  * @module ol/source/Stamen
  */
 
-import XYZ from './XYZ.js';
 import {ATTRIBUTION as OSM_ATTRIBUTION} from './OSM.js';
+import {XYZ} from './XYZ.js';
 
 /**
  * @const
@@ -115,7 +115,7 @@ const ProviderConfig = {
  * Layer source for the Stamen tile server.
  * @api
  */
-class Stamen extends XYZ {
+export class Stamen extends XYZ {
   /**
    * @param {Options} options Stamen options.
    */
@@ -153,5 +153,3 @@ class Stamen extends XYZ {
     });
   }
 }
-
-export default Stamen;

@@ -1,10 +1,10 @@
 /**
  * @module ol/render/canvas/ImageBuilder
  */
-import CanvasBuilder from './Builder.js';
-import CanvasInstruction from './Instruction.js';
+import {CanvasBuilder} from './Builder.js';
+import {Instruction as CanvasInstruction} from './Instruction.js';
 
-class CanvasImageBuilder extends CanvasBuilder {
+export class CanvasImageBuilder extends CanvasBuilder {
   /**
    * @param {number} tolerance Tolerance.
    * @param {import("../../extent.js").Extent} maxExtent Maximum extent.
@@ -267,5 +267,3 @@ class CanvasImageBuilder extends CanvasBuilder {
     this.declutterImageWithText_ = sharedData;
   }
 }
-
-export default CanvasImageBuilder;

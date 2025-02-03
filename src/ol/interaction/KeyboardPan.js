@@ -1,9 +1,9 @@
 /**
  * @module ol/interaction/KeyboardPan
  */
-import EventType from '../events/EventType.js';
 import Interaction, {pan} from './Interaction.js';
-import KeyCode from '../events/KeyCode.js';
+import {EventType} from '../events/EventType.js';
+import {KeyCode} from '../events/KeyCode.js';
 import {noModifierKeys, targetNotEditable} from '../events/condition.js';
 import {rotate as rotateCoordinate} from '../coordinate.js';
 
@@ -32,7 +32,7 @@ import {rotate as rotateCoordinate} from '../coordinate.js';
  * See also {@link module:ol/interaction/KeyboardZoom~KeyboardZoom}.
  * @api
  */
-class KeyboardPan extends Interaction {
+export class KeyboardPan extends Interaction {
   /**
    * @param {Options} [options] Options.
    */
@@ -121,5 +121,3 @@ class KeyboardPan extends Interaction {
     return !stopEvent;
   }
 }
-
-export default KeyboardPan;

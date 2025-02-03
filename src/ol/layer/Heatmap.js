@@ -1,8 +1,8 @@
 /**
  * @module ol/layer/Heatmap
  */
-import BaseVector from './BaseVector.js';
-import WebGLPointsLayerRenderer from '../renderer/webgl/PointsLayer.js';
+import {BaseVectorLayer as BaseVector} from './BaseVector.js';
+import {WebGLPointsLayerRenderer} from '../renderer/webgl/PointsLayer.js';
 import {clamp} from '../math.js';
 import {createCanvasContext2D} from '../dom.js';
 
@@ -63,7 +63,7 @@ const DEFAULT_GRADIENT = ['#00f', '#0ff', '#0f0', '#ff0', '#f00'];
  * @extends {BaseVector<import("../source/Vector.js").default, WebGLPointsLayerRenderer>}
  * @api
  */
-class Heatmap extends BaseVector {
+export class Heatmap extends BaseVector {
   /**
    * @param {Options} [options] Options.
    */
@@ -330,5 +330,3 @@ function createGradient(colors) {
 
   return context.canvas;
 }
-
-export default Heatmap;

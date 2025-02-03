@@ -1,13 +1,13 @@
 /**
  * @module ol/interaction/Select
  */
-import Collection from '../Collection.js';
-import CollectionEventType from '../CollectionEventType.js';
-import Event from '../events/Event.js';
-import Feature from '../Feature.js';
-import Interaction from './Interaction.js';
-import VectorLayer from '../layer/Vector.js';
+import {Collection} from '../Collection.js';
+import {CollectionEventType} from '../CollectionEventType.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {Feature} from '../Feature.js';
+import {Interaction} from './Interaction.js';
 import {TRUE} from '../functions.js';
+import {VectorLayer} from '../layer/Vector.js';
 import {clear} from '../obj.js';
 import {createEditingStyle} from '../style/Style.js';
 import {extend} from '../array.js';
@@ -156,7 +156,7 @@ const originalFeatureStyles = {};
  * @fires SelectEvent
  * @api
  */
-class Select extends Interaction {
+export class Select extends Interaction {
   /**
    * @param {Options} [options] Options.
    */
@@ -587,5 +587,3 @@ function getDefaultStyleFunction() {
     return styles[feature.getGeometry().getType()];
   };
 }
-
-export default Select;

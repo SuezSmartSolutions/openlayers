@@ -5,7 +5,7 @@
 /**
  * @enum {string}
  */
-export default {
+export const VectorEventType = {
   /**
    * Triggered when a feature is added to the source.
    * @event module:ol/source/Vector.VectorSourceEvent#addfeature

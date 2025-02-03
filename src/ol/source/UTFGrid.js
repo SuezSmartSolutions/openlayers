@@ -2,10 +2,10 @@
  * @module ol/source/UTFGrid
  */
 
-import EventType from '../events/EventType.js';
-import Tile from '../Tile.js';
-import TileSource from './Tile.js';
-import TileState from '../TileState.js';
+import {EventType} from '../events/EventType.js';
+import {Tile} from '../Tile.js';
+import {TileSource} from './Tile.js';
+import {TileState} from '../TileState.js';
 import {applyTransform, intersects} from '../extent.js';
 import {assert} from '../asserts.js';
 import {createFromTemplates, nullTileUrlFunction} from '../tileurlfunction.js';
@@ -277,7 +277,7 @@ export class CustomTile extends Tile {
  * Layer source for UTFGrid interaction data loaded from TileJSON format.
  * @api
  */
-class UTFGrid extends TileSource {
+export class UTFGrid extends TileSource {
   /**
    * @param {Options} options Source options.
    */
@@ -517,5 +517,3 @@ class UTFGrid extends TileSource {
     }
   }
 }
-
-export default UTFGrid;

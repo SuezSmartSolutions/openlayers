@@ -2,9 +2,9 @@
  * @module ol/style/IconImage
  */
 
-import EventTarget from '../events/Target.js';
-import EventType from '../events/EventType.js';
-import ImageState from '../ImageState.js';
+import {Target as EventTarget} from '../events/Target.js';
+import {EventType} from '../events/EventType.js';
+import {ImageState} from '../ImageState.js';
 import {asString} from '../color.js';
 import {createCanvasContext2D} from '../dom.js';
 import {shared as iconImageCache} from './IconImageCache.js';
@@ -15,7 +15,7 @@ import {listenImage} from '../Image.js';
  */
 let taintedTestContext = null;
 
-class IconImage extends EventTarget {
+export class IconImage extends EventTarget {
   /**
    * @param {HTMLImageElement|HTMLCanvasElement} image Image.
    * @param {string|undefined} src Src.
@@ -299,5 +299,3 @@ export function get(image, src, size, crossOrigin, imageState, color) {
   }
   return iconImage;
 }
-
-export default IconImage;

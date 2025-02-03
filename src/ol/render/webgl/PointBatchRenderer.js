@@ -2,7 +2,7 @@
  * @module ol/render/webgl/PointBatchRenderer
  */
 
-import AbstractBatchRenderer from './BatchRenderer.js';
+import {AbstractBatchRenderer} from './BatchRenderer.js';
 import {AttributeType} from '../../webgl/Helper.js';
 import {apply as applyTransform} from '../../transform.js';
 
@@ -16,7 +16,7 @@ export const Attributes = {
   INDEX: 'a_index',
 };
 
-class PointBatchRenderer extends AbstractBatchRenderer {
+export class PointBatchRenderer extends AbstractBatchRenderer {
   /**
    * @param {import("../../webgl/Helper.js").default} helper WebGL helper instance
    * @param {Worker} worker WebGL worker instance
@@ -93,5 +93,3 @@ class PointBatchRenderer extends AbstractBatchRenderer {
     }
   }
 }
-
-export default PointBatchRenderer;

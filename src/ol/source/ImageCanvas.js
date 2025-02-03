@@ -2,8 +2,8 @@
  * @module ol/source/ImageCanvas
  */
 
-import ImageCanvas from '../ImageCanvas.js';
-import ImageSource from './Image.js';
+import {ImageCanvas} from '../ImageCanvas.js';
+import {ImageSource} from './Image.js';
 import {
   containsExtent,
   getHeight,
@@ -51,7 +51,7 @@ import {
  * Base class for image sources where a canvas element is the image.
  * @api
  */
-class ImageCanvasSource extends ImageSource {
+export class ImageCanvasSource extends ImageSource {
   /**
    * @param {Options} [options] ImageCanvas options.
    */
@@ -135,5 +135,3 @@ class ImageCanvasSource extends ImageSource {
     return canvas;
   }
 }
-
-export default ImageCanvasSource;

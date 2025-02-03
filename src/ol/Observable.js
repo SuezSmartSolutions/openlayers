@@ -1,8 +1,8 @@
 /**
  * @module ol/Observable
  */
-import EventTarget from './events/Target.js';
-import EventType from './events/EventType.js';
+import {Target as EventTarget} from './events/Target.js';
+import {EventType} from './events/EventType.js';
 import {listen, listenOnce, unlistenByKey} from './events.js';
 
 /***
@@ -38,7 +38,7 @@ import {listen, listenOnce, unlistenByKey} from './events.js';
  * @fires import("./events/Event.js").default
  * @api
  */
-class Observable extends EventTarget {
+export class Observable extends EventTarget {
   constructor() {
     super();
 
@@ -188,5 +188,3 @@ export function unByKey(key) {
     unlistenByKey(/** @type {import("./events.js").EventsKey} */ (key));
   }
 }
-
-export default Observable;

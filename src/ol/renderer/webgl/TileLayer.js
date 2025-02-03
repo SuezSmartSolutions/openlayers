@@ -1,14 +1,14 @@
 /**
  * @module ol/renderer/webgl/TileLayer
  */
-import LRUCache from '../../structs/LRUCache.js';
-import TileRange from '../../TileRange.js';
-import TileState from '../../TileState.js';
-import TileTexture from '../../webgl/TileTexture.js';
-import WebGLArrayBuffer from '../../webgl/Buffer.js';
-import WebGLLayerRenderer from './Layer.js';
 import {AttributeType} from '../../webgl/Helper.js';
 import {ELEMENT_ARRAY_BUFFER, STATIC_DRAW} from '../../webgl.js';
+import {LRUCache} from '../../structs/LRUCache.js';
+import {TileRange} from '../../TileRange.js';
+import {TileState} from '../../TileState.js';
+import {TileTexture} from '../../webgl/TileTexture.js';
+import {WebGLArrayBuffer} from '../../webgl/Buffer.js';
+import {WebGLLayerRenderer} from './Layer.js';
 import {
   apply as applyTransform,
   create as createTransform,
@@ -145,7 +145,7 @@ function getCacheKey(source, tileCoord) {
  * @extends {WebGLLayerRenderer<LayerType>}
  * @api
  */
-class WebGLTileLayerRenderer extends WebGLLayerRenderer {
+export class WebGLTileLayerRenderer extends WebGLLayerRenderer {
   /**
    * @param {LayerType} tileLayer Tile layer.
    * @param {Options} options Options.
@@ -847,5 +847,3 @@ class WebGLTileLayerRenderer extends WebGLLayerRenderer {
     delete this.frameState_;
   }
 }
-
-export default WebGLTileLayerRenderer;

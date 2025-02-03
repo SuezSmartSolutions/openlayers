@@ -3,10 +3,10 @@
  */
 import {ERROR_THRESHOLD} from './common.js';
 
-import EventType from '../events/EventType.js';
-import Tile from '../Tile.js';
-import TileState from '../TileState.js';
-import Triangulation from './Triangulation.js';
+import {EventType} from '../events/EventType.js';
+import {Tile} from '../Tile.js';
+import {TileState} from '../TileState.js';
+import {Triangulation} from './Triangulation.js';
 import {
   calculateSourceExtentResolution,
   canvasPool,
@@ -27,7 +27,7 @@ import {releaseCanvas} from '../dom.js';
  * See {@link module:ol/source/TileImage~TileImage}.
  *
  */
-class ReprojTile extends Tile {
+export class ReprojTile extends Tile {
   /**
    * @param {import("../proj/Projection.js").default} sourceProj Source projection.
    * @param {import("../tilegrid/TileGrid.js").default} sourceTileGrid Source tile grid.
@@ -364,5 +364,3 @@ class ReprojTile extends Tile {
     super.release();
   }
 }
-
-export default ReprojTile;

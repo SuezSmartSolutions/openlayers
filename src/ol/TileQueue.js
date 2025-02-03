@@ -1,15 +1,15 @@
 /**
  * @module ol/TileQueue
  */
-import EventType from './events/EventType.js';
 import PriorityQueue, {DROP} from './structs/PriorityQueue.js';
-import TileState from './TileState.js';
+import {EventType} from './events/EventType.js';
+import {TileState} from './TileState.js';
 
 /**
  * @typedef {function(import("./Tile.js").default, string, import("./coordinate.js").Coordinate, number): number} PriorityFunction
  */
 
-class TileQueue extends PriorityQueue {
+export class TileQueue extends PriorityQueue {
   /**
    * @param {PriorityFunction} tilePriorityFunction Tile priority function.
    * @param {function(): ?} tileChangeCallback Function called on each tile change event.
@@ -122,8 +122,6 @@ class TileQueue extends PriorityQueue {
     }
   }
 }
-
-export default TileQueue;
 
 /**
  * @param {import('./Map.js').FrameState} frameState Frame state.

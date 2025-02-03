@@ -1,13 +1,13 @@
 /**
  * @module ol/MapBrowserEventType
  */
-import EventType from './events/EventType.js';
+import {EventType} from './events/EventType.js';
 
 /**
  * Constants for event names.
  * @enum {string}
  */
-export default {
+export const MapBrowserEventType = {
   /**
    * A true single click with no dragging and no double click. Note that this
    * event is delayed by 250 ms to ensure that it is not a double click.

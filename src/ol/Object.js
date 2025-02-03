@@ -1,9 +1,9 @@
 /**
  * @module ol/Object
  */
-import Event from './events/Event.js';
-import ObjectEventType from './ObjectEventType.js';
-import Observable from './Observable.js';
+import {BaseEvent as Event} from './events/Event.js';
+import {ObjectEventType} from './ObjectEventType.js';
+import {Observable} from './Observable.js';
 import {getUid} from './util.js';
 import {isEmpty} from './obj.js';
 
@@ -87,7 +87,7 @@ export class ObjectEvent extends Event {
  * @fires ObjectEvent
  * @api
  */
-class BaseObject extends Observable {
+export class BaseObject extends Observable {
   /**
    * @param {Object<string, *>} [values] An object with key-value pairs.
    */
@@ -261,5 +261,3 @@ class BaseObject extends Observable {
     }
   }
 }
-
-export default BaseObject;

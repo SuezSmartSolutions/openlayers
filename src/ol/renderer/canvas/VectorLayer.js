@@ -1,15 +1,15 @@
 /**
  * @module ol/renderer/canvas/VectorLayer
  */
-import CanvasBuilderGroup from '../../render/canvas/BuilderGroup.js';
-import CanvasLayerRenderer, {canvasPool} from './Layer.js';
-import ExecutorGroup from '../../render/canvas/ExecutorGroup.js';
-import ViewHint from '../../ViewHint.js';
+import {BuilderGroup as CanvasBuilderGroup} from '../../render/canvas/BuilderGroup.js';
+import {CanvasLayerRenderer, canvasPool} from './Layer.js';
+import {ExecutorGroup} from '../../render/canvas/ExecutorGroup.js';
 import {
   HIT_DETECT_RESOLUTION,
   createHitDetectionImageData,
   hitDetect,
 } from '../../render/canvas/hitdetect.js';
+import {ViewHint} from '../../ViewHint.js';
 import {
   apply,
   makeInverse,
@@ -47,7 +47,7 @@ import {wrapX as wrapCoordinateX} from '../../coordinate.js';
  * Canvas renderer for vector layers.
  * @api
  */
-class CanvasVectorLayerRenderer extends CanvasLayerRenderer {
+export class CanvasVectorLayerRenderer extends CanvasLayerRenderer {
   /**
    * @param {import("../../layer/BaseVector.js").default} vectorLayer Vector layer.
    */
@@ -796,5 +796,3 @@ class CanvasVectorLayerRenderer extends CanvasLayerRenderer {
     return loading;
   }
 }
-
-export default CanvasVectorLayerRenderer;

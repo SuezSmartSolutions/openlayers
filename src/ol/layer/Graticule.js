@@ -1,17 +1,17 @@
 /**
  * @module ol/layer/Graticule
  */
-import Collection from '../Collection.js';
-import EventType from '../render/EventType.js';
-import Feature from '../Feature.js';
-import Fill from '../style/Fill.js';
-import LineString from '../geom/LineString.js';
-import Point from '../geom/Point.js';
-import Stroke from '../style/Stroke.js';
-import Style from '../style/Style.js';
-import Text from '../style/Text.js';
-import VectorLayer from './Vector.js';
-import VectorSource from '../source/Vector.js';
+import {Collection} from '../Collection.js';
+import {RenderEventType as EventType} from '../render/EventType.js';
+import {Feature} from '../Feature.js';
+import {Fill} from '../style/Fill.js';
+import {LineString} from '../geom/LineString.js';
+import {Point} from '../geom/Point.js';
+import {Stroke} from '../style/Stroke.js';
+import {Style} from '../style/Style.js';
+import {Text} from '../style/Text.js';
+import {VectorLayer} from './Vector.js';
+import {VectorSource} from '../source/Vector.js';
 import {
   applyTransform,
   approximatelyEquals,
@@ -181,7 +181,7 @@ const INTERVALS = [
  * @extends {VectorLayer<import("../source/Vector.js").default>}
  * @api
  */
-class Graticule extends VectorLayer {
+export class Graticule extends VectorLayer {
   /**
    * @param {Options} [options] Options.
    */
@@ -1254,5 +1254,3 @@ class Graticule extends VectorLayer {
     this.projection_ = projection;
   }
 }
-
-export default Graticule;

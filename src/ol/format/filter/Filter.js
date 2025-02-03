@@ -9,7 +9,7 @@
  *
  * @abstract
  */
-class Filter {
+export class Filter {
   /**
    * @param {!string} tagName The XML tag name for this filter.
    */
@@ -29,5 +29,3 @@ class Filter {
     return this.tagName_;
   }
 }
-
-export default Filter;

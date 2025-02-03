@@ -21,7 +21,7 @@ import {toSize} from '../size.js';
  * @abstract
  * @api
  */
-class ImageStyle {
+export class ImageStyle {
   /**
    * @param {Options} options Options.
    */
@@ -293,5 +293,3 @@ class ImageStyle {
     abstract();
   }
 }
-
-export default ImageStyle;

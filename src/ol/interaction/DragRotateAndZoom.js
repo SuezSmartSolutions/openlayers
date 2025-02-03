@@ -1,7 +1,7 @@
 /**
  * @module ol/interaction/DragRotateAndZoom
  */
-import PointerInteraction from './Pointer.js';
+import {PointerInteraction} from './Pointer.js';
 import {mouseOnly, shiftKeyOnly} from '../events/condition.js';
 
 /**
@@ -24,7 +24,7 @@ import {mouseOnly, shiftKeyOnly} from '../events/condition.js';
  * And this interaction is not included in the default interactions.
  * @api
  */
-class DragRotateAndZoom extends PointerInteraction {
+export class DragRotateAndZoom extends PointerInteraction {
   /**
    * @param {Options} [options] Options.
    */
@@ -133,5 +133,3 @@ class DragRotateAndZoom extends PointerInteraction {
     }
   }
 }
-
-export default DragRotateAndZoom;

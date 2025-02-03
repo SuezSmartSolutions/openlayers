@@ -2,10 +2,10 @@
  * @module ol/source/IIIF
  */
 
-import TileGrid from '../tilegrid/TileGrid.js';
-import TileImage from './TileImage.js';
 import {CustomTile} from './Zoomify.js';
 import {DEFAULT_TILE_SIZE} from '../tilegrid/common.js';
+import {TileGrid} from '../tilegrid/TileGrid.js';
+import {TileImage} from './TileImage.js';
 import {Versions} from '../format/IIIFInfo.js';
 import {assert} from '../asserts.js';
 import {getTopLeft} from '../extent.js';
@@ -57,7 +57,7 @@ function formatPercentage(percentage) {
  * Layer source for IIIF Image API services.
  * @api
  */
-class IIIF extends TileImage {
+export class IIIF extends TileImage {
   /**
    * @param {Options} [options] Tile source options. Use {@link import("../format/IIIFInfo.js").IIIFInfo}
    * to parse Image API service information responses into constructor options.
@@ -350,5 +350,3 @@ class IIIF extends TileImage {
     this.zDirection = partialOptions.zDirection;
   }
 }
-
-export default IIIF;

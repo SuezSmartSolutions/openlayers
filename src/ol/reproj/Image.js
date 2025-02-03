@@ -3,10 +3,10 @@
  */
 import {ERROR_THRESHOLD} from './common.js';
 
-import EventType from '../events/EventType.js';
-import ImageBase from '../ImageBase.js';
-import ImageState from '../ImageState.js';
-import Triangulation from './Triangulation.js';
+import {EventType} from '../events/EventType.js';
+import {ImageBase} from '../ImageBase.js';
+import {ImageState} from '../ImageState.js';
+import {Triangulation} from './Triangulation.js';
 import {
   calculateSourceResolution,
   render as renderReprojected,
@@ -23,7 +23,7 @@ import {listen, unlistenByKey} from '../events.js';
  * Class encapsulating single reprojected image.
  * See {@link module:ol/source/Image~ImageSource}.
  */
-class ReprojImage extends ImageBase {
+export class ReprojImage extends ImageBase {
   /**
    * @param {import("../proj/Projection.js").default} sourceProj Source projection (of the data).
    * @param {import("../proj/Projection.js").default} targetProj Target projection.
@@ -240,5 +240,3 @@ class ReprojImage extends ImageBase {
     this.sourceListenerKey_ = null;
   }
 }
-
-export default ReprojImage;

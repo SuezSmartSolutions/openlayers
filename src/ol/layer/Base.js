@@ -1,8 +1,8 @@
 /**
  * @module ol/layer/Base
  */
-import BaseObject from '../Object.js';
-import LayerProperty from './Property.js';
+import {BaseObject} from '../Object.js';
+import {LayerProperty} from './Property.js';
 import {abstract} from '../util.js';
 import {assert} from '../asserts.js';
 import {clamp} from '../math.js';
@@ -60,7 +60,7 @@ import {clamp} from '../math.js';
  *
  * @api
  */
-class BaseLayer extends BaseObject {
+export class BaseLayer extends BaseObject {
   /**
    * @param {Options} options Layer options.
    */
@@ -393,5 +393,3 @@ class BaseLayer extends BaseObject {
     super.disposeInternal();
   }
 }
-
-export default BaseLayer;

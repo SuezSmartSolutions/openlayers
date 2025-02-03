@@ -46,7 +46,7 @@ const MULTIGEOMETRY_TO_MEMBER_NODENAME = {
  *
  * @api
  */
-class GML2 extends GMLBase {
+export class GML2 extends GMLBase {
   /**
    * @param {import("./GMLBase.js").Options} [options] Optional configuration object.
    */
@@ -780,5 +780,3 @@ GML2.prototype.ENVELOPE_SERIALIZERS = {
     'upperCorner': makeChildAppender(writeStringTextNode),
   },
 };
-
-export default GML2;

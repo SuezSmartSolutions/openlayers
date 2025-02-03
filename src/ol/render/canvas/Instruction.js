@@ -5,7 +5,7 @@
 /**
  * @enum {number}
  */
-const Instruction = {
+export const Instruction = {
   BEGIN_GEOMETRY: 0,
   BEGIN_PATH: 1,
   CIRCLE: 2,
@@ -40,5 +40,3 @@ export const beginPathInstruction = [Instruction.BEGIN_PATH];
  * @type {Array<Instruction>}
  */
 export const closePathInstruction = [Instruction.CLOSE_PATH];
-
-export default Instruction;

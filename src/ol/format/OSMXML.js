@@ -2,11 +2,11 @@
  * @module ol/format/OSMXML
  */
 // FIXME add typedef for stack state objects
-import Feature from '../Feature.js';
-import LineString from '../geom/LineString.js';
-import Point from '../geom/Point.js';
-import Polygon from '../geom/Polygon.js';
-import XMLFeature from './XMLFeature.js';
+import {Feature} from '../Feature.js';
+import {LineString} from '../geom/LineString.js';
+import {Point} from '../geom/Point.js';
+import {Polygon} from '../geom/Polygon.js';
+import {XMLFeature} from './XMLFeature.js';
 import {extend} from '../array.js';
 import {get as getProjection} from '../proj.js';
 import {isEmpty} from '../obj.js';
@@ -46,7 +46,7 @@ const PARSERS = makeStructureNS(NAMESPACE_URIS, {
  *
  * @api
  */
-class OSMXML extends XMLFeature {
+export class OSMXML extends XMLFeature {
   constructor() {
     super();
 
@@ -192,5 +192,3 @@ function readTag(node, objectStack) {
   const values = /** @type {Object} */ (objectStack[objectStack.length - 1]);
   values.tags[node.getAttribute('k')] = node.getAttribute('v');
 }
-
-export default OSMXML;

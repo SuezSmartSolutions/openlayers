@@ -1,12 +1,11 @@
 /**
  * @module ol/format/GML3
  */
-import GML2 from './GML2.js';
 import GMLBase, {GMLNS} from './GMLBase.js';
-import LineString from '../geom/LineString.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import MultiPolygon from '../geom/MultiPolygon.js';
-import Polygon from '../geom/Polygon.js';
+import {GML2} from './GML2.js';
+import {LineString} from '../geom/LineString.js';
+import {MultiLineString} from '../geom/MultiLineString.js';
+import {MultiPolygon} from '../geom/MultiPolygon.js';
 import {
   OBJECT_PROPERTY_NODE_FACTORY,
   XML_SCHEMA_INSTANCE_URI,
@@ -21,6 +20,7 @@ import {
   pushParseAndPop,
   pushSerializeAndPop,
 } from '../xml.js';
+import {Polygon} from '../geom/Polygon.js';
 import {createOrUpdate} from '../extent.js';
 import {extend} from '../array.js';
 import {get as getProjection} from '../proj.js';
@@ -59,7 +59,7 @@ const MULTIGEOMETRY_TO_MEMBER_NODENAME = {
  *
  * @api
  */
-class GML3 extends GMLBase {
+export class GML3 extends GMLBase {
   /**
    * @param {import("./GMLBase.js").Options} [options] Optional configuration object.
    */
@@ -1282,5 +1282,3 @@ GML3.prototype.GEOMETRY_SERIALIZERS = {
     'Envelope': makeChildAppender(GML3.prototype.writeEnvelope),
   },
 };
-
-export default GML3;

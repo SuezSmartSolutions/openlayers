@@ -1,9 +1,9 @@
 /**
  * @module ol/control/ZoomToExtent
  */
-import Control from './Control.js';
-import EventType from '../events/EventType.js';
 import {CLASS_CONTROL, CLASS_UNSELECTABLE} from '../css.js';
+import {Control} from './Control.js';
+import {EventType} from '../events/EventType.js';
 import {fromExtent as polygonFromExtent} from '../geom/Polygon.js';
 
 /**
@@ -25,7 +25,7 @@ import {fromExtent as polygonFromExtent} from '../geom/Polygon.js';
  *
  * @api
  */
-class ZoomToExtent extends Control {
+export class ZoomToExtent extends Control {
   /**
    * @param {Options} [options] Options.
    */
@@ -90,5 +90,3 @@ class ZoomToExtent extends Control {
     view.fitInternal(polygonFromExtent(extent));
   }
 }
-
-export default ZoomToExtent;

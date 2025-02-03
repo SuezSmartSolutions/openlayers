@@ -1,8 +1,8 @@
 /**
  * @module ol/geom/MultiPoint
  */
-import Point from './Point.js';
-import SimpleGeometry from './SimpleGeometry.js';
+import {Point} from './Point.js';
+import {SimpleGeometry} from './SimpleGeometry.js';
 import {closestSquaredDistanceXY, containsXY} from '../extent.js';
 import {deflateCoordinates} from './flat/deflate.js';
 import {extend} from '../array.js';
@@ -15,7 +15,7 @@ import {squaredDistance as squaredDx} from '../math.js';
  *
  * @api
  */
-class MultiPoint extends SimpleGeometry {
+export class MultiPoint extends SimpleGeometry {
   /**
    * @param {Array<import("../coordinate.js").Coordinate>|Array<number>} coordinates Coordinates.
    *     For internal use, flat coordinates in combination with `layout` are also accepted.
@@ -199,5 +199,3 @@ class MultiPoint extends SimpleGeometry {
     this.changed();
   }
 }
-
-export default MultiPoint;

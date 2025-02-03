@@ -1,9 +1,9 @@
 /**
  * @module ol/interaction/Link
  */
-import EventType from '../events/EventType.js';
-import Interaction from './Interaction.js';
-import MapEventType from '../MapEventType.js';
+import {EventType} from '../events/EventType.js';
+import {Interaction} from './Interaction.js';
+import {MapEventType} from '../MapEventType.js';
 import {listen, unlistenByKey} from '../events.js';
 import {toFixed} from '../math.js';
 
@@ -68,7 +68,7 @@ function differentArray(a, b) {
  *
  * @api
  */
-class Link extends Interaction {
+export class Link extends Interaction {
   /**
    * @param {Options} [options] Link options.
    */
@@ -354,5 +354,3 @@ class Link extends Interaction {
     }
   }
 }
-
-export default Link;

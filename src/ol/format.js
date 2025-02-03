@@ -2,20 +2,20 @@
  * @module ol/format
  */
 
-export {default as EsriJSON} from './format/EsriJSON.js';
-export {default as GeoJSON} from './format/GeoJSON.js';
-export {default as GML} from './format/GML.js';
-export {default as GPX} from './format/GPX.js';
-export {default as IGC} from './format/IGC.js';
-export {default as IIIFInfo} from './format/IIIFInfo.js';
-export {default as KML} from './format/KML.js';
-export {default as MVT} from './format/MVT.js';
-export {default as OWS} from './format/OWS.js';
-export {default as Polyline} from './format/Polyline.js';
-export {default as TopoJSON} from './format/TopoJSON.js';
-export {default as WFS} from './format/WFS.js';
-export {default as WKB} from './format/WKB.js';
-export {default as WKT} from './format/WKT.js';
-export {default as WMSCapabilities} from './format/WMSCapabilities.js';
-export {default as WMSGetFeatureInfo} from './format/WMSGetFeatureInfo.js';
-export {default as WMTSCapabilities} from './format/WMTSCapabilities.js';
+export {EsriJSON} from './format/EsriJSON.js';
+export {GeoJSON} from './format/GeoJSON.js';
+export {GML} from './format/GML.js';
+export {GPX} from './format/GPX.js';
+export {IGC} from './format/IGC.js';
+export {IIIFInfo} from './format/IIIFInfo.js';
+export {KML} from './format/KML.js';
+export {MVT} from './format/MVT.js';
+export {OWS} from './format/OWS.js';
+export {Polyline} from './format/Polyline.js';
+export {TopoJSON} from './format/TopoJSON.js';
+export {WFS} from './format/WFS.js';
+export {WKB} from './format/WKB.js';
+export {WKT} from './format/WKT.js';
+export {WMSCapabilities} from './format/WMSCapabilities.js';
+export {WMSGetFeatureInfo} from './format/WMSGetFeatureInfo.js';
+export {WMTSCapabilities} from './format/WMTSCapabilities.js';

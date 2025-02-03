@@ -1,8 +1,8 @@
 /**
  * @module ol/control/Control
  */
-import BaseObject from '../Object.js';
-import MapEventType from '../MapEventType.js';
+import {BaseObject} from '../Object.js';
+import {MapEventType} from '../MapEventType.js';
 import {VOID} from '../functions.js';
 import {listen, unlistenByKey} from '../events.js';
 import {removeNode} from '../dom.js';
@@ -43,7 +43,7 @@ import {removeNode} from '../dom.js';
  *
  * @api
  */
-class Control extends BaseObject {
+export class Control extends BaseObject {
   /**
    * @param {Options} options Control options.
    */
@@ -157,5 +157,3 @@ class Control extends BaseObject {
       typeof target === 'string' ? document.getElementById(target) : target;
   }
 }
-
-export default Control;

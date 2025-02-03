@@ -1,7 +1,7 @@
 /**
  * @module ol/format/XMLFeature
  */
-import FeatureFormat from '../format/Feature.js';
+import {FeatureFormat} from '../format/Feature.js';
 import {abstract} from '../util.js';
 import {extend} from '../array.js';
 import {getXMLSerializer, isDocument, parse} from '../xml.js';
@@ -14,7 +14,7 @@ import {getXMLSerializer, isDocument, parse} from '../xml.js';
  *
  * @abstract
  */
-class XMLFeature extends FeatureFormat {
+export class XMLFeature extends FeatureFormat {
   constructor() {
     super();
 
@@ -286,5 +286,3 @@ class XMLFeature extends FeatureFormat {
     return null; // not implemented
   }
 }
-
-export default XMLFeature;

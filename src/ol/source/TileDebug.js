@@ -2,7 +2,7 @@
  * @module ol/source/TileDebug
  */
 
-import XYZ from './XYZ.js';
+import {XYZ} from './XYZ.js';
 import {createCanvasContext2D} from '../dom.js';
 import {toSize} from '../size.js';
 
@@ -26,7 +26,7 @@ import {toSize} from '../size.js';
  * each tile. See examples/canvas-tiles for an example.
  * @api
  */
-class TileDebug extends XYZ {
+export class TileDebug extends XYZ {
   /**
    * @param {Options} [options] Debug tile options.
    */
@@ -67,5 +67,3 @@ class TileDebug extends XYZ {
     });
   }
 }
-
-export default TileDebug;

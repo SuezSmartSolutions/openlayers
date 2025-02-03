@@ -1,7 +1,7 @@
 /**
  * @module ol/render/webgl/PolygonBatchRenderer
  */
-import AbstractBatchRenderer from './BatchRenderer.js';
+import {AbstractBatchRenderer} from './BatchRenderer.js';
 import {AttributeType} from '../../webgl/Helper.js';
 import {transform2D} from '../../geom/flat/transform.js';
 
@@ -14,7 +14,7 @@ export const Attributes = {
   POSITION: 'a_position',
 };
 
-class PolygonBatchRenderer extends AbstractBatchRenderer {
+export class PolygonBatchRenderer extends AbstractBatchRenderer {
   /**
    * @param {import("../../webgl/Helper.js").default} helper WebGL helper instance
    * @param {Worker} worker WebGL worker instance
@@ -113,5 +113,3 @@ class PolygonBatchRenderer extends AbstractBatchRenderer {
     }
   }
 }
-
-export default PolygonBatchRenderer;

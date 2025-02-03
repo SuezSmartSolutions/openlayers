@@ -1,12 +1,12 @@
 /**
  * @module ol/layer/BaseVector
  */
-import Layer from './Layer.js';
 import RBush from 'rbush';
 import Style, {
   createDefaultStyle,
   toFunction as toStyleFunction,
 } from '../style/Style.js';
+import {Layer} from './Layer.js';
 import {toStyle} from '../style/flat.js';
 
 /**
@@ -84,7 +84,7 @@ const Property = {
  * @extends {Layer<VectorSourceType, RendererType>}
  * @api
  */
-class BaseVectorLayer extends Layer {
+export class BaseVectorLayer extends Layer {
   /**
    * @param {Options<VectorSourceType>} [options] Options.
    */
@@ -300,5 +300,3 @@ class BaseVectorLayer extends Layer {
     this.changed();
   }
 }
-
-export default BaseVectorLayer;

@@ -1,9 +1,9 @@
 /**
  * @module ol/renderer/canvas/Layer
  */
-import LayerRenderer from '../Layer.js';
-import RenderEvent from '../../render/Event.js';
-import RenderEventType from '../../render/EventType.js';
+import {LayerRenderer} from '../Layer.js';
+import {RenderEvent} from '../../render/Event.js';
+import {RenderEventType} from '../../render/EventType.js';
 import {
   apply as applyTransform,
   compose as composeTransform,
@@ -41,7 +41,7 @@ function createPixelContext() {
  * @template {import("../../layer/Layer.js").default} LayerType
  * @extends {LayerRenderer<LayerType>}
  */
-class CanvasLayerRenderer extends LayerRenderer {
+export class CanvasLayerRenderer extends LayerRenderer {
   /**
    * @param {LayerType} layer Layer.
    */
@@ -322,5 +322,3 @@ class CanvasLayerRenderer extends LayerRenderer {
     super.disposeInternal();
   }
 }
-
-export default CanvasLayerRenderer;

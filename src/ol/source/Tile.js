@@ -1,10 +1,10 @@
 /**
  * @module ol/source/Tile
  */
-import Event from '../events/Event.js';
-import Source from './Source.js';
-import TileCache from '../TileCache.js';
-import TileState from '../TileState.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {Source} from './Source.js';
+import {TileCache} from '../TileCache.js';
+import {TileState} from '../TileState.js';
 import {abstract} from '../util.js';
 import {assert} from '../asserts.js';
 import {equivalent} from '../proj.js';
@@ -50,7 +50,7 @@ import {scale as scaleSize, toSize} from '../size.js';
  * @abstract
  * @api
  */
-class TileSource extends Source {
+export class TileSource extends Source {
   /**
    * @param {Options} options SourceTile source options.
    */
@@ -392,5 +392,3 @@ export class TileSourceEvent extends Event {
     this.tile = tile;
   }
 }
-
-export default TileSource;

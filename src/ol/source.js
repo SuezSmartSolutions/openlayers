@@ -2,7 +2,7 @@
  * @module ol/source
  */
 
-import LRUCache from './structs/LRUCache.js';
+import {LRUCache} from './structs/LRUCache.js';
 import {getIntersection} from './extent.js';
 
 export {default as BingMaps} from './source/BingMaps.js';

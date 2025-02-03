@@ -7,7 +7,7 @@
  * See https://mapbox.com/developers/api/.
  */
 
-import TileImage from './TileImage.js';
+import {TileImage} from './TileImage.js';
 import {applyTransform, intersects} from '../extent.js';
 import {assert} from '../asserts.js';
 import {createFromTemplates} from '../tileurlfunction.js';
@@ -69,7 +69,7 @@ import {jsonp as requestJSONP} from '../net.js';
  * Layer source for tile data in TileJSON format.
  * @api
  */
-class TileJSON extends TileImage {
+export class TileJSON extends TileImage {
   /**
    * @param {Options} options TileJSON options.
    */
@@ -208,5 +208,3 @@ class TileJSON extends TileImage {
     this.setState('error');
   }
 }
-
-export default TileJSON;

@@ -2,7 +2,7 @@
  * @module ol/render/canvas/hitdetect
  */
 
-import CanvasImmediateRenderer from './Immediate.js';
+import {CanvasImmediateRenderer} from './Immediate.js';
 import {Icon} from '../../style.js';
 import {clamp} from '../../math.js';
 import {createCanvasContext2D} from '../../dom.js';

@@ -2,11 +2,11 @@
  * @module ol/render/canvas/BuilderGroup
  */
 
-import Builder from './Builder.js';
-import ImageBuilder from './ImageBuilder.js';
-import LineStringBuilder from './LineStringBuilder.js';
-import PolygonBuilder from './PolygonBuilder.js';
-import TextBuilder from './TextBuilder.js';
+import {CanvasBuilder as Builder} from './Builder.js';
+import {CanvasImageBuilder as ImageBuilder} from './ImageBuilder.js';
+import {CanvasLineStringBuilder as LineStringBuilder} from './LineStringBuilder.js';
+import {CanvasPolygonBuilder as PolygonBuilder} from './PolygonBuilder.js';
+import {CanvasTextBuilder as TextBuilder} from './TextBuilder.js';
 
 /**
  * @type {Object<import("../canvas.js").BuilderType, typeof Builder>}
@@ -20,7 +20,7 @@ const BATCH_CONSTRUCTORS = {
   'Text': TextBuilder,
 };
 
-class BuilderGroup {
+export class BuilderGroup {
   /**
    * @param {number} tolerance Tolerance.
    * @param {import("../../extent.js").Extent} maxExtent Max extent.
@@ -101,5 +101,3 @@ class BuilderGroup {
     return replay;
   }
 }
-
-export default BuilderGroup;

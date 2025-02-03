@@ -1,18 +1,18 @@
 /**
  * @module ol/interaction/Modify
  */
-import Collection from '../Collection.js';
-import CollectionEventType from '../CollectionEventType.js';
-import Event from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import Feature from '../Feature.js';
-import MapBrowserEventType from '../MapBrowserEventType.js';
-import Point from '../geom/Point.js';
-import PointerInteraction from './Pointer.js';
-import RBush from '../structs/RBush.js';
-import VectorEventType from '../source/VectorEventType.js';
-import VectorLayer from '../layer/Vector.js';
-import VectorSource from '../source/Vector.js';
+import {Collection} from '../Collection.js';
+import {CollectionEventType} from '../CollectionEventType.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {EventType} from '../events/EventType.js';
+import {Feature} from '../Feature.js';
+import {MapBrowserEventType} from '../MapBrowserEventType.js';
+import {Point} from '../geom/Point.js';
+import {PointerInteraction} from './Pointer.js';
+import {RBush} from '../structs/RBush.js';
+import {VectorEventType} from '../source/VectorEventType.js';
+import {VectorLayer} from '../layer/Vector.js';
+import {VectorSource} from '../source/Vector.js';
 import {
   altKeyOnly,
   always,
@@ -194,7 +194,7 @@ export class ModifyEvent extends Event {
  * @fires ModifyEvent
  * @api
  */
-class Modify extends PointerInteraction {
+export class Modify extends PointerInteraction {
   /**
    * @param {Options} options Options.
    */
@@ -1653,5 +1653,3 @@ function getDefaultStyleFunction() {
     return style['Point'];
   };
 }
-
-export default Modify;

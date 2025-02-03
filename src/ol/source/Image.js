@@ -1,10 +1,10 @@
 /**
  * @module ol/source/Image
  */
-import Event from '../events/Event.js';
-import ImageState from '../ImageState.js';
-import ReprojImage from '../reproj/Image.js';
-import Source from './Source.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {ImageState} from '../ImageState.js';
+import {ReprojImage} from '../reproj/Image.js';
+import {Source} from './Source.js';
 import {abstract} from '../util.js';
 import {equals} from '../extent.js';
 import {equivalent} from '../proj.js';
@@ -90,7 +90,7 @@ export class ImageSourceEvent extends Event {
  * @fires module:ol/source/Image.ImageSourceEvent
  * @api
  */
-class ImageSource extends Source {
+export class ImageSource extends Source {
   /**
    * @param {Options} options Single image source options.
    */
@@ -264,5 +264,3 @@ class ImageSource extends Source {
 export function defaultImageLoadFunction(image, src) {
   /** @type {HTMLImageElement|HTMLVideoElement} */ (image.getImage()).src = src;
 }
-
-export default ImageSource;

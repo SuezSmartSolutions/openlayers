@@ -1,9 +1,9 @@
 /**
  * @module ol/format/Polyline
  */
-import Feature from '../Feature.js';
-import LineString from '../geom/LineString.js';
-import TextFeature from './TextFeature.js';
+import {Feature} from '../Feature.js';
+import {LineString} from '../geom/LineString.js';
+import {TextFeature} from './TextFeature.js';
 import {assert} from '../asserts.js';
 import {flipXY} from '../geom/flat/flip.js';
 import {get as getProjection} from '../proj.js';
@@ -32,7 +32,7 @@ import {transformGeometryWithOptions} from './Feature.js';
  *
  * @api
  */
-class Polyline extends TextFeature {
+export class Polyline extends TextFeature {
   /**
    * @param {Options} [options] Optional configuration object.
    */
@@ -348,5 +348,3 @@ export function encodeUnsignedInteger(num) {
   encoded += String.fromCharCode(value);
   return encoded;
 }
-
-export default Polyline;

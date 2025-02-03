@@ -1,10 +1,10 @@
 /**
  * @module ol/layer/Layer
  */
-import BaseLayer from './Base.js';
-import EventType from '../events/EventType.js';
-import LayerProperty from './Property.js';
-import RenderEventType from '../render/EventType.js';
+import {BaseLayer} from './Base.js';
+import {EventType} from '../events/EventType.js';
+import {LayerProperty} from './Property.js';
+import {RenderEventType} from '../render/EventType.js';
 import {assert} from '../asserts.js';
 import {listen, unlistenByKey} from '../events.js';
 
@@ -89,7 +89,7 @@ import {listen, unlistenByKey} from '../events.js';
  * @template {import("../renderer/Layer.js").default} [RendererType=import("../renderer/Layer.js").default]
  * @api
  */
-class Layer extends BaseLayer {
+export class Layer extends BaseLayer {
   /**
    * @param {Options<SourceType>} options Layer options.
    */
@@ -422,5 +422,3 @@ export function inView(layerState, viewState) {
   const zoom = viewState.zoom;
   return zoom > layerState.minZoom && zoom <= layerState.maxZoom;
 }
-
-export default Layer;

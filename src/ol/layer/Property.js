@@ -5,7 +5,7 @@
 /**
  * @enum {string}
  */
-export default {
+export const LayerProperty = {
   OPACITY: 'opacity',
   VISIBLE: 'visible',
   EXTENT: 'extent',

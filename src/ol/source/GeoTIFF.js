@@ -1,8 +1,7 @@
 /**
  * @module ol/source/GeoTIFF
  */
-import DataTile from './DataTile.js';
-import TileGrid from '../tilegrid/TileGrid.js';
+import {DataTileSource as DataTile} from './DataTile.js';
 import {
   Pool,
   fromBlob as tiffFromBlob,
@@ -15,6 +14,7 @@ import {
   toUserCoordinate,
   toUserExtent,
 } from '../proj.js';
+import {TileGrid} from '../tilegrid/TileGrid.js';
 import {clamp} from '../math.js';
 import {getCenter, getIntersection} from '../extent.js';
 import {fromCode as unitsFromCode} from '../proj/Units.js';
@@ -328,7 +328,7 @@ function getMaxForDataType(array) {
  * A source for working with GeoTIFF data.
  * @api
  */
-class GeoTIFFSource extends DataTile {
+export class GeoTIFFSource extends DataTile {
   /**
    * @param {Options} options Data tile options.
    */
@@ -836,5 +836,3 @@ class GeoTIFFSource extends DataTile {
  *
  */
 GeoTIFFSource.prototype.getView;
-
-export default GeoTIFFSource;

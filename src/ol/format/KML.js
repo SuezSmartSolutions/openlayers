@@ -1,21 +1,15 @@
 /**
  * @module ol/format/KML
  */
-import Feature from '../Feature.js';
-import Fill from '../style/Fill.js';
-import GeometryCollection from '../geom/GeometryCollection.js';
-import Icon from '../style/Icon.js';
-import ImageState from '../ImageState.js';
-import LineString from '../geom/LineString.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import MultiPoint from '../geom/MultiPoint.js';
-import MultiPolygon from '../geom/MultiPolygon.js';
-import Point from '../geom/Point.js';
-import Polygon from '../geom/Polygon.js';
-import Stroke from '../style/Stroke.js';
-import Style from '../style/Style.js';
-import Text from '../style/Text.js';
-import XMLFeature from './XMLFeature.js';
+import {Feature} from '../Feature.js';
+import {Fill} from '../style/Fill.js';
+import {GeometryCollection} from '../geom/GeometryCollection.js';
+import {Icon} from '../style/Icon.js';
+import {ImageState} from '../ImageState.js';
+import {LineString} from '../geom/LineString.js';
+import {MultiLineString} from '../geom/MultiLineString.js';
+import {MultiPoint} from '../geom/MultiPoint.js';
+import {MultiPolygon} from '../geom/MultiPolygon.js';
 import {
   OBJECT_PROPERTY_NODE_FACTORY,
   XML_SCHEMA_INSTANCE_URI,
@@ -35,6 +29,12 @@ import {
   pushParseAndPop,
   pushSerializeAndPop,
 } from '../xml.js';
+import {Point} from '../geom/Point.js';
+import {Polygon} from '../geom/Polygon.js';
+import {Stroke} from '../style/Stroke.js';
+import {Style} from '../style/Style.js';
+import {Text} from '../style/Text.js';
+import {XMLFeature} from './XMLFeature.js';
 import {asArray} from '../color.js';
 import {assert} from '../asserts.js';
 import {extend} from '../array.js';
@@ -421,7 +421,7 @@ function defaultIconUrlFunction(href) {
  *
  * @api
  */
-class KML extends XMLFeature {
+export class KML extends XMLFeature {
   /**
    * @param {Options} [options] Options.
    */
@@ -3361,5 +3361,3 @@ function writeVec2(node, vec2) {
   node.setAttribute('xunits', vec2.xunits);
   node.setAttribute('yunits', vec2.yunits);
 }
-
-export default KML;

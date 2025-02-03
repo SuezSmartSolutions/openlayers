@@ -1,7 +1,7 @@
 /**
  * @module ol/source/Source
  */
-import BaseObject from '../Object.js';
+import {BaseObject} from '../Object.js';
 import {abstract} from '../util.js';
 import {get as getProjection} from '../proj.js';
 
@@ -49,7 +49,7 @@ import {get as getProjection} from '../proj.js';
  * @abstract
  * @api
  */
-class Source extends BaseObject {
+export class Source extends BaseObject {
   /**
    * @param {Options} options Source options.
    */
@@ -242,5 +242,3 @@ function adaptAttributions(attributionLike) {
     return [attributionLike];
   };
 }
-
-export default Source;

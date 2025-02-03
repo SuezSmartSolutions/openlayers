@@ -1,18 +1,18 @@
 /**
  * @module ol/layer/MapboxVector
  */
-import BaseEvent from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import MVT from '../format/MVT.js';
-import VectorTileLayer from '../layer/VectorTile.js';
-import VectorTileSource from '../source/VectorTile.js';
+import {BaseEvent} from '../events/Event.js';
+import {EventType} from '../events/EventType.js';
+import {MVT} from '../format/MVT.js';
+import {VectorTileLayer} from '../layer/VectorTile.js';
+import {VectorTile as VectorTileSource} from '../source/VectorTile.js';
 import {applyBackground, applyStyle} from 'ol-mapbox-style';
 
 /**
  * @classdesc
  * Event emitted on configuration or loading error.
  */
-class ErrorEvent extends BaseEvent {
+export class ErrorEvent extends BaseEvent {
   /**
    * @param {Error} error error object.
    */
@@ -135,7 +135,7 @@ class ErrorEvent extends BaseEvent {
  * @fires module:ol/events/Event~BaseEvent#event:error
  * @api
  */
-class MapboxVectorLayer extends VectorTileLayer {
+export class MapboxVectorLayer extends VectorTileLayer {
   /**
    * @param {Options} options Layer options.  At a minimum, `styleUrl` and `accessToken`
    * must be provided.
@@ -192,5 +192,3 @@ class MapboxVectorLayer extends VectorTileLayer {
     }
   }
 }
-
-export default MapboxVectorLayer;

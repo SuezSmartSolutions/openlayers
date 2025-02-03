@@ -1,11 +1,9 @@
 /**
  * @module ol/format/GPX
  */
-import Feature from '../Feature.js';
-import LineString from '../geom/LineString.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import Point from '../geom/Point.js';
-import XMLFeature from './XMLFeature.js';
+import {Feature} from '../Feature.js';
+import {LineString} from '../geom/LineString.js';
+import {MultiLineString} from '../geom/MultiLineString.js';
 import {
   OBJECT_PROPERTY_NODE_FACTORY,
   XML_SCHEMA_INSTANCE_URI,
@@ -21,6 +19,8 @@ import {
   pushParseAndPop,
   pushSerializeAndPop,
 } from '../xml.js';
+import {Point} from '../geom/Point.js';
+import {XMLFeature} from './XMLFeature.js';
 import {get as getProjection} from '../proj.js';
 import {
   readDateTime,
@@ -126,7 +126,7 @@ const GPX_SERIALIZERS = makeStructureNS(NAMESPACE_URIS, {
  *
  * @api
  */
-class GPX extends XMLFeature {
+export class GPX extends XMLFeature {
   /**
    * @param {Options} [options] Options.
    */
@@ -936,5 +936,3 @@ function writeWpt(node, feature, objectStack) {
     writeWptType(node, point.getCoordinates(), objectStack);
   }
 }
-
-export default GPX;

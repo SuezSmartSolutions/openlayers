@@ -6,7 +6,7 @@
  * @enum {number}
  * @const
  */
-export default {
+export const KeyCode = {
   LEFT: 37,
   UP: 38,
   RIGHT: 39,

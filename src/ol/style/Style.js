@@ -2,9 +2,9 @@
  * @module ol/style/Style
  */
 
-import CircleStyle from './Circle.js';
-import Fill from './Fill.js';
-import Stroke from './Stroke.js';
+import {CircleStyle} from './Circle.js';
+import {Fill} from './Fill.js';
+import {Stroke} from './Stroke.js';
 import {assert} from '../asserts.js';
 
 /**
@@ -149,7 +149,7 @@ import {assert} from '../asserts.js';
  *
  * @api
  */
-class Style {
+export class Style {
   /**
    * @param {Options} [options] Style options.
    */
@@ -562,5 +562,3 @@ export function createEditingStyle() {
 function defaultGeometryFunction(feature) {
   return feature.getGeometry();
 }
-
-export default Style;

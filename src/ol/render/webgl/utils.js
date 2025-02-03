@@ -1,9 +1,9 @@
 /**
  * @module ol/render/webgl/utils
  */
-import earcut from 'earcut';
 import {apply as applyTransform} from '../../transform.js';
 import {clamp} from '../../math.js';
+import {earcut} from 'earcut';
 
 const tmpArray_ = [];
 

@@ -2,7 +2,7 @@
  * @module ol/tilegrid/WMTS
  */
 
-import TileGrid from './TileGrid.js';
+import {TileGrid} from './TileGrid.js';
 import {get as getProjection} from '../proj.js';
 
 /**
@@ -42,7 +42,7 @@ import {get as getProjection} from '../proj.js';
  * Set the grid pattern for sources accessing WMTS tiled-image servers.
  * @api
  */
-class WMTSTileGrid extends TileGrid {
+export class WMTSTileGrid extends TileGrid {
   /**
    * @param {Options} options WMTS options.
    */
@@ -81,8 +81,6 @@ class WMTSTileGrid extends TileGrid {
     return this.matrixIds_;
   }
 }
-
-export default WMTSTileGrid;
 
 /**
  * Create a tile grid from a WMTS capabilities matrix set and an

@@ -5,7 +5,7 @@
 /**
  * @enum {string}
  */
-export default {
+export const ViewProperty = {
   CENTER: 'center',
   RESOLUTION: 'resolution',
   ROTATION: 'rotation',

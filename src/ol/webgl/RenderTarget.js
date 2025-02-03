@@ -13,7 +13,7 @@ const tmpArray4 = new Uint8Array(4);
  * simplifying initialization and binding for rendering.
  * @api
  */
-class WebGLRenderTarget {
+export class WebGLRenderTarget {
   /**
    * @param {import("./Helper.js").default} helper WebGL helper; mandatory.
    * @param {Array<number>} [size] Expected size of the render target texture; note: this can be changed later on.
@@ -183,5 +183,3 @@ class WebGLRenderTarget {
     this.data_ = new Uint8Array(size[0] * size[1] * 4);
   }
 }
-
-export default WebGLRenderTarget;

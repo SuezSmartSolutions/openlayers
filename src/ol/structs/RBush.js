@@ -22,7 +22,7 @@ import {isEmpty} from '../obj.js';
  *
  * @template T
  */
-class RBush {
+export class RBush {
   /**
    * @param {number} [maxEntries] Max entries.
    */
@@ -216,5 +216,3 @@ class RBush {
     }
   }
 }
-
-export default RBush;

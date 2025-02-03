@@ -1,10 +1,10 @@
 /**
  * @module ol/VectorTile
  */
-import Tile from './Tile.js';
-import TileState from './TileState.js';
+import {Tile} from './Tile.js';
+import {TileState} from './TileState.js';
 
-class VectorTile extends Tile {
+export class VectorTile extends Tile {
   /**
    * @param {import("./tilecoord.js").TileCoord} tileCoord Tile coordinate.
    * @param {import("./TileState.js").default} state State.
@@ -134,5 +134,3 @@ class VectorTile extends Tile {
     this.loader_ = loader;
   }
 }
-
-export default VectorTile;

@@ -5,7 +5,7 @@
 /**
  * @enum {string}
  */
-export default {
+export const MapProperty = {
   LAYERGROUP: 'layergroup',
   SIZE: 'size',
   TARGET: 'target',

@@ -7,7 +7,7 @@ import {asString} from '../color.js';
  * @classdesc
  * Singleton class. Available through {@link module:ol/style/IconImageCache.shared}.
  */
-class IconImageCache {
+export class IconImageCache {
   constructor() {
     /**
      * @type {!Object<string, import("./IconImage.js").default>}
@@ -105,8 +105,6 @@ function getKey(src, crossOrigin, color) {
   const colorString = color ? asString(color) : 'null';
   return crossOrigin + ':' + src + ':' + colorString;
 }
-
-export default IconImageCache;
 
 /**
  * The {@link module:ol/style/IconImageCache~IconImageCache} for

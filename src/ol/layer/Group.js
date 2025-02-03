@@ -1,12 +1,12 @@
 /**
  * @module ol/layer/Group
  */
-import BaseLayer from './Base.js';
-import Collection from '../Collection.js';
-import CollectionEventType from '../CollectionEventType.js';
-import Event from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import ObjectEventType from '../ObjectEventType.js';
+import {BaseLayer} from './Base.js';
+import {Collection} from '../Collection.js';
+import {CollectionEventType} from '../CollectionEventType.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {EventType} from '../events/EventType.js';
+import {ObjectEventType} from '../ObjectEventType.js';
 import {assert} from '../asserts.js';
 import {clear} from '../obj.js';
 import {getIntersection} from '../extent.js';
@@ -86,7 +86,7 @@ const Property = {
  *
  * @api
  */
-class LayerGroup extends BaseLayer {
+export class LayerGroup extends BaseLayer {
   /**
    * @param {Options} [options] Layer options.
    */
@@ -344,5 +344,3 @@ class LayerGroup extends BaseLayer {
     return 'ready';
   }
 }
-
-export default LayerGroup;

@@ -2,13 +2,13 @@
  * @module ol/style/flat
  */
 
-import Circle from '../style/Circle.js';
-import Fill from './Fill.js';
-import Icon from './Icon.js';
-import RegularShape from './RegularShape.js';
-import Stroke from './Stroke.js';
-import Style from './Style.js';
-import Text from './Text.js';
+import {CircleStyle as Circle} from '../style/Circle.js';
+import {Fill} from './Fill.js';
+import {Icon} from './Icon.js';
+import {RegularShape} from './RegularShape.js';
+import {Stroke} from './Stroke.js';
+import {Style} from './Style.js';
+import {Text} from './Text.js';
 
 /**
  * For static styling, the [layer.setStyle()]{@link module:ol/layer/Vector~VectorLayer#setStyle} method

@@ -1,8 +1,8 @@
 /**
  * @module ol/Feature
  */
-import BaseObject from './Object.js';
-import EventType from './events/EventType.js';
+import {BaseObject} from './Object.js';
+import {EventType} from './events/EventType.js';
 import {assert} from './asserts.js';
 import {listen, unlistenByKey} from './events.js';
 
@@ -49,9 +49,9 @@ import {listen, unlistenByKey} from './events.js';
  *
  * ```js
  *
- * import Feature from 'ol/Feature';
- * import Polygon from 'ol/geom/Polygon';
- * import Point from 'ol/geom/Point';
+ * import { Feature } from 'ol/Feature';
+ * import { Polygon } from 'ol/geom/Polygon';
+ * import { Point } from 'ol/geom/Point';
  *
  * const feature = new Feature({
  *   geometry: new Polygon(polyCoords),
@@ -72,7 +72,7 @@ import {listen, unlistenByKey} from './events.js';
  * @api
  * @template {import("./geom/Geometry.js").default} [Geometry=import("./geom/Geometry.js").default]
  */
-class Feature extends BaseObject {
+export class Feature extends BaseObject {
   /**
    * @param {Geometry|ObjectWithGeometry<Geometry>} [geometryOrProperties]
    *     You may pass a Geometry object directly, or an object literal containing
@@ -332,4 +332,3 @@ export function createStyleFunction(obj) {
     };
   }
 }
-export default Feature;

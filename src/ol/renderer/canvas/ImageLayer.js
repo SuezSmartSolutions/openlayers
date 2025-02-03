@@ -1,9 +1,9 @@
 /**
  * @module ol/renderer/canvas/ImageLayer
  */
-import CanvasLayerRenderer from './Layer.js';
-import ImageState from '../../ImageState.js';
-import ViewHint from '../../ViewHint.js';
+import {CanvasLayerRenderer} from './Layer.js';
+import {ImageState} from '../../ImageState.js';
+import {ViewHint} from '../../ViewHint.js';
 import {
   apply as applyTransform,
   compose as composeTransform,
@@ -26,7 +26,7 @@ import {fromUserExtent} from '../../proj.js';
  * Canvas renderer for image layers.
  * @api
  */
-class CanvasImageLayerRenderer extends CanvasLayerRenderer {
+export class CanvasImageLayerRenderer extends CanvasLayerRenderer {
   /**
    * @param {import("../../layer/Image.js").default} imageLayer Image layer.
    */
@@ -262,5 +262,3 @@ class CanvasImageLayerRenderer extends CanvasLayerRenderer {
     return this.container;
   }
 }
-
-export default CanvasImageLayerRenderer;

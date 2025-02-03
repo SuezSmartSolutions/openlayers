@@ -2,7 +2,7 @@
  * @module ol/source/TileArcGISRest
  */
 
-import TileImage from './TileImage.js';
+import {TileImage} from './TileImage.js';
 import {appendParams} from '../uri.js';
 import {createEmpty} from '../extent.js';
 import {modulo} from '../math.js';
@@ -65,7 +65,7 @@ import {hash as tileCoordHash} from '../tilecoord.js';
  * {@link module:ol/source/XYZ~XYZ} data source.
  * @api
  */
-class TileArcGISRest extends TileImage {
+export class TileArcGISRest extends TileImage {
   /**
    * @param {Options} [options] Tile ArcGIS Rest options.
    */
@@ -250,5 +250,3 @@ class TileArcGISRest extends TileImage {
     );
   }
 }
-
-export default TileArcGISRest;

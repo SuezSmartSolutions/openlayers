@@ -5,6 +5,6 @@
 /**
  * @enum {string}
  */
-export default {
+export const InteractionProperty = {
   ACTIVE: 'active',
 };

@@ -6,7 +6,7 @@
  * @enum {string}
  * @const
  */
-export default {
+export const EventType = {
   /**
    * Generic change event. Triggered when the revision counter is increased.
    * @event module:ol/events/Event~BaseEvent#change

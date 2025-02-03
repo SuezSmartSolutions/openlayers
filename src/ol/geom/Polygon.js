@@ -1,9 +1,9 @@
 /**
  * @module ol/geom/Polygon
  */
-import LinearRing from './LinearRing.js';
-import Point from './Point.js';
-import SimpleGeometry from './SimpleGeometry.js';
+import {LinearRing} from './LinearRing.js';
+import {Point} from './Point.js';
+import {SimpleGeometry} from './SimpleGeometry.js';
 import {arrayMaxSquaredDelta, assignClosestArrayPoint} from './flat/closest.js';
 import {closestSquaredDistanceXY, getCenter} from '../extent.js';
 import {deflateCoordinatesArray} from './flat/deflate.js';
@@ -24,7 +24,7 @@ import {offset as sphereOffset} from '../sphere.js';
  *
  * @api
  */
-class Polygon extends SimpleGeometry {
+export class Polygon extends SimpleGeometry {
   /**
    * @param {!Array<Array<import("../coordinate.js").Coordinate>>|!Array<number>} coordinates
    *     Array of linear rings that define the polygon. The first linear ring of the
@@ -402,8 +402,6 @@ class Polygon extends SimpleGeometry {
     this.changed();
   }
 }
-
-export default Polygon;
 
 /**
  * Create an approximation of a circle on the surface of a sphere.

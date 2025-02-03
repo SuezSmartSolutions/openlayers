@@ -5,7 +5,7 @@
 /**
  * @enum {string}
  */
-export default {
+export const RenderEventType = {
   /**
    * Triggered before a layer is rendered.
    * @event module:ol/render/Event~RenderEvent#prerender

@@ -1,7 +1,7 @@
 /**
  * @module ol/geom/Circle
  */
-import SimpleGeometry from './SimpleGeometry.js';
+import {SimpleGeometry} from './SimpleGeometry.js';
 import {createOrUpdate, forEachCorner, intersects} from '../extent.js';
 import {deflateCoordinate} from './flat/deflate.js';
 import {rotate, translate} from './flat/transform.js';
@@ -12,7 +12,7 @@ import {rotate, translate} from './flat/transform.js';
  *
  * @api
  */
-class Circle extends SimpleGeometry {
+export class Circle extends SimpleGeometry {
   /**
    * @param {!import("../coordinate.js").Coordinate} center Center.
    *     For internal use, flat coordinates in combination with `layout` and no
@@ -279,4 +279,3 @@ class Circle extends SimpleGeometry {
  * @api
  */
 Circle.prototype.transform;
-export default Circle;

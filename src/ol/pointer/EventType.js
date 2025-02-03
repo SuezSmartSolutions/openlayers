@@ -6,7 +6,7 @@
  * Constants for event names.
  * @enum {string}
  */
-export default {
+export const EventType = {
   POINTERMOVE: 'pointermove',
   POINTERDOWN: 'pointerdown',
   POINTERUP: 'pointerup',

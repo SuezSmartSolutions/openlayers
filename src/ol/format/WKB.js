@@ -1,18 +1,18 @@
 /**
  * @module ol/format/WKB
  */
-import Feature from '../Feature.js';
 import FeatureFormat, {transformGeometryWithOptions} from './Feature.js';
-import GeometryCollection from '../geom/GeometryCollection.js';
-import LineString from '../geom/LineString.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import MultiPoint from '../geom/MultiPoint.js';
-import MultiPolygon from '../geom/MultiPolygon.js';
-import Point from '../geom/Point.js';
-import Polygon from '../geom/Polygon.js';
+import {Feature} from '../Feature.js';
+import {GeometryCollection} from '../geom/GeometryCollection.js';
+import {LineString} from '../geom/LineString.js';
+import {MultiLineString} from '../geom/MultiLineString.js';
+import {MultiPoint} from '../geom/MultiPoint.js';
+import {MultiPolygon} from '../geom/MultiPolygon.js';
+import {Point} from '../geom/Point.js';
+import {Polygon} from '../geom/Polygon.js';
 import {get as getProjection} from '../proj.js';
 
-import SimpleGeometry from '../geom/SimpleGeometry.js';
+import {SimpleGeometry} from '../geom/SimpleGeometry.js';
 
 // WKB spec: https://www.ogc.org/standards/sfa
 // EWKB spec: https://raw.githubusercontent.com/postgis/postgis/2.1.0/doc/ZMSgeoms.txt
@@ -46,7 +46,7 @@ const WKBGeometryType = {
   TRIANGLE: 17,
 };
 
-class WkbReader {
+export class WkbReader {
   /**
    * @param {DataView} view source to read
    */
@@ -394,7 +394,7 @@ class WkbReader {
   }
 }
 
-class WkbWriter {
+export class WkbWriter {
   /**
    * @type {Object}
    * @property {string} [layout] geometryLayout
@@ -698,7 +698,7 @@ class WkbWriter {
  *
  * @api
  */
-class WKB extends FeatureFormat {
+export class WKB extends FeatureFormat {
   /**
    * @param {Options} [options] Optional configuration object.
    */
@@ -921,5 +921,3 @@ function getDataView(source) {
     return null;
   }
 }
-
-export default WKB;

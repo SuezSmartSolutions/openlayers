@@ -1,11 +1,11 @@
 /**
  * @module ol/format/WFS
  */
-import GML2 from './GML2.js';
-import GML3 from './GML3.js';
-import GML32 from './GML32.js';
 import GMLBase, {GMLNS} from './GMLBase.js';
-import XMLFeature from './XMLFeature.js';
+import {GML2} from './GML2.js';
+import {GML3} from './GML3.js';
+import {GML32} from './GML32.js';
+import {XMLFeature} from './XMLFeature.js';
 import {
   XML_SCHEMA_INSTANCE_URI,
   createElementNS,
@@ -263,7 +263,7 @@ const DEFAULT_VERSION = '1.1.0';
  *
  * @api
  */
-class WFS extends XMLFeature {
+export class WFS extends XMLFeature {
   /**
    * @param {Options} [options] Optional configuration object.
    */
@@ -1368,5 +1368,3 @@ function getFilterNS(version) {
   }
   return ns;
 }
-
-export default WFS;

@@ -1,9 +1,9 @@
 /**
  * @module ol/format/GML32
  */
-import GML2 from './GML2.js';
-import GML3 from './GML3.js';
-import GMLBase from './GMLBase.js';
+import {GML2} from './GML2.js';
+import {GML3} from './GML3.js';
+import {GMLBase} from './GMLBase.js';
 import {
   makeArrayExtender,
   makeArrayPusher,
@@ -17,7 +17,7 @@ import {writeStringTextNode} from '../format/xsd.js';
  *            version 3.2.1.
  * @api
  */
-class GML32 extends GML3 {
+export class GML32 extends GML3 {
   /**
    * @param {import("./GMLBase.js").Options} [options] Optional configuration object.
    */
@@ -338,5 +338,3 @@ GML32.prototype.GEOMETRY_SERIALIZERS = {
     'Envelope': makeChildAppender(GML3.prototype.writeEnvelope),
   },
 };
-
-export default GML32;

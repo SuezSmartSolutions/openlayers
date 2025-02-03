@@ -1,9 +1,9 @@
 /**
  * @module ol/source/UrlTile
  */
-import TileEventType from './TileEventType.js';
 import TileSource, {TileSourceEvent} from './Tile.js';
-import TileState from '../TileState.js';
+import {TileEventType} from './TileEventType.js';
+import {TileState} from '../TileState.js';
 import {createFromTemplates, expandUrl} from '../tileurlfunction.js';
 import {getKeyZXY} from '../tilecoord.js';
 import {getUid} from '../util.js';
@@ -36,7 +36,7 @@ import {getUid} from '../util.js';
  *
  * @fires import("./Tile.js").TileSourceEvent
  */
-class UrlTile extends TileSource {
+export class UrlTile extends TileSource {
   /**
    * @param {Options} options Image tile options.
    */
@@ -227,5 +227,3 @@ class UrlTile extends TileSource {
     }
   }
 }
-
-export default UrlTile;

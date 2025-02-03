@@ -1,8 +1,8 @@
 /**
  * @module ol/render/canvas/TextBuilder
  */
-import CanvasBuilder from './Builder.js';
-import CanvasInstruction from './Instruction.js';
+import {CanvasBuilder} from './Builder.js';
+import {Instruction as CanvasInstruction} from './Instruction.js';
 import {asColorLike} from '../../colorlike.js';
 import {
   defaultFillStyle,
@@ -40,7 +40,7 @@ export const TEXT_ALIGN = {
   'bottom': 1,
 };
 
-class CanvasTextBuilder extends CanvasBuilder {
+export class CanvasTextBuilder extends CanvasBuilder {
   /**
    * @param {number} tolerance Tolerance.
    * @param {import("../../extent.js").Extent} maxExtent Maximum extent.
@@ -631,5 +631,3 @@ class CanvasTextBuilder extends CanvasBuilder {
     this.declutterImageWithText_ = sharedData;
   }
 }
-
-export default CanvasTextBuilder;

@@ -1,8 +1,8 @@
 /**
  * @module ol/control/ScaleLine
  */
-import Control from './Control.js';
 import {CLASS_UNSELECTABLE} from '../css.js';
+import {Control} from './Control.js';
 import {METERS_PER_UNIT, getPointResolution} from '../proj.js';
 import {assert} from '../asserts.js';
 
@@ -73,7 +73,7 @@ const DEFAULT_DPI = 25.4 / 0.28;
  *
  * @api
  */
-class ScaleLine extends Control {
+export class ScaleLine extends Control {
   /**
    * @param {Options} [options] Scale line options.
    */
@@ -478,5 +478,3 @@ class ScaleLine extends Control {
     this.updateElement_();
   }
 }
-
-export default ScaleLine;

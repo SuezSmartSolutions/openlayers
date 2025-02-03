@@ -1,23 +1,23 @@
 /**
  * @module ol/interaction/Draw
  */
-import Circle from '../geom/Circle.js';
-import Event from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import Feature from '../Feature.js';
-import InteractionProperty from './Property.js';
-import LineString from '../geom/LineString.js';
-import MapBrowserEvent from '../MapBrowserEvent.js';
-import MapBrowserEventType from '../MapBrowserEventType.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import MultiPoint from '../geom/MultiPoint.js';
-import MultiPolygon from '../geom/MultiPolygon.js';
-import Point from '../geom/Point.js';
-import PointerInteraction from './Pointer.js';
 import Polygon, {fromCircle, makeRegular} from '../geom/Polygon.js';
-import VectorLayer from '../layer/Vector.js';
-import VectorSource from '../source/Vector.js';
+import {Circle} from '../geom/Circle.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {EventType} from '../events/EventType.js';
 import {FALSE, TRUE} from '../functions.js';
+import {Feature} from '../Feature.js';
+import {InteractionProperty} from './Property.js';
+import {LineString} from '../geom/LineString.js';
+import {MapBrowserEvent} from '../MapBrowserEvent.js';
+import {MapBrowserEventType} from '../MapBrowserEventType.js';
+import {MultiLineString} from '../geom/MultiLineString.js';
+import {MultiPoint} from '../geom/MultiPoint.js';
+import {MultiPolygon} from '../geom/MultiPolygon.js';
+import {Point} from '../geom/Point.js';
+import {PointerInteraction} from './Pointer.js';
+import {VectorLayer} from '../layer/Vector.js';
+import {VectorSource} from '../source/Vector.js';
 import {always, noModifierKeys, shiftKeyOnly} from '../events/condition.js';
 import {
   boundingExtent,
@@ -185,7 +185,7 @@ export class DrawEvent extends Event {
  * @fires DrawEvent
  * @api
  */
-class Draw extends PointerInteraction {
+export class Draw extends PointerInteraction {
   /**
    * @param {Options} options Options.
    */
@@ -1284,5 +1284,3 @@ function getMode(type) {
       throw new Error('Invalid type: ' + type);
   }
 }
-
-export default Draw;

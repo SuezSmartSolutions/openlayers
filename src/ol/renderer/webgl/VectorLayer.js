@@ -1,14 +1,7 @@
 /**
  * @module ol/renderer/webgl/VectorLayer
  */
-import BaseVector from '../../layer/BaseVector.js';
-import LineStringBatchRenderer from '../../render/webgl/LineStringBatchRenderer.js';
-import MixedGeometryBatch from '../../render/webgl/MixedGeometryBatch.js';
-import PointBatchRenderer from '../../render/webgl/PointBatchRenderer.js';
-import PolygonBatchRenderer from '../../render/webgl/PolygonBatchRenderer.js';
-import VectorEventType from '../../source/VectorEventType.js';
-import ViewHint from '../../ViewHint.js';
-import WebGLLayerRenderer from './Layer.js';
+import {BaseVectorLayer as BaseVector} from '../../layer/BaseVector.js';
 import {DefaultUniform} from '../../webgl/Helper.js';
 import {
   FILL_FRAGMENT_SHADER,
@@ -19,6 +12,13 @@ import {
   STROKE_VERTEX_SHADER,
   packColor,
 } from './shaders.js';
+import {LineStringBatchRenderer} from '../../render/webgl/LineStringBatchRenderer.js';
+import {MixedGeometryBatch} from '../../render/webgl/MixedGeometryBatch.js';
+import {PointBatchRenderer} from '../../render/webgl/PointBatchRenderer.js';
+import {PolygonBatchRenderer} from '../../render/webgl/PolygonBatchRenderer.js';
+import {VectorEventType} from '../../source/VectorEventType.js';
+import {ViewHint} from '../../ViewHint.js';
+import {WebGLLayerRenderer} from './Layer.js';
 import {buffer, createEmpty, equals, getWidth} from '../../extent.js';
 import {create as createTransform} from '../../transform.js';
 import {create as createWebGLWorker} from '../../worker/webgl.js';
@@ -75,7 +75,7 @@ function toAttributesArray(obj) {
  *
  * Note: this uses {@link module:ol/webgl/Helper~WebGLHelper} internally.
  */
-class WebGLVectorLayerRenderer extends WebGLLayerRenderer {
+export class WebGLVectorLayerRenderer extends WebGLLayerRenderer {
   /**
    * @param {import("../../layer/Layer.js").default} layer Layer.
    * @param {Options} options Options.
@@ -405,5 +405,3 @@ class WebGLVectorLayerRenderer extends WebGLLayerRenderer {
     super.disposeInternal();
   }
 }
-
-export default WebGLVectorLayerRenderer;

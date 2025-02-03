@@ -1,8 +1,8 @@
 /**
  * @module ol/events/Target
  */
-import Disposable from '../Disposable.js';
-import Event from './Event.js';
+import {Disposable} from '../Disposable.js';
+import {BaseEvent as Event} from './Event.js';
 import {VOID} from '../functions.js';
 import {clear} from '../obj.js';
 
@@ -25,7 +25,7 @@ import {clear} from '../obj.js';
  *    more listeners after this one will be called. Same as when the listener
  *    returns false.
  */
-class Target extends Disposable {
+export class Target extends Disposable {
   /**
    * @param {*} [target] Default event target for dispatched events.
    */
@@ -184,5 +184,3 @@ class Target extends Disposable {
     }
   }
 }
-
-export default Target;

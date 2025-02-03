@@ -2,7 +2,7 @@
  * @module ol/source/XYZ
  */
 
-import TileImage from './TileImage.js';
+import {TileImage} from './TileImage.js';
 import {createXYZ, extentFromProjection} from '../tilegrid.js';
 
 /**
@@ -70,7 +70,7 @@ import {createXYZ, extentFromProjection} from '../tilegrid.js';
  * ```
  * @api
  */
-class XYZ extends TileImage {
+export class XYZ extends TileImage {
   /**
    * @param {Options} [options] XYZ options.
    */
@@ -125,5 +125,3 @@ class XYZ extends TileImage {
     return this.gutter_;
   }
 }
-
-export default XYZ;

@@ -8,7 +8,7 @@ import {VERSION} from './util.js';
  * extended with a `code` property.
  * See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error.
  */
-class AssertionError extends Error {
+export class AssertionError extends Error {
   /**
    * @param {number} code Error code.
    */
@@ -42,5 +42,3 @@ class AssertionError extends Error {
     this.message = message;
   }
 }
-
-export default AssertionError;

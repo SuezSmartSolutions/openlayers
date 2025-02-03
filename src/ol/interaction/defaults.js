@@ -1,17 +1,17 @@
 /**
  * @module ol/interaction/defaults
  */
-import Collection from '../Collection.js';
-import DoubleClickZoom from './DoubleClickZoom.js';
-import DragPan from './DragPan.js';
-import DragRotate from './DragRotate.js';
-import DragZoom from './DragZoom.js';
-import KeyboardPan from './KeyboardPan.js';
-import KeyboardZoom from './KeyboardZoom.js';
-import Kinetic from '../Kinetic.js';
-import MouseWheelZoom from './MouseWheelZoom.js';
-import PinchRotate from './PinchRotate.js';
-import PinchZoom from './PinchZoom.js';
+import {Collection} from '../Collection.js';
+import {DoubleClickZoom} from './DoubleClickZoom.js';
+import {DragPan} from './DragPan.js';
+import {DragRotate} from './DragRotate.js';
+import {DragZoom} from './DragZoom.js';
+import {KeyboardPan} from './KeyboardPan.js';
+import {KeyboardZoom} from './KeyboardZoom.js';
+import {Kinetic} from '../Kinetic.js';
+import {MouseWheelZoom} from './MouseWheelZoom.js';
+import {PinchRotate} from './PinchRotate.js';
+import {PinchZoom} from './PinchZoom.js';
 
 /**
  * @typedef {Object} DefaultsOptions

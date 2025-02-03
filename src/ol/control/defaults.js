@@ -1,10 +1,10 @@
 /**
  * @module ol/control/defaults
  */
-import Attribution from './Attribution.js';
-import Collection from '../Collection.js';
-import Rotate from './Rotate.js';
-import Zoom from './Zoom.js';
+import {Attribution} from './Attribution.js';
+import {Collection} from '../Collection.js';
+import {Rotate} from './Rotate.js';
+import {Zoom} from './Zoom.js';
 
 /**
  * @typedef {Object} DefaultsOptions

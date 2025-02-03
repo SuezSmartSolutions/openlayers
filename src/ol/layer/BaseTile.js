@@ -1,8 +1,8 @@
 /**
  * @module ol/layer/BaseTile
  */
-import Layer from './Layer.js';
-import TileProperty from './TileProperty.js';
+import {Layer} from './Layer.js';
+import {TileProperty} from './TileProperty.js';
 
 /***
  * @template Return
@@ -58,7 +58,7 @@ import TileProperty from './TileProperty.js';
  * @extends {Layer<TileSourceType, RendererType>}
  * @api
  */
-class BaseTileLayer extends Layer {
+export class BaseTileLayer extends Layer {
   /**
    * @param {Options<TileSourceType>} [options] Tile layer options.
    */
@@ -156,5 +156,3 @@ class BaseTileLayer extends Layer {
     return super.getData(pixel);
   }
 }
-
-export default BaseTileLayer;

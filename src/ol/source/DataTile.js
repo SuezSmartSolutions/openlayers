@@ -1,11 +1,11 @@
 /**
  * @module ol/source/DataTile
  */
-import DataTile from '../DataTile.js';
-import EventType from '../events/EventType.js';
-import TileEventType from './TileEventType.js';
 import TileSource, {TileSourceEvent} from './Tile.js';
-import TileState from '../TileState.js';
+import {DataTile} from '../DataTile.js';
+import {EventType} from '../events/EventType.js';
+import {TileEventType} from './TileEventType.js';
+import {TileState} from '../TileState.js';
 import {createXYZ, extentFromProjection} from '../tilegrid.js';
 import {getKeyZXY} from '../tilecoord.js';
 import {getUid} from '../util.js';
@@ -50,7 +50,7 @@ import {toSize} from '../size.js';
  * @fires import("./Tile.js").TileSourceEvent
  * @api
  */
-class DataTileSource extends TileSource {
+export class DataTileSource extends TileSource {
   /**
    * @param {Options} options Image tile options.
    */
@@ -229,5 +229,3 @@ class DataTileSource extends TileSource {
     }
   }
 }
-
-export default DataTileSource;

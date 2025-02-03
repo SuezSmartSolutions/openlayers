@@ -1,7 +1,7 @@
 /**
  * @module ol/render/Feature
  */
-import Feature from '../Feature.js';
+import {Feature} from '../Feature.js';
 import {
   LineString,
   MultiLineString,
@@ -41,7 +41,7 @@ const tmpTransform = createTransform();
  * structure, optimized for vector tile rendering and styling. Geometry access
  * through the API is limited to getting the type and extent of the geometry.
  */
-class RenderFeature {
+export class RenderFeature {
   /**
    * @param {import("../geom/Geometry.js").Type} type Geometry type.
    * @param {Array<number>} flatCoordinates Flat coordinates. These always need
@@ -394,5 +394,3 @@ export function toFeature(renderFeature, geometryName) {
   feature.setProperties(properties, true);
   return feature;
 }
-
-export default RenderFeature;

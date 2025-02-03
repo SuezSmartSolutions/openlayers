@@ -1,10 +1,10 @@
 /**
  * @module ol/interaction/Translate
  */
-import Collection from '../Collection.js';
-import Event from '../events/Event.js';
-import InteractionProperty from './Property.js';
-import PointerInteraction from './Pointer.js';
+import {Collection} from '../Collection.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {InteractionProperty} from './Property.js';
+import {PointerInteraction} from './Pointer.js';
 import {TRUE} from '../functions.js';
 import {always} from '../events/condition.js';
 
@@ -129,7 +129,7 @@ export class TranslateEvent extends Event {
  * @fires TranslateEvent
  * @api
  */
-class Translate extends PointerInteraction {
+export class Translate extends PointerInteraction {
   /**
    * @param {Options} [options] Options.
    */
@@ -412,5 +412,3 @@ class Translate extends PointerInteraction {
     }
   }
 }
-
-export default Translate;

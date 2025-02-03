@@ -1,9 +1,9 @@
 /**
  * @module ol/geom/MultiPolygon
  */
-import MultiPoint from './MultiPoint.js';
-import Polygon from './Polygon.js';
-import SimpleGeometry from './SimpleGeometry.js';
+import {MultiPoint} from './MultiPoint.js';
+import {Polygon} from './Polygon.js';
+import {SimpleGeometry} from './SimpleGeometry.js';
 import {
   assignClosestMultiArrayPoint,
   multiArrayMaxSquaredDelta,
@@ -29,7 +29,7 @@ import {quantizeMultiArray} from './flat/simplify.js';
  *
  * @api
  */
-class MultiPolygon extends SimpleGeometry {
+export class MultiPolygon extends SimpleGeometry {
   /**
    * @param {Array<Array<Array<import("../coordinate.js").Coordinate>>|Polygon>|Array<number>} coordinates Coordinates.
    *     For internal use, flat coordinates in combination with `layout` and `endss` are also accepted.
@@ -467,5 +467,3 @@ class MultiPolygon extends SimpleGeometry {
     this.changed();
   }
 }
-
-export default MultiPolygon;

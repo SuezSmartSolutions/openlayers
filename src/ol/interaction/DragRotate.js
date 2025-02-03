@@ -1,8 +1,8 @@
 /**
  * @module ol/interaction/DragRotate
  */
-import PointerInteraction from './Pointer.js';
 import {FALSE} from '../functions.js';
+import {PointerInteraction} from './Pointer.js';
 import {
   altShiftKeysOnly,
   mouseActionButton,
@@ -28,7 +28,7 @@ import {disable} from '../rotationconstraint.js';
  * This interaction is only supported for mouse devices.
  * @api
  */
-class DragRotate extends PointerInteraction {
+export class DragRotate extends PointerInteraction {
   /**
    * @param {Options} [options] Options.
    */
@@ -121,5 +121,3 @@ class DragRotate extends PointerInteraction {
     }
   }
 }
-
-export default DragRotate;

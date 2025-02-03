@@ -1,9 +1,9 @@
 /**
  * @module ol/interaction/MouseWheelZoom
  */
-import EventType from '../events/EventType.js';
 import Interaction, {zoomByDelta} from './Interaction.js';
 import {DEVICE_PIXEL_RATIO, FIREFOX} from '../has.js';
+import {EventType} from '../events/EventType.js';
 import {all, always, focusWithTabindex} from '../events/condition.js';
 import {clamp} from '../math.js';
 
@@ -35,7 +35,7 @@ import {clamp} from '../math.js';
  * Allows the user to zoom the map by scrolling the mouse wheel.
  * @api
  */
-class MouseWheelZoom extends Interaction {
+export class MouseWheelZoom extends Interaction {
   /**
    * @param {Options} [options] Options.
    */
@@ -293,5 +293,3 @@ class MouseWheelZoom extends Interaction {
     }
   }
 }
-
-export default MouseWheelZoom;

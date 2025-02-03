@@ -62,7 +62,7 @@ const DECIMALS = 5;
  * servers.
  * @api
  */
-class TileGrid {
+export class TileGrid {
   /**
    * @param {Options} options Tile grid options.
    */
@@ -686,5 +686,3 @@ class TileGrid {
     this.fullTileRanges_ = fullTileRanges;
   }
 }
-
-export default TileGrid;

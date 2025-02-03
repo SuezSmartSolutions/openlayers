@@ -1,12 +1,12 @@
 /**
  * @module ol/ImageTile
  */
-import Tile from './Tile.js';
-import TileState from './TileState.js';
+import {Tile} from './Tile.js';
+import {TileState} from './TileState.js';
 import {createCanvasContext2D} from './dom.js';
 import {listenImage} from './Image.js';
 
-class ImageTile extends Tile {
+export class ImageTile extends Tile {
   /**
    * @param {import("./tilecoord.js").TileCoord} tileCoord Tile coordinate.
    * @param {import("./TileState.js").default} state State.
@@ -184,5 +184,3 @@ function getBlankImage() {
   ctx.fillRect(0, 0, 1, 1);
   return ctx.canvas;
 }
-
-export default ImageTile;

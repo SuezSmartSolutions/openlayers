@@ -1,8 +1,8 @@
 /**
  * @module ol/interaction/KeyboardZoom
  */
-import EventType from '../events/EventType.js';
 import Interaction, {zoomByDelta} from './Interaction.js';
+import {EventType} from '../events/EventType.js';
 import {targetNotEditable} from '../events/condition.js';
 
 /**
@@ -28,7 +28,7 @@ import {targetNotEditable} from '../events/condition.js';
  * See also {@link module:ol/interaction/KeyboardPan~KeyboardPan}.
  * @api
  */
-class KeyboardZoom extends Interaction {
+export class KeyboardZoom extends Interaction {
   /**
    * @param {Options} [options] Options.
    */
@@ -90,5 +90,3 @@ class KeyboardZoom extends Interaction {
     return !stopEvent;
   }
 }
-
-export default KeyboardZoom;

@@ -1,7 +1,7 @@
 /**
  * @module ol/layer/BaseImage
  */
-import Layer from './Layer.js';
+import {Layer} from './Layer.js';
 
 /**
  * @template {import("../source/Image.js").default} ImageSourceType
@@ -44,7 +44,7 @@ import Layer from './Layer.js';
  * @extends {Layer<ImageSourceType, RendererType>}
  * @api
  */
-class BaseImageLayer extends Layer {
+export class BaseImageLayer extends Layer {
   /**
    * @param {Options<ImageSourceType>} [options] Layer options.
    */
@@ -53,5 +53,3 @@ class BaseImageLayer extends Layer {
     super(options);
   }
 }
-
-export default BaseImageLayer;

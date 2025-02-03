@@ -1,7 +1,7 @@
 /**
  * @module ol/renderer/Map
  */
-import Disposable from '../Disposable.js';
+import {Disposable} from '../Disposable.js';
 import {TRUE} from '../functions.js';
 import {abstract} from '../util.js';
 import {compose as composeTransform, makeInverse} from '../transform.js';
@@ -23,7 +23,7 @@ import {wrapX} from '../coordinate.js';
 /**
  * @abstract
  */
-class MapRenderer extends Disposable {
+export class MapRenderer extends Disposable {
   /**
    * @param {import("../Map.js").default} map Map.
    */
@@ -239,5 +239,3 @@ class MapRenderer extends Disposable {
 function expireIconCache(map, frameState) {
   iconImageCache.expire();
 }
-
-export default MapRenderer;

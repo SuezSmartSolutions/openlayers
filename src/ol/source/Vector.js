@@ -2,15 +2,15 @@
  * @module ol/source/Vector
  */
 
-import Collection from '../Collection.js';
-import CollectionEventType from '../CollectionEventType.js';
-import Event from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import ObjectEventType from '../ObjectEventType.js';
-import RBush from '../structs/RBush.js';
-import Source from './Source.js';
-import VectorEventType from './VectorEventType.js';
+import {Collection} from '../Collection.js';
+import {CollectionEventType} from '../CollectionEventType.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {EventType} from '../events/EventType.js';
+import {ObjectEventType} from '../ObjectEventType.js';
+import {RBush} from '../structs/RBush.js';
+import {Source} from './Source.js';
 import {TRUE, VOID} from '../functions.js';
+import {VectorEventType} from './VectorEventType.js';
 import {all as allStrategy} from '../loadingstrategy.js';
 import {assert} from '../asserts.js';
 import {containsExtent, equals, wrapAndSliceX} from '../extent.js';
@@ -172,7 +172,7 @@ export class VectorSourceEvent extends Event {
  * @api
  * @template {import("../geom/Geometry.js").default} [Geometry=import("../geom/Geometry.js").default]
  */
-class VectorSource extends Source {
+export class VectorSource extends Source {
   /**
    * @param {Options<Geometry>} [options] Vector source options.
    */
@@ -1123,5 +1123,3 @@ class VectorSource extends Source {
     this.setLoader(xhr(url, this.format_));
   }
 }
-
-export default VectorSource;

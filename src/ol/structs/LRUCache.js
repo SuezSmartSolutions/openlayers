@@ -21,7 +21,7 @@ import {assert} from '../asserts.js';
  * @fires import("../events/Event.js").default
  * @template T
  */
-class LRUCache {
+export class LRUCache {
   /**
    * @param {number} [highWaterMark] High water mark.
    */
@@ -282,5 +282,3 @@ class LRUCache {
     this.highWaterMark = size;
   }
 }
-
-export default LRUCache;

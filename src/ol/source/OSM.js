@@ -2,7 +2,7 @@
  * @module ol/source/OSM
  */
 
-import XYZ from './XYZ.js';
+import {XYZ} from './XYZ.js';
 
 /**
  * The attribution containing a link to the OpenStreetMap Copyright and License
@@ -50,7 +50,7 @@ export const ATTRIBUTION =
  * Layer source for the OpenStreetMap tile server.
  * @api
  */
-class OSM extends XYZ {
+export class OSM extends XYZ {
   /**
    * @param {Options} [options] Open Street Map options.
    */
@@ -89,5 +89,3 @@ class OSM extends XYZ {
     });
   }
 }
-
-export default OSM;

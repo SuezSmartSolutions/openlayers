@@ -2,10 +2,10 @@
  * @module ol/control/ZoomSlider
  */
 
-import Control from './Control.js';
-import EventType from '../events/EventType.js';
-import PointerEventType from '../pointer/EventType.js';
 import {CLASS_CONTROL, CLASS_UNSELECTABLE} from '../css.js';
+import {Control} from './Control.js';
+import {EventType} from '../events/EventType.js';
+import {EventType as PointerEventType} from '../pointer/EventType.js';
 import {clamp} from '../math.js';
 import {easeOut} from '../easing.js';
 import {listen, unlistenByKey} from '../events.js';
@@ -39,7 +39,7 @@ const Direction = {
  *
  * @api
  */
-class ZoomSlider extends Control {
+export class ZoomSlider extends Control {
   /**
    * @param {Options} [options] Zoom slider options.
    */
@@ -384,5 +384,3 @@ class ZoomSlider extends Control {
     this.setThumbPosition_(res);
   }
 }
-
-export default ZoomSlider;

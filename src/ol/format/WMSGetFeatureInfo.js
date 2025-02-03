@@ -1,8 +1,8 @@
 /**
  * @module ol/format/WMSGetFeatureInfo
  */
-import GML2 from './GML2.js';
-import XMLFeature from './XMLFeature.js';
+import {GML2} from './GML2.js';
+import {XMLFeature} from './XMLFeature.js';
 import {extend} from '../array.js';
 import {makeArrayPusher, makeStructureNS, pushParseAndPop} from '../xml.js';
 
@@ -30,7 +30,7 @@ const layerIdentifier = '_layer';
  *
  * @api
  */
-class WMSGetFeatureInfo extends XMLFeature {
+export class WMSGetFeatureInfo extends XMLFeature {
   /**
    * @param {Options} [options] Options.
    */
@@ -161,5 +161,3 @@ class WMSGetFeatureInfo extends XMLFeature {
     return this.readFeatures_(node, [internalOptions]);
   }
 }
-
-export default WMSGetFeatureInfo;

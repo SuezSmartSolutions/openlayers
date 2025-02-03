@@ -1,7 +1,7 @@
 /**
  * @module ol/interaction/DragZoom
  */
-import DragBox from './DragBox.js';
+import {DragBox} from './DragBox.js';
 import {easeOut} from '../easing.js';
 import {shiftKeyOnly} from '../events/condition.js';
 
@@ -29,7 +29,7 @@ import {shiftKeyOnly} from '../events/condition.js';
  * your custom one configured with `className`.
  * @api
  */
-class DragZoom extends DragBox {
+export class DragZoom extends DragBox {
   /**
    * @param {Options} [options] Options.
    */
@@ -80,5 +80,3 @@ class DragZoom extends DragBox {
     });
   }
 }
-
-export default DragZoom;

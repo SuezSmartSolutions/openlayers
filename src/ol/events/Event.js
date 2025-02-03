@@ -12,7 +12,7 @@
  * for higher level events defined in the library, and works with
  * {@link module:ol/events/Target~Target}.
  */
-class BaseEvent {
+export class BaseEvent {
   /**
    * @param {string} type Type.
    */
@@ -73,5 +73,3 @@ export function stopPropagation(evt) {
 export function preventDefault(evt) {
   evt.preventDefault();
 }
-
-export default BaseEvent;

@@ -1,17 +1,17 @@
 /**
  * @module ol/render/canvas/PolygonBuilder
  */
-import CanvasBuilder from './Builder.js';
 import CanvasInstruction, {
   beginPathInstruction,
   closePathInstruction,
   fillInstruction,
   strokeInstruction,
 } from './Instruction.js';
+import {CanvasBuilder} from './Builder.js';
 import {defaultFillStyle} from '../canvas.js';
 import {snap} from '../../geom/flat/simplify.js';
 
-class CanvasPolygonBuilder extends CanvasBuilder {
+export class CanvasPolygonBuilder extends CanvasBuilder {
   /**
    * @param {number} tolerance Tolerance.
    * @param {import("../../extent.js").Extent} maxExtent Maximum extent.
@@ -253,5 +253,3 @@ class CanvasPolygonBuilder extends CanvasBuilder {
     }
   }
 }
-
-export default CanvasPolygonBuilder;

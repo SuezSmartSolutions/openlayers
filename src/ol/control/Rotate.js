@@ -1,9 +1,9 @@
 /**
  * @module ol/control/Rotate
  */
-import Control from './Control.js';
-import EventType from '../events/EventType.js';
 import {CLASS_CONTROL, CLASS_HIDDEN, CLASS_UNSELECTABLE} from '../css.js';
+import {Control} from './Control.js';
+import {EventType} from '../events/EventType.js';
 import {easeOut} from '../easing.js';
 
 /**
@@ -31,7 +31,7 @@ import {easeOut} from '../easing.js';
  *
  * @api
  */
-class Rotate extends Control {
+export class Rotate extends Control {
   /**
    * @param {Options} [options] Rotate options.
    */
@@ -178,5 +178,3 @@ class Rotate extends Control {
     this.rotation_ = rotation;
   }
 }
-
-export default Rotate;

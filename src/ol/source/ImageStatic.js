@@ -2,10 +2,10 @@
  * @module ol/source/ImageStatic
  */
 
-import EventType from '../events/EventType.js';
 import ImageSource, {defaultImageLoadFunction} from './Image.js';
-import ImageState from '../ImageState.js';
-import ImageWrapper from '../Image.js';
+import {EventType} from '../events/EventType.js';
+import {ImageState} from '../ImageState.js';
+import {ImageWrapper} from '../Image.js';
 import {createCanvasContext2D} from '../dom.js';
 import {getHeight, getWidth, intersects} from '../extent.js';
 import {get as getProjection} from '../proj.js';
@@ -32,7 +32,7 @@ import {get as getProjection} from '../proj.js';
  * A layer source for displaying a single, static image.
  * @api
  */
-class Static extends ImageSource {
+export class Static extends ImageSource {
   /**
    * @param {Options} options ImageStatic options.
    */
@@ -169,5 +169,3 @@ class Static extends ImageSource {
     super.handleImageChange(evt);
   }
 }
-
-export default Static;

@@ -2,9 +2,9 @@
  * @module ol/render/Event
  */
 
-import Event from '../events/Event.js';
+import {BaseEvent as Event} from '../events/Event.js';
 
-class RenderEvent extends Event {
+export class RenderEvent extends Event {
   /**
    * @param {import("./EventType.js").default} type Type.
    * @param {import("../transform.js").Transform} [inversePixelTransform] Transform for
@@ -40,5 +40,3 @@ class RenderEvent extends Event {
     this.context = context;
   }
 }
-
-export default RenderEvent;

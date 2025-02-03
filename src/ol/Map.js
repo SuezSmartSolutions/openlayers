@@ -1,27 +1,27 @@
 /**
  * @module ol/Map
  */
-import BaseObject from './Object.js';
-import Collection from './Collection.js';
-import CollectionEventType from './CollectionEventType.js';
-import CompositeMapRenderer from './renderer/Composite.js';
-import EventType from './events/EventType.js';
-import Layer from './layer/Layer.js';
-import LayerGroup, {GroupEvent} from './layer/Group.js';
-import MapBrowserEvent from './MapBrowserEvent.js';
-import MapBrowserEventHandler from './MapBrowserEventHandler.js';
-import MapBrowserEventType from './MapBrowserEventType.js';
-import MapEvent from './MapEvent.js';
-import MapEventType from './MapEventType.js';
-import MapProperty from './MapProperty.js';
-import ObjectEventType from './ObjectEventType.js';
-import PointerEventType from './pointer/EventType.js';
-import RenderEventType from './render/EventType.js';
-import TileQueue, {getTilePriority} from './TileQueue.js';
-import View from './View.js';
-import ViewHint from './ViewHint.js';
+import {BaseObject} from './Object.js';
+import {Collection} from './Collection.js';
+import {CollectionEventType} from './CollectionEventType.js';
+import {CompositeMapRenderer} from './renderer/Composite.js';
 import {DEVICE_PIXEL_RATIO, PASSIVE_EVENT_LISTENERS} from './has.js';
+import {EventType} from './events/EventType.js';
+import {GroupEvent, LayerGroup} from './layer/Group.js';
+import {Layer} from './layer/Layer.js';
+import {MapBrowserEvent} from './MapBrowserEvent.js';
+import {MapBrowserEventHandler} from './MapBrowserEventHandler.js';
+import {MapBrowserEventType} from './MapBrowserEventType.js';
+import {MapEvent} from './MapEvent.js';
+import {MapEventType} from './MapEventType.js';
+import {MapProperty} from './MapProperty.js';
+import {ObjectEventType} from './ObjectEventType.js';
+import {EventType as PointerEventType} from './pointer/EventType.js';
+import {RenderEventType} from './render/EventType.js';
 import {TRUE} from './functions.js';
+import {TileQueue, getTilePriority} from './TileQueue.js';
+import {View} from './View.js';
+import {ViewHint} from './ViewHint.js';
 import {
   apply as applyTransform,
   create as createTransform,
@@ -185,10 +185,10 @@ function setLayerMapProperty(layer, map) {
  * The map is the core component of OpenLayers. For a map to render, a view,
  * one or more layers, and a target container are needed:
  *
- *     import Map from 'ol/Map';
- *     import View from 'ol/View';
- *     import TileLayer from 'ol/layer/Tile';
- *     import OSM from 'ol/source/OSM';
+ *     import { Map } from 'ol/Map';
+ *     import { View } from 'ol/View';
+ *     import { TileLayer } from 'ol/layer/Tile';
+ *     import { OSM } from 'ol/source/OSM';
  *
  *     const map = new Map({
  *       view: new View({
@@ -232,7 +232,7 @@ function setLayerMapProperty(layer, map) {
  * @fires import("./render/Event.js").default#rendercomplete
  * @api
  */
-class Map extends BaseObject {
+export class Map extends BaseObject {
   /**
    * @param {MapOptions} [options] Map options.
    */
@@ -1816,4 +1816,3 @@ function createOptionsInternal(options) {
     values: values,
   };
 }
-export default Map;

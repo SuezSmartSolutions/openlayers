@@ -65,7 +65,7 @@ import {
  * @abstract
  * @api
  */
-class FeatureFormat {
+export class FeatureFormat {
   constructor() {
     /**
      * @protected
@@ -224,8 +224,6 @@ class FeatureFormat {
     return abstract();
   }
 }
-
-export default FeatureFormat;
 
 /**
  * @param {import("../geom/Geometry.js").default} geometry Geometry.

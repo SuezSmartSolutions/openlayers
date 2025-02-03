@@ -1,8 +1,8 @@
 /**
  * @module ol/interaction/Interaction
  */
-import BaseObject from '../Object.js';
-import InteractionProperty from './Property.js';
+import {BaseObject} from '../Object.js';
+import {InteractionProperty} from './Property.js';
 import {easeOut, linear} from '../easing.js';
 
 /***
@@ -38,7 +38,7 @@ import {easeOut, linear} from '../easing.js';
  * vectors and so are visible on the screen.
  * @api
  */
-class Interaction extends BaseObject {
+export class Interaction extends BaseObject {
   /**
    * @param {InteractionOptions} [options] Options.
    */
@@ -166,5 +166,3 @@ export function zoomByDelta(view, delta, anchor, duration) {
     easing: easeOut,
   });
 }
-
-export default Interaction;

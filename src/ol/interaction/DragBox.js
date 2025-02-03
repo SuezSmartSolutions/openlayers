@@ -2,9 +2,9 @@
  * @module ol/interaction/DragBox
  */
 // FIXME draw drag box
-import Event from '../events/Event.js';
-import PointerInteraction from './Pointer.js';
-import RenderBox from '../render/Box.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {PointerInteraction} from './Pointer.js';
+import {RenderBox} from '../render/Box.js';
 import {mouseActionButton} from '../events/condition.js';
 
 /**
@@ -115,7 +115,7 @@ export class DragBoxEvent extends Event {
  * @fires DragBoxEvent
  * @api
  */
-class DragBox extends PointerInteraction {
+export class DragBox extends PointerInteraction {
   /**
    * @param {Options} [options] Options.
    */
@@ -271,5 +271,3 @@ class DragBox extends PointerInteraction {
    */
   onBoxEnd(event) {}
 }
-
-export default DragBox;

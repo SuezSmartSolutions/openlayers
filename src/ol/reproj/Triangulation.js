@@ -47,7 +47,7 @@ const MAX_TRIANGLE_WIDTH = 0.25;
  * Class containing triangulation of the given target extent.
  * Used for determining source data and the reprojection itself.
  */
-class Triangulation {
+export class Triangulation {
   /**
    * @param {import("../proj/Projection.js").default} sourceProj Source projection.
    * @param {import("../proj/Projection.js").default} targetProj Target projection.
@@ -500,5 +500,3 @@ class Triangulation {
     return this.triangles_;
   }
 }
-
-export default Triangulation;

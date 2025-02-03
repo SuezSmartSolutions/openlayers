@@ -14,7 +14,7 @@
  * Set fill style for vector features.
  * @api
  */
-class Fill {
+export class Fill {
   /**
    * @param {Options} [options] Options.
    */
@@ -59,5 +59,3 @@ class Fill {
     this.color_ = color;
   }
 }
-
-export default Fill;

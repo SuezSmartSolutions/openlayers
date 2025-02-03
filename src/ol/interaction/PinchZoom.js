@@ -17,7 +17,7 @@ import {FALSE} from '../functions.js';
  * on a touch screen.
  * @api
  */
-class PinchZoom extends PointerInteraction {
+export class PinchZoom extends PointerInteraction {
   /**
    * @param {Options} [options] Options.
    */
@@ -135,5 +135,3 @@ class PinchZoom extends PointerInteraction {
     }
   }
 }
-
-export default PinchZoom;

@@ -2,8 +2,8 @@
  * @module ol/control/MousePosition
  */
 
-import Control from './Control.js';
-import EventType from '../pointer/EventType.js';
+import {Control} from './Control.js';
+import {EventType} from '../pointer/EventType.js';
 import {
   get as getProjection,
   getTransformFromProjections,
@@ -60,7 +60,7 @@ const COORDINATE_FORMAT = 'coordinateFormat';
  *
  * @api
  */
-class MousePosition extends Control {
+export class MousePosition extends Control {
   /**
    * @param {Options} [options] Mouse position options.
    */
@@ -290,5 +290,3 @@ class MousePosition extends Control {
     }
   }
 }
-
-export default MousePosition;

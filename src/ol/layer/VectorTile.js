@@ -1,9 +1,9 @@
 /**
  * @module ol/layer/VectorTile
  */
-import BaseVectorLayer from './BaseVector.js';
-import CanvasVectorTileLayerRenderer from '../renderer/canvas/VectorTileLayer.js';
-import TileProperty from './TileProperty.js';
+import {BaseVectorLayer} from './BaseVector.js';
+import {CanvasVectorTileLayerRenderer} from '../renderer/canvas/VectorTileLayer.js';
+import {TileProperty} from './TileProperty.js';
 import {assert} from '../asserts.js';
 
 /***
@@ -97,7 +97,7 @@ import {assert} from '../asserts.js';
  * @extends {BaseVectorLayer<import("../source/VectorTile.js").default, CanvasVectorTileLayerRenderer>}
  * @api
  */
-class VectorTileLayer extends BaseVectorLayer {
+export class VectorTileLayer extends BaseVectorLayer {
   /**
    * @param {Options} [options] Options.
    */
@@ -232,5 +232,3 @@ class VectorTileLayer extends BaseVectorLayer {
     this.set(TileProperty.USE_INTERIM_TILES_ON_ERROR, useInterimTilesOnError);
   }
 }
-
-export default VectorTileLayer;

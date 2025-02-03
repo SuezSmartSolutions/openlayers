@@ -1,14 +1,14 @@
 /**
  * @module ol/format/TopoJSON
  */
-import Feature from '../Feature.js';
-import JSONFeature from './JSONFeature.js';
-import LineString from '../geom/LineString.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import MultiPoint from '../geom/MultiPoint.js';
-import MultiPolygon from '../geom/MultiPolygon.js';
-import Point from '../geom/Point.js';
-import Polygon from '../geom/Polygon.js';
+import {Feature} from '../Feature.js';
+import {JSONFeature} from './JSONFeature.js';
+import {LineString} from '../geom/LineString.js';
+import {MultiLineString} from '../geom/MultiLineString.js';
+import {MultiPoint} from '../geom/MultiPoint.js';
+import {MultiPolygon} from '../geom/MultiPolygon.js';
+import {Point} from '../geom/Point.js';
+import {Polygon} from '../geom/Polygon.js';
 import {get as getProjection} from '../proj.js';
 import {transformGeometryWithOptions} from './Feature.js';
 
@@ -54,7 +54,7 @@ import {transformGeometryWithOptions} from './Feature.js';
  *
  * @api
  */
-class TopoJSON extends JSONFeature {
+export class TopoJSON extends JSONFeature {
   /**
    * @param {Options} [options] Options.
    */
@@ -443,5 +443,3 @@ function transformVertex(vertex, scale, translate) {
   vertex[0] = vertex[0] * scale[0] + translate[0];
   vertex[1] = vertex[1] * scale[1] + translate[1];
 }
-
-export default TopoJSON;

@@ -53,7 +53,6 @@
  * {@link module:ol/proj.addProjection}. See examples/wms-no-proj for an example of
  * this.
  */
-import Projection from './proj/Projection.js';
 import {
   PROJECTIONS as EPSG3857_PROJECTIONS,
   fromEPSG4326,
@@ -61,6 +60,7 @@ import {
 } from './proj/epsg3857.js';
 import {PROJECTIONS as EPSG4326_PROJECTIONS} from './proj/epsg4326.js';
 import {METERS_PER_UNIT} from './proj/Units.js';
+import {Projection} from './proj/Projection.js';
 import {
   add as addProj,
   clear as clearProj,

@@ -23,7 +23,7 @@
  * the options; they will not return the default.
  * @api
  */
-class Stroke {
+export class Stroke {
   /**
    * @param {Options} [options] Options.
    */
@@ -224,5 +224,3 @@ class Stroke {
     this.width_ = width;
   }
 }
-
-export default Stroke;

@@ -1,11 +1,11 @@
 /**
  * @module ol/renderer/Composite
  */
-import MapRenderer from './Map.js';
-import ObjectEventType from '../ObjectEventType.js';
-import RenderEvent from '../render/Event.js';
-import RenderEventType from '../render/EventType.js';
 import {CLASS_UNSELECTABLE} from '../css.js';
+import {MapRenderer} from './Map.js';
+import {ObjectEventType} from '../ObjectEventType.js';
+import {RenderEvent} from '../render/Event.js';
+import {RenderEventType} from '../render/EventType.js';
 import {checkedFonts} from '../render/canvas.js';
 import {inView} from '../layer/Layer.js';
 import {listen, unlistenByKey} from '../events.js';
@@ -16,7 +16,7 @@ import {replaceChildren} from '../dom.js';
  * Canvas map renderer.
  * @api
  */
-class CompositeMapRenderer extends MapRenderer {
+export class CompositeMapRenderer extends MapRenderer {
   /**
    * @param {import("../Map.js").default} map Map.
    */
@@ -150,5 +150,3 @@ class CompositeMapRenderer extends MapRenderer {
     this.scheduleExpireIconCache(frameState);
   }
 }
-
-export default CompositeMapRenderer;

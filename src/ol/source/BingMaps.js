@@ -2,7 +2,7 @@
  * @module ol/source/BingMaps
  */
 
-import TileImage from './TileImage.js';
+import {TileImage} from './TileImage.js';
 import {applyTransform, intersects} from '../extent.js';
 import {createFromTileUrlFunctions} from '../tileurlfunction.js';
 import {createOrUpdate} from '../tilecoord.js';
@@ -113,7 +113,7 @@ const TOS_ATTRIBUTION =
  * Layer source for Bing Maps tile data.
  * @api
  */
-class BingMaps extends TileImage {
+export class BingMaps extends TileImage {
   /**
    * @param {Options} options Bing Maps options.
    */
@@ -324,5 +324,3 @@ class BingMaps extends TileImage {
     this.setState('ready');
   }
 }
-
-export default BingMaps;

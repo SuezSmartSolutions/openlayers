@@ -1,8 +1,8 @@
 /**
  * @module ol/geom/MultiLineString
  */
-import LineString from './LineString.js';
-import SimpleGeometry from './SimpleGeometry.js';
+import {LineString} from './LineString.js';
+import {SimpleGeometry} from './SimpleGeometry.js';
 import {arrayMaxSquaredDelta, assignClosestArrayPoint} from './flat/closest.js';
 import {closestSquaredDistanceXY} from '../extent.js';
 import {deflateCoordinatesArray} from './flat/deflate.js';
@@ -21,7 +21,7 @@ import {intersectsLineStringArray} from './flat/intersectsextent.js';
  *
  * @api
  */
-class MultiLineString extends SimpleGeometry {
+export class MultiLineString extends SimpleGeometry {
   /**
    * @param {Array<Array<import("../coordinate.js").Coordinate>|LineString>|Array<number>} coordinates
    *     Coordinates or LineString geometries. (For internal use, flat coordinates in
@@ -346,5 +346,3 @@ class MultiLineString extends SimpleGeometry {
     this.changed();
   }
 }
-
-export default MultiLineString;

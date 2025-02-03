@@ -8,7 +8,7 @@
  *
  * @api
  */
-class Kinetic {
+export class Kinetic {
   /**
    * @param {number} decay Rate of decay (must be negative).
    * @param {number} minVelocity Minimum velocity (pixels/millisecond).
@@ -122,5 +122,3 @@ class Kinetic {
     return this.angle_;
   }
 }
-
-export default Kinetic;

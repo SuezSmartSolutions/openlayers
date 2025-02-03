@@ -1,9 +1,9 @@
 /**
  * @module ol/render/canvas/Builder
  */
-import CanvasInstruction from './Instruction.js';
-import Relationship from '../../extent/Relationship.js';
-import VectorContext from '../VectorContext.js';
+import {Instruction as CanvasInstruction} from './Instruction.js';
+import {Relationship} from '../../extent/Relationship.js';
+import {VectorContext} from '../VectorContext.js';
 import {asColorLike} from '../../colorlike.js';
 import {
   buffer,
@@ -28,7 +28,7 @@ import {
   inflateMultiCoordinatesArray,
 } from '../../geom/flat/inflate.js';
 
-class CanvasBuilder extends VectorContext {
+export class CanvasBuilder extends VectorContext {
   /**
    * @param {number} tolerance Tolerance.
    * @param {import("../../extent.js").Extent} maxExtent Maximum extent.
@@ -647,5 +647,3 @@ class CanvasBuilder extends VectorContext {
     return this.bufferedMaxExtent_;
   }
 }
-
-export default CanvasBuilder;

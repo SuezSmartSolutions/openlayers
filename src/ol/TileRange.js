@@ -6,7 +6,7 @@
  * A representation of a contiguous block of tiles.  A tile range is specified
  * by its min/max tile coordinates and is inclusive of coordinates.
  */
-class TileRange {
+export class TileRange {
   /**
    * @param {number} minX Minimum X.
    * @param {number} maxX Maximum X.
@@ -150,5 +150,3 @@ export function createOrUpdate(minX, maxX, minY, maxY, tileRange) {
     return new TileRange(minX, maxX, minY, maxY);
   }
 }
-
-export default TileRange;

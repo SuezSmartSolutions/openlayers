@@ -1,7 +1,7 @@
 /**
  * @module ol/proj/proj4
  */
-import Projection from './Projection.js';
+import {Projection} from './Projection.js';
 import {
   addCoordinateTransforms,
   addEquivalentProjections,

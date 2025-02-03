@@ -49,7 +49,7 @@ import {METERS_PER_UNIT} from './Units.js';
  *
  * @api
  */
-class Projection {
+export class Projection {
   /**
    * @param {Options} options Projection options.
    */
@@ -267,5 +267,3 @@ class Projection {
     return this.getPointResolutionFunc_;
   }
 }
-
-export default Projection;

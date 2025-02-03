@@ -2,7 +2,7 @@
  * @module ol/source/CartoDB
  */
 
-import XYZ from './XYZ.js';
+import {XYZ} from './XYZ.js';
 
 /**
  * @typedef {Object} Options
@@ -43,7 +43,7 @@ import XYZ from './XYZ.js';
  * Layer source for the CartoDB Maps API.
  * @api
  */
-class CartoDB extends XYZ {
+export class CartoDB extends XYZ {
   /**
    * @param {Options} options CartoDB options.
    */
@@ -199,5 +199,3 @@ class CartoDB extends XYZ {
     this.setUrl(tilesUrl);
   }
 }
-
-export default CartoDB;

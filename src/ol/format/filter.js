@@ -1,26 +1,26 @@
 /**
  * @module ol/format/filter
  */
-import And from './filter/And.js';
-import Bbox from './filter/Bbox.js';
-import Contains from './filter/Contains.js';
-import DWithin from './filter/DWithin.js';
-import Disjoint from './filter/Disjoint.js';
-import During from './filter/During.js';
-import EqualTo from './filter/EqualTo.js';
-import GreaterThan from './filter/GreaterThan.js';
-import GreaterThanOrEqualTo from './filter/GreaterThanOrEqualTo.js';
-import Intersects from './filter/Intersects.js';
-import IsBetween from './filter/IsBetween.js';
-import IsLike from './filter/IsLike.js';
-import IsNull from './filter/IsNull.js';
-import LessThan from './filter/LessThan.js';
-import LessThanOrEqualTo from './filter/LessThanOrEqualTo.js';
-import Not from './filter/Not.js';
-import NotEqualTo from './filter/NotEqualTo.js';
-import Or from './filter/Or.js';
-import ResourceId from './filter/ResourceId.js';
-import Within from './filter/Within.js';
+import {And} from './filter/And.js';
+import {Bbox} from './filter/Bbox.js';
+import {Contains} from './filter/Contains.js';
+import {DWithin} from './filter/DWithin.js';
+import {Disjoint} from './filter/Disjoint.js';
+import {During} from './filter/During.js';
+import {EqualTo} from './filter/EqualTo.js';
+import {GreaterThan} from './filter/GreaterThan.js';
+import {GreaterThanOrEqualTo} from './filter/GreaterThanOrEqualTo.js';
+import {Intersects} from './filter/Intersects.js';
+import {IsBetween} from './filter/IsBetween.js';
+import {IsLike} from './filter/IsLike.js';
+import {IsNull} from './filter/IsNull.js';
+import {LessThan} from './filter/LessThan.js';
+import {LessThanOrEqualTo} from './filter/LessThanOrEqualTo.js';
+import {Not} from './filter/Not.js';
+import {NotEqualTo} from './filter/NotEqualTo.js';
+import {Or} from './filter/Or.js';
+import {ResourceId} from './filter/ResourceId.js';
+import {Within} from './filter/Within.js';
 
 /**
  * Create a logical `<And>` operator between two or more filter conditions.

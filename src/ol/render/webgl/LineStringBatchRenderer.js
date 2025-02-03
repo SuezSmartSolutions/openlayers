@@ -1,7 +1,7 @@
 /**
  * @module ol/render/webgl/LineStringBatchRenderer
  */
-import AbstractBatchRenderer from './BatchRenderer.js';
+import {AbstractBatchRenderer} from './BatchRenderer.js';
 import {AttributeType} from '../../webgl/Helper.js';
 import {transform2D} from '../../geom/flat/transform.js';
 
@@ -16,7 +16,7 @@ export const Attributes = {
   PARAMETERS: 'a_parameters',
 };
 
-class LineStringBatchRenderer extends AbstractBatchRenderer {
+export class LineStringBatchRenderer extends AbstractBatchRenderer {
   /**
    * @param {import("../../webgl/Helper.js").default} helper WebGL helper instance
    * @param {Worker} worker WebGL worker instance
@@ -112,5 +112,3 @@ class LineStringBatchRenderer extends AbstractBatchRenderer {
     }
   }
 }
-
-export default LineStringBatchRenderer;

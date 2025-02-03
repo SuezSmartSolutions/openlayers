@@ -3,9 +3,9 @@
  */
 // FIXME should handle all geo-referenced data, not just vector data
 
-import Event from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import Interaction from './Interaction.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {EventType} from '../events/EventType.js';
+import {Interaction} from './Interaction.js';
 import {TRUE} from '../functions.js';
 import {get as getProjection, getUserProjection} from '../proj.js';
 import {listen, unlistenByKey} from '../events.js';
@@ -91,7 +91,7 @@ export class DragAndDropEvent extends Event {
  *
  * @fires DragAndDropEvent
  */
-class DragAndDrop extends Interaction {
+export class DragAndDrop extends Interaction {
   /**
    * @param {Options} [options] Options.
    */
@@ -320,5 +320,3 @@ class DragAndDrop extends Interaction {
     event.dataTransfer.dropEffect = 'copy';
   }
 }
-
-export default DragAndDrop;

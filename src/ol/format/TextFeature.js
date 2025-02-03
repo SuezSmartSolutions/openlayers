@@ -1,7 +1,7 @@
 /**
  * @module ol/format/TextFeature
  */
-import FeatureFormat from '../format/Feature.js';
+import {FeatureFormat} from '../format/Feature.js';
 import {abstract} from '../util.js';
 
 /**
@@ -12,7 +12,7 @@ import {abstract} from '../util.js';
  *
  * @abstract
  */
-class TextFeature extends FeatureFormat {
+export class TextFeature extends FeatureFormat {
   constructor() {
     super();
   }
@@ -203,5 +203,3 @@ function getText(source) {
     return '';
   }
 }
-
-export default TextFeature;

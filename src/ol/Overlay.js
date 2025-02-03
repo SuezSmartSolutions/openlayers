@@ -1,9 +1,9 @@
 /**
  * @module ol/Overlay
  */
-import BaseObject from './Object.js';
-import MapEventType from './MapEventType.js';
+import {BaseObject} from './Object.js';
 import {CLASS_SELECTABLE} from './css.js';
+import {MapEventType} from './MapEventType.js';
 import {containsExtent} from './extent.js';
 import {listen, unlistenByKey} from './events.js';
 import {outerHeight, outerWidth, removeChildren, removeNode} from './dom.js';
@@ -98,7 +98,7 @@ const Property = {
  *
  * Example:
  *
- *     import Overlay from 'ol/Overlay';
+ *     import { Overlay } from 'ol/Overlay';
  *
  *     // ...
  *     const popup = new Overlay({
@@ -109,7 +109,7 @@ const Property = {
  *
  * @api
  */
-class Overlay extends BaseObject {
+export class Overlay extends BaseObject {
   /**
    * @param {Options} options Overlay options.
    */
@@ -578,5 +578,3 @@ class Overlay extends BaseObject {
     return this.options;
   }
 }
-
-export default Overlay;

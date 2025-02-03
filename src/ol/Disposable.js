@@ -6,7 +6,7 @@
  * @classdesc
  * Objects that need to clean up after themselves.
  */
-class Disposable {
+export class Disposable {
   constructor() {
     /**
      * The object has already been disposed.
@@ -32,5 +32,3 @@ class Disposable {
    */
   disposeInternal() {}
 }
-
-export default Disposable;

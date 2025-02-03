@@ -1,7 +1,7 @@
 /**
  * @module ol/render/canvas
  */
-import BaseObject from '../Object.js';
+import {BaseObject} from '../Object.js';
 import {WORKER_OFFSCREEN_CANVAS} from '../has.js';
 import {clear} from '../obj.js';
 import {createCanvasContext2D} from '../dom.js';

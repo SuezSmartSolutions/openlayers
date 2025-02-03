@@ -1,7 +1,7 @@
 /**
  * @module ol/render
  */
-import CanvasImmediateRenderer from './render/canvas/Immediate.js';
+import {CanvasImmediateRenderer} from './render/canvas/Immediate.js';
 import {DEVICE_PIXEL_RATIO} from './has.js';
 import {
   apply as applyTransform,
@@ -49,8 +49,8 @@ import {getTransformFromProjections, getUserProjection} from './proj.js';
  * corner of the canvas element.
  * ```js
  * import {toContext} from 'ol/render';
- * import Fill from 'ol/style/Fill';
- * import Polygon from 'ol/geom/Polygon';
+ * import { Fill } from 'ol/style/Fill';
+ * import { Polygon } from 'ol/geom/Polygon';
  *
  * const canvas = document.createElement('canvas');
  * const render = toContext(

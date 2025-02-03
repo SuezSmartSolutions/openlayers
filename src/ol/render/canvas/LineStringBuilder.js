@@ -1,14 +1,15 @@
 /**
  * @module ol/render/canvas/LineStringBuilder
  */
-import CanvasBuilder from './Builder.js';
-import CanvasInstruction, {
+import {CanvasBuilder} from './Builder.js';
+import {
+  Instruction as CanvasInstruction,
   beginPathInstruction,
   strokeInstruction,
 } from './Instruction.js';
 import {defaultLineDash, defaultLineDashOffset} from '../canvas.js';
 
-class CanvasLineStringBuilder extends CanvasBuilder {
+export class CanvasLineStringBuilder extends CanvasBuilder {
   /**
    * @param {number} tolerance Tolerance.
    * @param {import("../../extent.js").Extent} maxExtent Maximum extent.
@@ -159,5 +160,3 @@ class CanvasLineStringBuilder extends CanvasBuilder {
     this.instructions.push(beginPathInstruction);
   }
 }
-
-export default CanvasLineStringBuilder;

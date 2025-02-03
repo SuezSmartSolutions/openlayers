@@ -2,7 +2,7 @@
  * @module ol/render/canvas/ExecutorGroup
  */
 
-import Executor from './Executor.js';
+import {Executor} from './Executor.js';
 import {buffer, createEmpty, extendCoordinate} from '../../extent.js';
 import {
   compose as composeTransform,
@@ -19,7 +19,7 @@ import {transform2D} from '../../geom/flat/transform.js';
  */
 const ORDER = ['Polygon', 'Circle', 'LineString', 'Image', 'Text', 'Default'];
 
-class ExecutorGroup {
+export class ExecutorGroup {
   /**
    * @param {import("../../extent.js").Extent} maxExtent Max extent for clipping. When a
    * `maxExtent` was set on the Builder for this executor group, the same `maxExtent`
@@ -418,5 +418,3 @@ export function getPixelIndexArray(radius) {
   circlePixelIndexArrayCache[radius] = pixelIndex;
   return pixelIndex;
 }
-
-export default ExecutorGroup;

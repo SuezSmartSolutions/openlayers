@@ -1,7 +1,7 @@
 /**
  * @module ol/geom/SimpleGeometry
  */
-import Geometry from './Geometry.js';
+import {Geometry} from './Geometry.js';
 import {abstract} from '../util.js';
 import {createOrUpdateFromFlatCoordinates, getCenter} from '../extent.js';
 import {rotate, scale, transform2D, translate} from './flat/transform.js';
@@ -14,7 +14,7 @@ import {rotate, scale, transform2D, translate} from './flat/transform.js';
  * @abstract
  * @api
  */
-class SimpleGeometry extends Geometry {
+export class SimpleGeometry extends Geometry {
   constructor() {
     super();
 
@@ -348,5 +348,3 @@ export function transformGeom2D(simpleGeometry, transform, dest) {
     );
   }
 }
-
-export default SimpleGeometry;

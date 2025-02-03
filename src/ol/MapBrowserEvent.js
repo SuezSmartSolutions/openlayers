@@ -1,7 +1,7 @@
 /**
  * @module ol/MapBrowserEvent
  */
-import MapEvent from './MapEvent.js';
+import {MapEvent} from './MapEvent.js';
 
 /**
  * @classdesc
@@ -9,7 +9,7 @@ import MapEvent from './MapEvent.js';
  * See {@link module:ol/Map~Map} for which events trigger a map browser event.
  * @template {UIEvent} EVENT
  */
-class MapBrowserEvent extends MapEvent {
+export class MapBrowserEvent extends MapEvent {
   /**
    * @param {string} type Event type.
    * @param {import("./Map.js").default} map Map.
@@ -111,5 +111,3 @@ class MapBrowserEvent extends MapEvent {
     }
   }
 }
-
-export default MapBrowserEvent;

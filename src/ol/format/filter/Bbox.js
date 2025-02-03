@@ -1,7 +1,7 @@
 /**
  * @module ol/format/filter/Bbox
  */
-import Filter from './Filter.js';
+import {Filter} from './Filter.js';
 
 /**
  * @classdesc
@@ -10,7 +10,7 @@ import Filter from './Filter.js';
  *
  * @api
  */
-class Bbox extends Filter {
+export class Bbox extends Filter {
   /**
    * @param {!string} geometryName Geometry name to use.
    * @param {!import("../../extent.js").Extent} extent Extent.
@@ -41,5 +41,3 @@ class Bbox extends Filter {
     this.srsName = srsName;
   }
 }
-
-export default Bbox;

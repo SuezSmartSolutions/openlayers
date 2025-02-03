@@ -2,10 +2,10 @@
  * @module ol/source/Cluster
  */
 
-import EventType from '../events/EventType.js';
-import Feature from '../Feature.js';
-import Point from '../geom/Point.js';
-import VectorSource from './Vector.js';
+import {EventType} from '../events/EventType.js';
+import {Feature} from '../Feature.js';
+import {Point} from '../geom/Point.js';
+import {VectorSource} from './Vector.js';
 import {add as addCoordinate, scale as scaleCoordinate} from '../coordinate.js';
 import {assert} from '../asserts.js';
 import {
@@ -66,7 +66,7 @@ import {getUid} from '../util.js';
  * from the wrapped source.
  * @api
  */
-class Cluster extends VectorSource {
+export class Cluster extends VectorSource {
   /**
    * @param {Options} options Cluster options.
    */
@@ -324,5 +324,3 @@ class Cluster extends VectorSource {
     }
   }
 }
-
-export default Cluster;

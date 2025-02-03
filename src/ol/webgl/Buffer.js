@@ -37,7 +37,7 @@ export const BufferUsage = {
  * for more info on buffer usage.
  * @api
  */
-class WebGLArrayBuffer {
+export class WebGLArrayBuffer {
   /**
    * @param {number} type Buffer type, either ARRAY_BUFFER or ELEMENT_ARRAY_BUFFER.
    * @param {number} [usage] Intended usage, either `STATIC_DRAW`, `STREAM_DRAW` or `DYNAMIC_DRAW`.
@@ -136,5 +136,3 @@ export function getArrayClassForType(type) {
       return Float32Array;
   }
 }
-
-export default WebGLArrayBuffer;

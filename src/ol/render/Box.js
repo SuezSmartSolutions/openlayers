@@ -2,10 +2,10 @@
  * @module ol/render/Box
  */
 
-import Disposable from '../Disposable.js';
-import Polygon from '../geom/Polygon.js';
+import {Disposable} from '../Disposable.js';
+import {Polygon} from '../geom/Polygon.js';
 
-class RenderBox extends Disposable {
+export class RenderBox extends Disposable {
   /**
    * @param {string} className CSS class name.
    */
@@ -128,5 +128,3 @@ class RenderBox extends Disposable {
     return this.geometry_;
   }
 }
-
-export default RenderBox;

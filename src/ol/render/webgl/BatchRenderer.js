@@ -25,7 +25,7 @@ let workerMessageCounter = 0;
  * Batch renderers are meant to render the geometries contained in a {@link module:ol/render/webgl/GeometryBatch}
  * instance. They are responsible for generating render instructions and transforming them into WebGL buffers.
  */
-class AbstractBatchRenderer {
+export class AbstractBatchRenderer {
   /**
    * @param {import("../../webgl/Helper.js").default} helper WebGL helper instance
    * @param {Worker} worker WebGL worker instance
@@ -197,5 +197,3 @@ class AbstractBatchRenderer {
     this.worker_.addEventListener('message', handleMessage);
   }
 }
-
-export default AbstractBatchRenderer;

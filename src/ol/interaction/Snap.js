@@ -1,12 +1,12 @@
 /**
  * @module ol/interaction/Snap
  */
-import CollectionEventType from '../CollectionEventType.js';
-import EventType from '../events/EventType.js';
-import PointerInteraction from './Pointer.js';
-import RBush from '../structs/RBush.js';
-import VectorEventType from '../source/VectorEventType.js';
+import {CollectionEventType} from '../CollectionEventType.js';
+import {EventType} from '../events/EventType.js';
 import {FALSE, TRUE} from '../functions.js';
+import {PointerInteraction} from './Pointer.js';
+import {RBush} from '../structs/RBush.js';
+import {VectorEventType} from '../source/VectorEventType.js';
 import {boundingExtent, createEmpty} from '../extent.js';
 import {
   closestOnCircle,
@@ -80,7 +80,7 @@ const tempSegment = [];
  *
  * Example:
  *
- *     import Snap from 'ol/interaction/Snap';
+ *     import { Snap } from 'ol/interaction/Snap';
  *
  *     const snap = new Snap({
  *       source: source
@@ -90,7 +90,7 @@ const tempSegment = [];
  *
  * @api
  */
-class Snap extends PointerInteraction {
+export class Snap extends PointerInteraction {
   /**
    * @param {Options} [options] Options.
    */
@@ -664,5 +664,3 @@ class Snap extends PointerInteraction {
     }
   }
 }
-
-export default Snap;

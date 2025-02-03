@@ -1,7 +1,7 @@
 /**
  * @module ol/format/filter/And
  */
-import LogicalNary from './LogicalNary.js';
+import {LogicalNary} from './LogicalNary.js';
 
 /**
  * @classdesc
@@ -9,7 +9,7 @@ import LogicalNary from './LogicalNary.js';
  *
  * @abstract
  */
-class And extends LogicalNary {
+export class And extends LogicalNary {
   /**
    * @param {...import("./Filter.js").default} conditions Conditions.
    */
@@ -17,5 +17,3 @@ class And extends LogicalNary {
     super('And', Array.prototype.slice.call(arguments));
   }
 }
-
-export default And;

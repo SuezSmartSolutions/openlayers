@@ -1,16 +1,16 @@
 /**
  * @module ol/source/Raster
  */
-import Disposable from '../Disposable.js';
-import Event from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import ImageCanvas from '../ImageCanvas.js';
-import ImageLayer from '../layer/Image.js';
-import ImageSource from './Image.js';
-import Source from './Source.js';
-import TileLayer from '../layer/Tile.js';
-import TileQueue from '../TileQueue.js';
-import TileSource from './Tile.js';
+import {Disposable} from '../Disposable.js';
+import {BaseEvent as Event} from '../events/Event.js';
+import {EventType} from '../events/EventType.js';
+import {ImageCanvas} from '../ImageCanvas.js';
+import {ImageLayer} from '../layer/Image.js';
+import {ImageSource} from './Image.js';
+import {Source} from './Source.js';
+import {TileLayer} from '../layer/Tile.js';
+import {TileQueue} from '../TileQueue.js';
+import {TileSource} from './Tile.js';
 import {createCanvasContext2D} from '../dom.js';
 import {create as createTransform} from '../transform.js';
 import {equals, getCenter, getHeight, getWidth} from '../extent.js';
@@ -536,7 +536,7 @@ export class RasterSourceEvent extends Event {
  * @fires module:ol/source/Raster.RasterSourceEvent
  * @api
  */
-class RasterSource extends ImageSource {
+export class RasterSource extends ImageSource {
   /**
    * @param {Options} options Options.
    */
@@ -982,5 +982,3 @@ function createLayer(layerOrSource) {
   }
   return layer;
 }
-
-export default RasterSource;

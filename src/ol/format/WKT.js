@@ -1,15 +1,15 @@
 /**
  * @module ol/format/WKT
  */
-import Feature from '../Feature.js';
-import GeometryCollection from '../geom/GeometryCollection.js';
-import LineString from '../geom/LineString.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import MultiPoint from '../geom/MultiPoint.js';
-import MultiPolygon from '../geom/MultiPolygon.js';
-import Point from '../geom/Point.js';
-import Polygon from '../geom/Polygon.js';
-import TextFeature from './TextFeature.js';
+import {Feature} from '../Feature.js';
+import {GeometryCollection} from '../geom/GeometryCollection.js';
+import {LineString} from '../geom/LineString.js';
+import {MultiLineString} from '../geom/MultiLineString.js';
+import {MultiPoint} from '../geom/MultiPoint.js';
+import {MultiPolygon} from '../geom/MultiPolygon.js';
+import {Point} from '../geom/Point.js';
+import {Polygon} from '../geom/Polygon.js';
+import {TextFeature} from './TextFeature.js';
 import {transformGeometryWithOptions} from './Feature.js';
 
 /**
@@ -93,7 +93,7 @@ const wktTypeLookup = {
 /**
  * Class to tokenize a WKT string.
  */
-class Lexer {
+export class Lexer {
   /**
    * @param {string} wkt WKT string.
    */
@@ -227,7 +227,7 @@ class Lexer {
 /**
  * Class to parse the tokens from the WKT string.
  */
-class Parser {
+export class Parser {
   /**
    * @param {Lexer} lexer The lexer.
    */
@@ -599,7 +599,7 @@ class Parser {
  *
  * @api
  */
-class WKT extends TextFeature {
+export class WKT extends TextFeature {
   /**
    * @param {Options} [options] Options.
    */
@@ -865,5 +865,3 @@ function encode(geom) {
   }
   return wktType + '(' + enc + ')';
 }
-
-export default WKT;

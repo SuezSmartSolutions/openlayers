@@ -2,16 +2,16 @@
  * @module ol/MapBrowserEventHandler
  */
 
-import EventType from './events/EventType.js';
-import MapBrowserEvent from './MapBrowserEvent.js';
-import MapBrowserEventType from './MapBrowserEventType.js';
-import PointerEventType from './pointer/EventType.js';
-import Target from './events/Target.js';
+import {EventType} from './events/EventType.js';
+import {MapBrowserEvent} from './MapBrowserEvent.js';
+import {MapBrowserEventType} from './MapBrowserEventType.js';
 import {PASSIVE_EVENT_LISTENERS} from './has.js';
+import {EventType as PointerEventType} from './pointer/EventType.js';
+import {Target} from './events/Target.js';
 import {VOID} from './functions.js';
 import {listen, unlistenByKey} from './events.js';
 
-class MapBrowserEventHandler extends Target {
+export class MapBrowserEventHandler extends Target {
   /**
    * @param {import("./Map.js").default} map The map with the viewport to listen to events on.
    * @param {number} [moveTolerance] The minimal distance the pointer must travel to trigger a move.
@@ -416,5 +416,3 @@ class MapBrowserEventHandler extends Target {
     super.disposeInternal();
   }
 }
-
-export default MapBrowserEventHandler;

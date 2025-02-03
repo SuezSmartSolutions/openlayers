@@ -1,14 +1,14 @@
 /**
  * @module ol/format/filter/IsLike
  */
-import Comparison from './Comparison.js';
+import {Comparison} from './Comparison.js';
 
 /**
  * @classdesc
  * Represents a `<PropertyIsLike>` comparison operator.
  * @api
  */
-class IsLike extends Comparison {
+export class IsLike extends Comparison {
   /**
    * [constructor description]
    * @param {!string} propertyName Name of the context property to compare.
@@ -57,5 +57,3 @@ class IsLike extends Comparison {
     this.matchCase = matchCase;
   }
 }
-
-export default IsLike;

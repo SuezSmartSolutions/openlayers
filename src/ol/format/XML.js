@@ -9,7 +9,7 @@ import {isDocument, parse} from '../xml.js';
  *
  * @abstract
  */
-class XML {
+export class XML {
   /**
    * Read the source document.
    *
@@ -50,5 +50,3 @@ class XML {
    */
   readFromNode(node) {}
 }
-
-export default XML;

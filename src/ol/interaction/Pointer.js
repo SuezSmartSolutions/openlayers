@@ -1,8 +1,8 @@
 /**
  * @module ol/interaction/Pointer
  */
-import Interaction from './Interaction.js';
-import MapBrowserEventType from '../MapBrowserEventType.js';
+import {Interaction} from './Interaction.js';
+import {MapBrowserEventType} from '../MapBrowserEventType.js';
 
 /**
  * @typedef {Object} Options
@@ -42,7 +42,7 @@ import MapBrowserEventType from '../MapBrowserEventType.js';
  * user function is called and returns `false`.
  * @api
  */
-class PointerInteraction extends Interaction {
+export class PointerInteraction extends Interaction {
   /**
    * @param {Options} [options] Options.
    */
@@ -202,5 +202,3 @@ export function centroid(pointerEvents) {
   }
   return [clientX / length, clientY / length];
 }
-
-export default PointerInteraction;

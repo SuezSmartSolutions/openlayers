@@ -1,7 +1,7 @@
 /**
  * @module ol/proj/epsg4326
  */
-import Projection from './Projection.js';
+import {Projection} from './Projection.js';
 
 /**
  * Semi-major radius of the WGS84 ellipsoid.
@@ -33,7 +33,7 @@ export const METERS_PER_UNIT = (Math.PI * RADIUS) / 180;
  * The EPSG registry defines 4326 as a CRS for Latitude,Longitude (y,x).
  * OpenLayers treats EPSG:4326 as a pseudo-projection, with x,y coordinates.
  */
-class EPSG4326Projection extends Projection {
+export class EPSG4326Projection extends Projection {
   /**
    * @param {string} code Code.
    * @param {string} [axisOrientation] Axis orientation.

@@ -306,7 +306,7 @@ versionFunctions[Versions.VERSION3] = generateVersion3Options;
  *
  * @api
  */
-class IIIFInfo {
+export class IIIFInfo {
   /**
    * @param {string|ImageInformationResponse} imageInfo
    * Deserialized image information JSON response object or JSON response as string
@@ -480,5 +480,3 @@ class IIIFInfo {
     };
   }
 }
-
-export default IIIFInfo;

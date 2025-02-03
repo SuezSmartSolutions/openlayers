@@ -8,7 +8,7 @@
  * events and does not need to be constructed directly.
  * @api
  */
-class VectorContext {
+export class VectorContext {
   /**
    * Render a geometry with a custom renderer.
    *
@@ -111,5 +111,3 @@ class VectorContext {
    */
   setTextStyle(textStyle, declutterImageWithText) {}
 }
-
-export default VectorContext;

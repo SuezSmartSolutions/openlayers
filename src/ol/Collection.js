@@ -1,10 +1,10 @@
 /**
  * @module ol/Collection
  */
-import AssertionError from './AssertionError.js';
-import BaseObject from './Object.js';
-import CollectionEventType from './CollectionEventType.js';
-import Event from './events/Event.js';
+import {AssertionError} from './AssertionError.js';
+import {BaseObject} from './Object.js';
+import {CollectionEventType} from './CollectionEventType.js';
+import {BaseEvent as Event} from './events/Event.js';
 
 /**
  * @enum {string}
@@ -74,7 +74,7 @@ export class CollectionEvent extends Event {
  * @template T
  * @api
  */
-class Collection extends BaseObject {
+export class Collection extends BaseObject {
   /**
    * @param {Array<T>} [array] Array.
    * @param {Options} [options] Collection options.
@@ -325,5 +325,3 @@ class Collection extends BaseObject {
     }
   }
 }
-
-export default Collection;
