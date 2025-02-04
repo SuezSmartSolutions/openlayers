@@ -16,7 +16,7 @@ import CanvasTileLayerRenderer from '../renderer/canvas/TileLayer.js';
  * @extends BaseTileLayer<TileSourceType, CanvasTileLayerRenderer>
  * @api
  */
-class TileLayer extends BaseTileLayer {
+export class TileLayer extends BaseTileLayer {
   /**
    * @param {import("./BaseTile.js").Options<TileSourceType>} [options] Tile layer options.
    */
@@ -28,5 +28,3 @@ class TileLayer extends BaseTileLayer {
     return new CanvasTileLayerRenderer(this);
   }
 }
-
-export default TileLayer;
