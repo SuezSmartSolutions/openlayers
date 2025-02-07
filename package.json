@@ -1,5 +1,5 @@
 {
-  "name": "ol",
+  "name": "@suez/ol",
   "version": "7.0.0-tweaked.2",
   "description": "OpenLayers mapping library",
   "keywords": [

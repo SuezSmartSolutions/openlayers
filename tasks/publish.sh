@@ -15,7 +15,7 @@ BUILT_PACKAGE=build/ol
 #
 # URL for canonical repo.
 #
-REMOTE=https://github.com/openlayers/openlayers.git
+REMOTE=https://github.com/SuezSmartSolutions/openlayers.git
 
 #
 # Display usage and exit.
@@ -42,7 +42,7 @@ EOF
 # Exit if the current working tree is not clean.
 #
 assert_clean() {
-  source `git --exec-path`/git-sh-setup && \
+  source "`git --exec-path`/git-sh-setup" && \
       require_clean_work_tree "publish" "Please commit or stash them."
 }
 
@@ -79,7 +79,7 @@ main() {
   npm run build-package
   cd ${BUILT_PACKAGE}
   shift
-  npm publish ${@}
+  npm publish ${@} --access=public
 }
 
 if test ${#} -lt 1; then
