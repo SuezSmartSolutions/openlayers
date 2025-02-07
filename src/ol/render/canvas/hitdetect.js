@@ -3,7 +3,7 @@
  */
 
 import CanvasImmediateRenderer from './Immediate.js';
-import {Icon} from '../../style.js';
+import {Icon} from '../../style/index.js';
 import {clamp} from '../../math.js';
 import {createCanvasContext2D} from '../../dom.js';
 import {intersects} from '../../extent.js';

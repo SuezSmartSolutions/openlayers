@@ -9,7 +9,7 @@ import {
   MultiPolygon,
   Point,
   Polygon,
-} from '../geom.js';
+} from '../geom/index.js';
 import {
   compose as composeTransform,
   create as createTransform,

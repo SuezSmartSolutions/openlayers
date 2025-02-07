@@ -1,6 +1,6 @@
 {
   "name": "ol",
-  "version": "7.0.0",
+  "version": "7.0.0-tweaked.2",
   "description": "OpenLayers mapping library",
   "keywords": [
     "map",
@@ -10,6 +10,7 @@
   "private": true,
   "homepage": "https://openlayers.org/",
   "scripts": {
+    "review-barrel": "node tasks/review-barrel.js",
     "lint": "eslint tasks test src/ol examples config",
     "pretest": "npm run lint && npm run typecheck",
     "test-rendering": "node test/rendering/test.js",
